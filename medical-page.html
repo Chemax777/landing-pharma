@@ -1,0 +1,1699 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medical page</title>
+    <link rel="stylesheet" href="./style/reset.css" />
+    <link rel="stylesheet" href="./style/normalize.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="burger">
+        <img
+          src="./img/icons/burger.svg"
+          width="35"
+          height="35"
+          alt="burger icon"
+        />
+      </div>
+      <aside>
+        <nav class="header__nav-mobile">
+          <div class="nav__logo-mobile">
+            <a href="./">
+              <img
+                src="./img/logo.jpg"
+                alt="logo"
+                width="160"
+                height="75"
+                loading="lazy"
+              />
+            </a>
+            <div class="close-mobile">
+              <img
+                src="./img/icons/close.svg"
+                alt="close"
+                width="35"
+                height="35"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <ul class="nav__list-mobile">
+            <li class="nav__item-mobile">
+              <a href="./medical-page.html">Інструкція</a>
+            </li>
+            <li class="nav__item-mobile">
+              <a href="./all-content.html">Уникайте підробок</a>
+            </li>
+            <li class="nav__item-mobile">
+              <a href="./all-content.html">Доставка</a>
+            </li>
+            <li class="nav__item-mobile">
+              <a href="./all-content.html">Все про ЕД</a>
+            </li>
+            <li class="nav__item-mobile">
+              <a href="./all-content.html">Відгуки</a>
+            </li>
+            <li class="nav__item-mobile">
+              <a href="./all-content.html">FAQ</a>
+            </li>
+          </ul>
+          <div class="header__order-btn-mobile primary-btn">
+            <a href="#order">Заказать</a>
+          </div>
+        </nav>
+      </aside>
+      <div class="header">
+        <div class="header__container">
+          <div class="header__logo">
+            <a href="./">
+              <img
+                src="./img/logo.jpg"
+                alt="logo"
+                width="192"
+                height="90"
+                loading="lazy"
+              />
+            </a>
+          </div>
+          <nav class="header__nav-desktop">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="./medical-page.html">Інструкція</a>
+              </li>
+              <li class="nav__item">
+                <a href="./all-content.html">Уникайте підробок</a>
+              </li>
+              <li class="nav__item">
+                <a href="./all-content.html">Доставка</a>
+              </li>
+              <li class="nav__item">
+                <a href="./all-content.html">Все про ЕД</a>
+              </li>
+              <li class="nav__item">
+                <a href="./all-content.html">Відгуки</a>
+              </li>
+              <li class="nav__item">
+                <a href="./all-content.html">FAQ</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__order-btn primary-btn">
+            <a href="#order">Заказать</a>
+          </div>
+        </div>
+      </div>
+      <div class="aside-overlay"></div>
+      <div class="modal-wrapper">
+        <div class="modal">
+          <div class="banner__form">
+            <div class="close-modal-btn">
+              <svg
+                fill="#fff"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z"
+                  fill="#fff"
+                />
+              </svg>
+            </div>
+            <div class="title__form">ЧТОБЫ ЗАКАЗАТЬ ПРОСТО ЗАПОЛНИТЕ ФОРМУ</div>
+            <form class="form-wrapper">
+              <div class="form__text">
+                <div>Закажите со скидкой <span class="discont">65%</span></div>
+                <div>осталось <span>10</span> упаковок</div>
+                <div class="region">
+                  Ваш регион
+                  <span>
+                    <img src="./img/flag/usa.png" alt="название страны" />
+                    страна
+                  </span>
+                </div>
+              </div>
+              <div class="form__input-wrapper">
+                <label for="nameModal">Введите email</label>
+                <input
+                  class="mail-inp"
+                  id="nameModal"
+                  type="text"
+                  placeholder="example@gamil.com"
+                  required
+                />
+                <span class="warning">Проверьте правильность email</span>
+              </div>
+              <div class="form__input-wrapper">
+                <label for="telModal">Введите телефон</label>
+                <input
+                  id="telModal"
+                  class="tel"
+                  type="tel"
+                  placeholder="Ваш номер телефона"
+                  required
+                />
+                <span class="warning">Проверьте правильность телефона</span>
+              </div>
+              <div class="form__counter-wrapper">
+                <div class="counter-title">Количество упаковок</div>
+                <div class="counter">
+                  <div class="counter-left">
+                    <button aria-label="+" class="counter-plus">
+                      <svg
+                        version="1.1"
+                        id="Layer_1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 512 512"
+                        xml:space="preserve"
+                        fill="#000000"
+                      >
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g
+                          id="SVGRepo_tracerCarrier"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></g>
+                        <g id="SVGRepo_iconCarrier">
+                          <circle
+                            cx="256"
+                            cy="256"
+                            r="256"
+                          ></circle>
+                          <g>
+                            <rect
+                              x="240"
+                              y="120"
+                              style="fill: #ffffff"
+                              width="32"
+                              height="272"
+                            ></rect>
+                            <rect
+                              x="120"
+                              y="240"
+                              style="fill: #ffffff"
+                              width="272"
+                              height="32"
+                            ></rect>
+                          </g>
+                        </g>
+                      </svg>
+                    </button>
+                    <div class="counter-value">1</div>
+                    <button aria-label="-" class="counter-minus">
+                      <svg
+                        viewBox="0 0 48 48"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="#25b6d2"
+                        stroke="#25b6d2"
+                      >
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g
+                          id="SVGRepo_tracerCarrier"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></g>
+                        <g id="SVGRepo_iconCarrier">
+                          <title>70 Basic icons by Xicons.co</title>
+                          <path
+                            d="M24,3A21,21,0,1,0,45,24,21,21,0,0,0,24,3Z"
+                            fill="#ffffff8bcc4"
+                          ></path>
+                          <path
+                            d="M32,26H16a2,2,0,0,1,0-4H32A2,2,0,0,1,32,26Z"
+                            fill="#ffffff"
+                          ></path>
+                        </g>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="counter__right">
+                    <div class="counter-total">
+                      Итого <span class="total-number">100</span> USD + доставка
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-actions">
+                <div class="form-btn primary-btn">
+                  <button
+                    class="get-order-btn"
+                    aria-label="Заказать сейчас"
+                    type="submit"
+                  >
+                    Заказать сейчас
+                  </button>
+                </div>
+                <div class="form-btn secondary-btn">
+                  <button aria-label="Скачать инструкцию">
+                    Скачать инструкцию
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="main">
+        <div class="main__container">
+          <div itemscope itemtype="https://schema.org/Drug">
+            <meta itemprop="name" content="Kamagra 100mg" />
+            <meta
+              itemprop="description"
+              content="Best Prices For Kamagra Without Prescription In Our Pharmacy ❤️ Fast Delivery 5-9 Days All Over Greece And Discreet Packaging."
+            />
+            <meta itemprop="prescriptionStatus" content="over the bench" />
+            <div
+              itemprop="additionalProperty"
+              itemscope
+              itemtype="https://schema.org/PropertyValue"
+            >
+              <meta itemprop="name" content="Compatibility with alcohol" />
+              <meta itemprop="value" content />
+            </div>
+            <div
+              itemprop="additionalProperty"
+              itemscope
+              itemtype="https://schema.org/PropertyValue"
+            >
+              <meta itemprop="name" content="Use during pregnancy" />
+              <meta itemprop="value" content />
+            </div>
+            <div
+              itemprop="additionalProperty"
+              itemscope=""
+              itemtype="https://schema.org/PropertyValue"
+            >
+              <meta itemprop="name" content="For allergy sufferers" />
+              <meta itemprop="value" content />
+            </div>
+            <div
+              itemprop="additionalProperty"
+              itemscope=""
+              itemtype="https://schema.org/PropertyValue"
+            >
+              <meta itemprop="name" content="For diabetics" />
+              <meta itemprop="value" content />
+            </div>
+            <div
+              itemprop="additionalProperty"
+              itemscope=""
+              itemtype="https://schema.org/PropertyValue"
+            >
+              <meta itemprop="name" content="For drivers" />
+              <meta itemprop="value" content />
+            </div>
+            <div
+              itemprop="additionalProperty"
+              itemscope
+              itemtype="https://schema.org/PropertyValue"
+            >
+              <meta itemprop="name" content="Prescribed license" />
+              <meta itemprop="value" content="Over the bench" />
+            </div>
+            <section>
+              <div class="container__sections">
+                <section class="product__section">
+                  <div class="product__banner">
+                    <div class="product__discount">
+                      <div class="discount__text">Discount</div>
+                      <div class="discount__text">
+                        -<span class="discount__text-value">33</span>%
+                      </div>
+                    </div>
+                    <img
+                      src="./img/product/kamagra.jpg"
+                      alt="Название препарата"
+                      title="Название препарата"
+                      width="500"
+                      height="500"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="product__main">
+                    <form
+                      class="product__form"
+                      itemprop="offers"
+                      itemscope
+                      itemtype="https://schema.org/Offer"
+                    >
+                      <link itemprop="url" href="#" />
+                      <meta itemprop="price" content="43.07" />
+                      <meta itemprop="priceCurrency" content="EUR" />
+                      <meta itemprop="priceValidUntil" content="2024-10-18" />
+                      <div
+                        itemprop="priceSpecification"
+                        itemscope
+                        itemtype="https://schema.org/PriceSpecification"
+                      >
+                        <meta itemprop="price" content="43.07" />
+                        <meta itemprop="priceValidUntil" content="2024-12-31" />
+                        <meta itemprop="priceCurrency" content="EUR" />
+                        <div
+                          itemprop="valueAddedTaxIncluded"
+                          content="true"
+                        ></div>
+                      </div>
+                      <div
+                        itemprop="priceSpecification"
+                        itemscope
+                        itemtype="https://schema.org/PriceSpecification"
+                      >
+                        <meta itemprop="price" content="64" />
+                        <meta itemprop="priceCurrency" content="EUR" />
+                        <meta itemprop="valueAddedTaxIncluded" content="true" />
+                      </div>
+                      <link
+                        itemprop="availability"
+                        href="https://schema.org/InStock"
+                      />
+                      <h1 class="product__name">Kamagra</h1>
+                      <div class="product__banner-mobile">
+                        <div class="product__discount">
+                          <div class="discount__text">Discount</div>
+                          <div class="discount__text">-33%</div>
+                        </div>
+                        <img
+                          src="./img/product/kamagra.jpg"
+                          alt="Название препарата"
+                          title="Название препарата"
+                          width="500"
+                          height="500"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div class="product__code">
+                        Product code: <span>002857</span>
+                      </div>
+                      <div class="product__info">
+                        <div class="product__description_anchor">
+                          <a href="#">Information about medicines</a>
+                        </div>
+                        <div class="product__review_anchor">
+                          <div class="product__rating">
+                            <a href="#reviews">
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                              <span class="review__count">0</span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="product__in-stock">In stock — 10 pieces</div>
+                      <ul class="product__list">
+                        <li class="product__list-item">
+                          <svg viewBox="0 0 640 512">
+                            <path
+                              d="M48 0C21.5 0 0 21.5 0 48V368c0 26.5 21.5 48 48 48H64c0 53 43 96 96 96s96-43 96-96H384c0 53 43 96 96 96s96-43 96-96h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V288 256 237.3c0-17-6.7-33.3-18.7-45.3L512 114.7c-12-12-28.3-18.7-45.3-18.7H416V48c0-26.5-21.5-48-48-48H48zM416 160h50.7L544 237.3V256H416V160zM112 416a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm368-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"
+                            ></path>
+                          </svg>
+                          <span>Delivery throughout Greece — 5-9 days</span>
+                        </li>
+                        <li class="product__list-item">
+                          <svg viewBox="0 0 640 512">
+                            <path
+                              d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c1.8 0 3.5-.2 5.3-.5c-76.3-55.1-99.8-141-103.1-200.2c-16.1-4.8-33.1-7.3-50.7-7.3H178.3zm308.8-78.3l-120 48C358 277.4 352 286.2 352 296c0 63.3 25.9 168.8 134.8 214.2c5.9 2.5 12.6 2.5 18.5 0C614.1 464.8 640 359.3 640 296c0-9.8-6-18.6-15.1-22.3l-120-48c-5.7-2.3-12.1-2.3-17.8 0zM591.4 312c-3.9 50.7-27.2 116.7-95.4 149.7V273.8L591.4 312z"
+                            ></path>
+                          </svg>
+                          <span>Anonymous packaging</span>
+                        </li>
+                        <li class="product__list-item">
+                          <svg viewBox="0 0 576 512">
+                            <path
+                              d="M64 32C28.7 32 0 60.7 0 96v32H576V96c0-35.3-28.7-64-64-64H64zM576 224H0V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V224zM112 352h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm112 16c0-8.8 7.2-16 16-16H368c8.8 0 16 7.2 16 16s-7.2 16-16 16H240c-8.8 0-16-7.2-16-16z"
+                            ></path>
+                          </svg>
+                          <span>Payment methods:</span>
+                          <span class="product__payment-methods">
+                            <img
+                              src="./img/payments/visa.png"
+                              loading="lazy"
+                              alt="Visa"
+                              width="155"
+                              height="50"
+                            />
+                            <img
+                              src="./img/payments/mastercard.png"
+                              loading="lazy"
+                              alt="Master Card"
+                              width="80"
+                              height="50"
+                            />
+                            <img
+                              src="./img/payments/usdt.png"
+                              loading="lazy"
+                              alt="USDT"
+                              width="50"
+                              height="50"
+                            />
+                            <img
+                              src="./img/payments/bitcoin.png"
+                              loading="lazy"
+                              alt="Bitcoin"
+                              width="50"
+                              height="50"
+                            />
+                          </span>
+                        </li>
+                      </ul>
+                      <div class="product__actions_selects">
+                        <div class="product__select">
+                          <span>Dose</span>
+                          <div class="itc-select" id="select-dose">
+                            <button
+                              type="button"
+                              class="itc-select__toggle"
+                              name="car"
+                              value=""
+                              data-select="toggle"
+                              data-index="-1"
+                              aria-label="Дозировка"
+                            >
+                              Choose Dose
+                            </button>
+                            <div class="itc-select__dropdown">
+                              <ul class="itc-select__options">
+                                <li
+                                  class="itc-select__option"
+                                  data-select="option"
+                                  data-value="100mg * 12"
+                                  data-index="0"
+                                  data-price="45.82"
+                                >
+                                  100mg * 12
+                                </li>
+                                <li
+                                  class="itc-select__option"
+                                  data-select="option"
+                                  data-value="100mg * 32"
+                                  data-index="1"
+                                  data-price="68.76"
+                                >
+                                  100mg * 32
+                                </li>
+                                <li
+                                  class="itc-select__option"
+                                  data-select="option"
+                                  data-value="100mg * 60"
+                                  data-index="2"
+                                  data-price="115.55"
+                                >
+                                  100mg * 60
+                                </li>
+                                <li
+                                  class="itc-select__option"
+                                  data-select="option"
+                                  data-value="100mg * 92"
+                                  data-index="2"
+                                  data-price="168.76"
+                                >
+                                  100mg * 92
+                                </li>
+                                <li
+                                  class="itc-select__option"
+                                  data-select="option"
+                                  data-value="100mg * 120"
+                                  data-index="2"
+                                  data-price="209.12"
+                                >
+                                  100mg * 120
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="product__count">
+                          <span>Quantity</span>
+                          <div class="count__section">
+                            <button type="button" class="btn-minus">-</button>
+                            <input
+                              type="number"
+                              name="quantity"
+                              id="quantity"
+                              value="1"
+                              min="1"
+                              max="10"
+                            />
+                            <button type="button" class="btn-plus">+</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="product__actions_purchase">
+                        <div class="product__price-section">
+                          <div class="product__old-price">
+                            Old price:
+                            <span class="old-price_number">64</span> €
+                          </div>
+                          <div class="product__new-price">
+                            <span class="new-price_number">43.07</span> €
+                          </div>
+                        </div>
+                        <div class="product__purchase-btn primary-btn">
+                          <button>Purchase</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </section>
+                <section class="same-products__section">
+                  <h2 class="no-border">Similar drugs</h2>
+                  <ul class="products__list">
+                    <li
+                      class="products__list-item"
+                      itemprop="itemListElement"
+                      itemscope
+                      itemtype="https://schema.org/Product"
+                    >
+                      <meta
+                        itemprop="name"
+                        content="Kamagra Effervescent 100mg"
+                      />
+                      <meta
+                        itemprop="description"
+                        content="Best Prices For Kamagra Effervescent Without Prescription In Our Pharmacy ❤️ Fast Delivery 5-9 Days All Over Greece And Discreet Packaging."
+                      />
+                      <div class="product__top">
+                        <a href="#">
+                          <div class="product-item__discount">
+                            <span>Discount</span><span>-33%</span>
+                          </div>
+                          <picture>
+                            <img
+                              src="./img/product/kamagra-effervescent.jpg"
+                              alt="kamagra effervescent"
+                              loading="lazy"
+                              width="250"
+                              height="250"
+                            />
+                          </picture>
+                        </a>
+                      </div>
+                      <div class="product__description">
+                        <div class="product__title">
+                          <a
+                            href="#"
+                            content="Kamagra Effervescent"
+                            title="Kamagra Effervescent"
+                            >Kamagra Effervescent</a
+                          >
+                        </div>
+                        <div class="product__in-stock">5 in stock</div>
+                      </div>
+                      <div class="product__bottom">
+                        <div class="product__price">
+                          <span class="old-price">79 €</span>
+                          <span class="new-price">57.75 €</span>
+                        </div>
+                        <div class="product__buy-btn primary-btn">
+                          <a href="#"
+                            ><svg viewBox="0 0 576 512">
+                              <path
+                                d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"
+                              ></path>
+                            </svg>
+                            Purchase</a
+                          >
+                        </div>
+                      </div>
+                    </li>
+                    <li
+                      class="products__list-item"
+                      itemprop="itemListElement"
+                      itemscope
+                      itemtype="https://schema.org/Product"
+                    >
+                      <meta
+                        itemprop="name"
+                        content="Kamagra Effervescent 100mg"
+                      />
+                      <meta
+                        itemprop="description"
+                        content="Best Prices For Kamagra Effervescent Without Prescription In Our Pharmacy ❤️ Fast Delivery 5-9 Days All Over Greece And Discreet Packaging."
+                      />
+                      <div class="product__top">
+                        <a href="#">
+                          <div class="product-item__discount">
+                            <span>Discount</span><span>-33%</span>
+                          </div>
+                          <picture>
+                            <img
+                              src="./img/product/kamagra-effervescent.jpg"
+                              alt="kamagra effervescent"
+                              loading="lazy"
+                              width="250"
+                              height="250"
+                            />
+                          </picture>
+                        </a>
+                      </div>
+                      <div class="product__description">
+                        <div class="product__title">
+                          <a
+                            href="#"
+                            content="Kamagra Effervescent"
+                            title="Kamagra Effervescent"
+                            >Kamagra Effervescent</a
+                          >
+                        </div>
+                        <div class="product__in-stock">5 in stock</div>
+                      </div>
+                      <div class="product__bottom">
+                        <div class="product__price">
+                          <span class="old-price">79 €</span>
+                          <span class="new-price">57.75 €</span>
+                        </div>
+                        <div class="product__buy-btn primary-btn">
+                          <a href="#"
+                            ><svg viewBox="0 0 576 512">
+                              <path
+                                d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"
+                              ></path>
+                            </svg>
+                            Purchase</a
+                          >
+                        </div>
+                      </div>
+                    </li>
+                    <li
+                      class="products__list-item"
+                      itemprop="itemListElement"
+                      itemscope
+                      itemtype="https://schema.org/Product"
+                    >
+                      <meta
+                        itemprop="name"
+                        content="Kamagra Effervescent 100mg"
+                      />
+                      <meta
+                        itemprop="description"
+                        content="Best Prices For Kamagra Effervescent Without Prescription In Our Pharmacy ❤️ Fast Delivery 5-9 Days All Over Greece And Discreet Packaging."
+                      />
+                      <div class="product__top">
+                        <a href="#">
+                          <div class="product-item__discount">
+                            <span>Discount</span><span>-33%</span>
+                          </div>
+                          <picture>
+                            <img
+                              src="./img/product/kamagra-effervescent.jpg"
+                              alt="kamagra effervescent"
+                              loading="lazy"
+                              width="250"
+                              height="250"
+                            />
+                          </picture>
+                        </a>
+                      </div>
+                      <div class="product__description">
+                        <div class="product__title">
+                          <a
+                            href="#"
+                            content="Kamagra Effervescent"
+                            title="Kamagra Effervescent"
+                            >Kamagra Effervescent</a
+                          >
+                        </div>
+                        <div class="product__in-stock">5 in stock</div>
+                      </div>
+                      <div class="product__bottom">
+                        <div class="product__price">
+                          <span class="old-price">79 €</span>
+                          <span class="new-price">57.75 €</span>
+                        </div>
+                        <div class="product__buy-btn primary-btn">
+                          <a href="#"
+                            ><svg viewBox="0 0 576 512">
+                              <path
+                                d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"
+                              ></path>
+                            </svg>
+                            Purchase</a
+                          >
+                        </div>
+                      </div>
+                    </li>
+                    <li
+                      class="products__list-item"
+                      itemprop="itemListElement"
+                      itemscope
+                      itemtype="https://schema.org/Product"
+                    >
+                      <meta
+                        itemprop="name"
+                        content="Kamagra Effervescent 100mg"
+                      />
+                      <meta
+                        itemprop="description"
+                        content="Best Prices For Kamagra Effervescent Without Prescription In Our Pharmacy ❤️ Fast Delivery 5-9 Days All Over Greece And Discreet Packaging."
+                      />
+                      <div class="product__top">
+                        <a href="#">
+                          <div class="product-item__discount">
+                            <span>Discount</span><span>-33%</span>
+                          </div>
+                          <picture>
+                            <img
+                              src="./img/product/kamagra-effervescent.jpg"
+                              alt="kamagra effervescent"
+                              loading="lazy"
+                              width="250"
+                              height="250"
+                            />
+                          </picture>
+                        </a>
+                      </div>
+                      <div class="product__description">
+                        <div class="product__title">
+                          <a
+                            href="#"
+                            content="Kamagra Effervescent"
+                            title="Kamagra Effervescent"
+                            >Kamagra Effervescent</a
+                          >
+                        </div>
+                        <div class="product__in-stock">5 in stock</div>
+                      </div>
+                      <div class="product__bottom">
+                        <div class="product__price">
+                          <span class="old-price">79 €</span>
+                          <span class="new-price">57.75 €</span>
+                        </div>
+                        <div class="product__buy-btn primary-btn">
+                          <a href="#"
+                            ><svg viewBox="0 0 576 512">
+                              <path
+                                d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"
+                              ></path>
+                            </svg>
+                            Purchase</a
+                          >
+                        </div>
+                      </div>
+                    </li>
+                    <li
+                      class="products__list-item"
+                      itemprop="itemListElement"
+                      itemscope
+                      itemtype="https://schema.org/Product"
+                    >
+                      <meta
+                        itemprop="name"
+                        content="Kamagra Effervescent 100mg"
+                      />
+                      <meta
+                        itemprop="description"
+                        content="Best Prices For Kamagra Effervescent Without Prescription In Our Pharmacy ❤️ Fast Delivery 5-9 Days All Over Greece And Discreet Packaging."
+                      />
+                      <div class="product__top">
+                        <a href="#">
+                          <div class="product-item__discount">
+                            <span>Discount</span><span>-33%</span>
+                          </div>
+                          <picture>
+                            <img
+                              src="./img/product/kamagra-effervescent.jpg"
+                              alt="kamagra effervescent"
+                              loading="lazy"
+                              width="250"
+                              height="250"
+                            />
+                          </picture>
+                        </a>
+                      </div>
+                      <div class="product__description">
+                        <div class="product__title">
+                          <a
+                            href="#"
+                            content="Kamagra Effervescent"
+                            title="Kamagra Effervescent"
+                            >Kamagra Effervescent</a
+                          >
+                        </div>
+                        <div class="product__in-stock">5 in stock</div>
+                      </div>
+                      <div class="product__bottom">
+                        <div class="product__price">
+                          <span class="old-price">79 €</span>
+                          <span class="new-price">57.75 €</span>
+                        </div>
+                        <div class="product__buy-btn primary-btn">
+                          <a href="#"
+                            ><svg viewBox="0 0 576 512">
+                              <path
+                                d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"
+                              ></path>
+                            </svg>
+                            Purchase</a
+                          >
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </section>
+                <section class="review__section">
+                  <h2 class="no-border" id="reviews">Reviews (4)</h2>
+                  <div class="reviews__section-product">
+                    <div class="reviews">
+                      <div
+                        class="review-item"
+                        itemscope=""
+                        itemtype="https://schema.org/Review"
+                      >
+                        <div
+                          itemprop="itemReviewed"
+                          itemscope=""
+                          itemtype="https://schema.org/Organization"
+                        >
+                          <meta itemprop="name" content="" />
+                        </div>
+                        <div class="review__head">
+                          <div
+                            class="review__author-photo"
+                            itemprop="author"
+                            itemscope=""
+                            itemtype="https://schema.org/Person"
+                          >
+                            <meta itemprop="name" content="Имя Фамилия" />
+                            <img
+                              src="./img/review/1.jpg"
+                              alt="Имя Фамилия"
+                              width="128"
+                              height="128"
+                              loading="lazy"
+                              itemprop="image"
+                            />
+                          </div>
+                          <div class="review__main">
+                            <h3 class="review__author-name">Имя Фамилия</h3>
+                            <div
+                              class="review__rating"
+                              itemprop="reviewRating"
+                              itemscope=""
+                              itemtype="https://schema.org/Rating"
+                            >
+                              <meta itemprop="ratingValue" content="5" />
+                              <meta itemprop="worstRating" content="1" />
+                              <meta itemprop="bestRating" content="5" />
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                        <p class="review__text" itemprop="reviewBody">
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit. Praesentium odio illum placeat laborum, labore,
+                          quae provident aliquid blanditiis fuga nam veniam
+                          quasi laudantium nobis fugit molestiae non ducimus
+                          ullam voluptatum!
+                        </p>
+                      </div>
+                      <div
+                        class="review-item"
+                        itemscope=""
+                        itemtype="https://schema.org/Review"
+                      >
+                        <div
+                          itemprop="itemReviewed"
+                          itemscope=""
+                          itemtype="https://schema.org/Organization"
+                        >
+                          <meta itemprop="name" content="" />
+                        </div>
+                        <div class="review__head">
+                          <div
+                            class="review__author-photo"
+                            itemprop="author"
+                            itemscope=""
+                            itemtype="https://schema.org/Person"
+                          >
+                            <meta itemprop="name" content="Имя Фамилия" />
+                            <img
+                              src="./img/review/2.jpg"
+                              alt="Имя Фамилия"
+                              width="128"
+                              height="128"
+                              loading="lazy"
+                              itemprop="image"
+                            />
+                          </div>
+                          <div class="review__main">
+                            <h3 class="review__author-name">Имя Фамилия</h3>
+                            <div
+                              class="review__rating"
+                              itemprop="reviewRating"
+                              itemscope=""
+                              itemtype="https://schema.org/Rating"
+                            >
+                              <meta itemprop="ratingValue" content="5" />
+                              <meta itemprop="worstRating" content="1" />
+                              <meta itemprop="bestRating" content="5" />
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                        <p class="review__text" itemprop="reviewBody">
+                          Lorem ipsum dolor sit, amet consectetur adipisicing
+                          elit. Delectus libero, rerum adipisci magni ducimus
+                          maiores.
+                        </p>
+                      </div>
+                      <div
+                        class="review-item"
+                        itemscope=""
+                        itemtype="https://schema.org/Review"
+                      >
+                        <div
+                          itemprop="itemReviewed"
+                          itemscope=""
+                          itemtype="https://schema.org/Organization"
+                        >
+                          <meta itemprop="name" content="" />
+                        </div>
+                        <div class="review__head">
+                          <div
+                            class="review__author-photo"
+                            itemprop="author"
+                            itemscope=""
+                            itemtype="https://schema.org/Person"
+                          >
+                            <meta itemprop="name" content="Имя Фамилия" />
+                            <img
+                              src="./img/review/3.jpg"
+                              alt="Имя Фамилия"
+                              width="128"
+                              height="128"
+                              loading="lazy"
+                              itemprop="image"
+                            />
+                          </div>
+                          <div class="review__main">
+                            <h3 class="review__author-name">Имя Фамилия</h3>
+                            <div
+                              class="review__rating"
+                              itemprop="reviewRating"
+                              itemscope=""
+                              itemtype="https://schema.org/Rating"
+                            >
+                              <meta itemprop="ratingValue" content="5" />
+                              <meta itemprop="worstRating" content="1" />
+                              <meta itemprop="bestRating" content="5" />
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                        <p class="review__text" itemprop="reviewBody">
+                          Lorem ipsum dolor sit amet elit. Omnis blanditiis
+                          libero voluptatibus harum dolores accusamus. Sapiente
+                          iure pariatur sed blanditiis perferendis, deserunt ad
+                          dolore, tempora error voluptatibus ipsum recusandae
+                          suscipit.
+                        </p>
+                      </div>
+                      <div
+                        class="review-item"
+                        itemscope=""
+                        itemtype="https://schema.org/Review"
+                      >
+                        <div
+                          itemprop="itemReviewed"
+                          itemscope=""
+                          itemtype="https://schema.org/Organization"
+                        >
+                          <meta itemprop="name" content="" />
+                        </div>
+                        <div class="review__head">
+                          <div
+                            class="review__author-photo"
+                            itemprop="author"
+                            itemscope=""
+                            itemtype="https://schema.org/Person"
+                          >
+                            <meta itemprop="name" content="Имя Фамилия" />
+                            <img
+                              src="./img/review/4.jpg"
+                              alt="Имя Фамилия"
+                              width="128"
+                              height="128"
+                              loading="lazy"
+                              itemprop="image"
+                            />
+                          </div>
+                          <div class="review__main">
+                            <h3 class="review__author-name">Имя Фамилия</h3>
+                            <div
+                              class="review__rating"
+                              itemprop="reviewRating"
+                              itemscope=""
+                              itemtype="https://schema.org/Rating"
+                            >
+                              <meta itemprop="ratingValue" content="5" />
+                              <meta itemprop="worstRating" content="1" />
+                              <meta itemprop="bestRating" content="5" />
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                        <p itemprop="reviewBody">
+                          Lorem ipsum dolor, sit amet consectetur adipisicing
+                          elit. Aliquam debitis sapiente ex quos vel ipsam,
+                          distinctio quisquam veritatis perspiciatis! In quam
+                          cum incidunt consequuntur cupiditate.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="review__comment">
+                      <form class="comment__form">
+                        <div class="comment__form_title">
+                          Leave your comments
+                        </div>
+                        <div class="comment__form_rating">
+                          <p>Rate this product:</p>
+                          <div class="full-stars">
+                            <div class="rating-group">
+                              <input
+                                name="fst"
+                                value="0"
+                                type="radio"
+                                disabled
+                                checked
+                              />
+                              <label for="fst-1">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 576 512"
+                                >
+                                  <path
+                                    d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                                  />
+                                </svg>
+                              </label>
+                              <input
+                                name="fst"
+                                id="fst-1"
+                                value="1"
+                                type="radio"
+                              />
+                              <label for="fst-2">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 576 512"
+                                >
+                                  <path
+                                    d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                                  />
+                                </svg>
+                              </label>
+                              <input
+                                name="fst"
+                                id="fst-2"
+                                value="2"
+                                type="radio"
+                              />
+                              <label for="fst-3">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 576 512"
+                                >
+                                  <path
+                                    d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                                  />
+                                </svg>
+                              </label>
+                              <input
+                                name="fst"
+                                id="fst-3"
+                                value="3"
+                                type="radio"
+                              />
+                              <label for="fst-4">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 576 512"
+                                >
+                                  <path
+                                    d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                                  />
+                                </svg>
+                              </label>
+                              <input
+                                name="fst"
+                                id="fst-4"
+                                value="4"
+                                type="radio"
+                              />
+                              <label for="fst-5">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 576 512"
+                                >
+                                  <path
+                                    d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                                  />
+                                </svg>
+                              </label>
+                              <input
+                                name="fst"
+                                id="fst-5"
+                                value="5"
+                                type="radio"
+                                checked
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <label class="comment__img">
+                          <input
+                            type="file"
+                            accept=".jpg,.jpeg,.png"
+                            name="avatar"
+                            id="upload-photo"
+                          />
+                          <span>Upload photo</span>
+                          <div class="comment__img_wrapper">
+                            <img
+                              src="./img/avatar.png"
+                              alt="avatar preview"
+                              id="new-photo"
+                            />
+                          </div>
+                        </label>
+                        <div class="comment__input_wrapper">
+                          <span>Name</span>
+                          <input
+                            type="text"
+                            placeholder="Your name"
+                            id="name-review"
+                            required
+                          />
+                          <span class="warning-input"
+                            >Name field cant be empty</span
+                          >
+                        </div>
+                        <div class="comment__input_wrapper">
+                          <span>Email</span>
+                          <input
+                            type="text"
+                            placeholder="example@gmail.com"
+                            id="email-review"
+                            required
+                          />
+                          <span class="warning-input"
+                            >Check the email please</span
+                          >
+                        </div>
+                        <div class="comment__input_wrapper">
+                          <span>Review</span>
+                          <textarea
+                            name="comment"
+                            id="text_comment"
+                            placeholder="Your review"
+                            required
+                            spellcheck="false"
+                            id="comment-review"
+                          ></textarea>
+                          <span class="warning-input"
+                            >Comment field cant be empty</span
+                          >
+                        </div>
+                        <div class="comment__form-btn primary-btn">
+                          <button type="submit">Submit</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer__main">
+        <div class="footer__container">
+          <div class="footer__left">
+            <div class="footer__info">
+              <div class="footer__info_logo">
+                <a href="./"
+                  ><img src="./img/logo.jpg" alt="logo" loading="lazy"
+                /></a>
+              </div>
+              <p class="footer__info_text">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Dignissimos, ea voluptate vero velit maiores officia animi
+                optio.Dignissimos, ea voluptate vero velit maiores officia animi
+                optio Lorem ipsum dolor sit amet consectetur adipisicing.
+              </p>
+            </div>
+          </div>
+          <div class="footer__right">
+            <div class="footer__links">
+              <div class="footer__title">Навигация</div>
+              <ul class="footer__links_list">
+                <li class="footer__links_item"><a href="#">Про нас</a></li>
+                <li class="footer__links_item">
+                  <a href="#">Зв'яжіться з нами</a>
+                </li>
+                <li class="footer__links_item">
+                  <a href="#">Політика конфіденційності</a>
+                </li>
+                <li class="footer__links_item">
+                  <a href="#">Умови використання</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__contacts">
+              <div class="footer__title">Контакты</div>
+              <ul class="footer__contacts_list">
+                <li class="footer__contacts_item">
+                  <a href="tel:+00000000000"
+                    ><svg
+                      height="200px"
+                      width="200px"
+                      version="1.1"
+                      id="_x32_"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      viewBox="0 0 512 512"
+                      xml:space="preserve"
+                      fill="#ffffff"
+                    >
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g
+                        id="SVGRepo_tracerCarrier"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></g>
+                      <g id="SVGRepo_iconCarrier">
+                        <style type="text/css">
+                          .st0 {
+                            fill: #ffffff;
+                          }
+                        </style>
+                        <g>
+                          <path
+                            class="st0"
+                            d="M94.811,21.696c-35.18,22.816-42.091,94.135-28.809,152.262c10.344,45.266,32.336,105.987,69.42,163.165 c34.886,53.79,83.557,102.022,120.669,129.928c47.657,35.832,115.594,58.608,150.774,35.792 c17.789-11.537,44.218-43.058,45.424-48.714c0,0-15.498-23.896-18.899-29.14l-51.972-80.135 c-3.862-5.955-28.082-0.512-40.386,6.457c-16.597,9.404-31.882,34.636-31.882,34.636c-11.38,6.575-20.912,0.024-40.828-9.142 c-24.477-11.262-51.997-46.254-73.9-77.947c-20.005-32.923-40.732-72.322-41.032-99.264c-0.247-21.922-2.341-33.296,8.304-41.006 c0,0,29.272-3.666,44.627-14.984c11.381-8.392,26.228-28.286,22.366-34.242l-51.972-80.134c-3.401-5.244-18.899-29.14-18.899-29.14 C152.159-1.117,112.6,10.159,94.811,21.696z"
+                          ></path>
+                        </g>
+                      </g></svg
+                    ><span>+000000000000</span></a
+                  >
+                </li>
+                <li class="footer__contacts_item">
+                  <a href="mailto: example@gmail.com">
+                    <svg
+                      viewBox="0 -2.5 20 20"
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      fill="#ffffff"
+                    >
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g
+                        id="SVGRepo_tracerCarrier"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></g>
+                      <g id="SVGRepo_iconCarrier">
+                        <title>email [#000000]</title>
+                        <desc>Created with Sketch.</desc>
+                        <defs></defs>
+                        <g
+                          id="Page-1"
+                          stroke="none"
+                          stroke-width="1"
+                          fill="none"
+                          fill-rule="evenodd"
+                        >
+                          <g
+                            id="Dribbble-Light-Preview"
+                            transform="translate(-340.000000, -922.000000)"
+                            fill="#ffffff"
+                          >
+                            <g
+                              id="icons"
+                              transform="translate(56.000000, 160.000000)"
+                            >
+                              <path
+                                d="M294,774.474 L284,765.649 L284,777 L304,777 L304,765.649 L294,774.474 Z M294.001,771.812 L284,762.981 L284,762 L304,762 L304,762.981 L294.001,771.812 Z"
+                                id="email-[#000000]"
+                              ></path>
+                            </g>
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
+                    <span>example@gmail.com</span>
+                  </a>
+                </li>
+                <li class="footer__contact_item">
+                  <div class="footer__btn primary-btn">
+                    <a href="#"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g
+                          id="SVGRepo_tracerCarrier"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></g>
+                        <g id="SVGRepo_iconCarrier">
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M22 10.787c0 4.854-4.253 8.788-9.5 8.788a10.22 10.22 0 0 1-2.684-.355c-1.881 1.241-4.233 1.617-5.485 1.73-.286.027-.434-.347-.24-.559.595-.65 1.431-1.803 1.715-3.368C4.073 15.43 3 13.225 3 10.787 3 5.934 7.253 2 12.5 2S22 5.934 22 10.787z"
+                            fill="#ffffff"
+                          ></path>
+                        </g></svg
+                      ><span>Чат 24/7</span></a
+                    >
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__social">
+              <div class="footer__title">Мы в соц. сетях</div>
+              <ul class="footer__social_list">
+                <li class="footer__social_item">
+                  <a href="#"
+                    ><svg
+                      viewBox="0 0 20 20"
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      fill="#ffffff"
+                      stroke="#ffffff"
+                    >
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g
+                        id="SVGRepo_tracerCarrier"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></g>
+                      <g id="SVGRepo_iconCarrier">
+                        <title>instagram [#fffffffffff]</title>
+                        <desc>Created with Sketch.</desc>
+                        <defs></defs>
+                        <g
+                          id="Page-1"
+                          stroke="none"
+                          stroke-width="1"
+                          fill="none"
+                          fill-rule="evenodd"
+                        >
+                          <g
+                            id="Dribbble-Light-Preview"
+                            transform="translate(-340.000000, -7439.000000)"
+                            fill="#ffffff"
+                          >
+                            <g
+                              id="icons"
+                              transform="translate(56.000000, 160.000000)"
+                            >
+                              <path
+                                d="M289.869652,7279.12273 C288.241769,7279.19618 286.830805,7279.5942 285.691486,7280.72871 C284.548187,7281.86918 284.155147,7283.28558 284.081514,7284.89653 C284.035742,7285.90201 283.768077,7293.49818 284.544207,7295.49028 C285.067597,7296.83422 286.098457,7297.86749 287.454694,7298.39256 C288.087538,7298.63872 288.809936,7298.80547 289.869652,7298.85411 C298.730467,7299.25511 302.015089,7299.03674 303.400182,7295.49028 C303.645956,7294.859 303.815113,7294.1374 303.86188,7293.08031 C304.26686,7284.19677 303.796207,7282.27117 302.251908,7280.72871 C301.027016,7279.50685 299.5862,7278.67508 289.869652,7279.12273 M289.951245,7297.06748 C288.981083,7297.0238 288.454707,7296.86201 288.103459,7296.72603 C287.219865,7296.3826 286.556174,7295.72155 286.214876,7294.84312 C285.623823,7293.32944 285.819846,7286.14023 285.872583,7284.97693 C285.924325,7283.83745 286.155174,7282.79624 286.959165,7281.99226 C287.954203,7280.99968 289.239792,7280.51332 297.993144,7280.90837 C299.135448,7280.95998 300.179243,7281.19026 300.985224,7281.99226 C301.980262,7282.98483 302.473801,7284.28014 302.071806,7292.99991 C302.028024,7293.96767 301.865833,7294.49274 301.729513,7294.84312 C300.829003,7297.15085 298.757333,7297.47145 289.951245,7297.06748 M298.089663,7283.68956 C298.089663,7284.34665 298.623998,7284.88065 299.283709,7284.88065 C299.943419,7284.88065 300.47875,7284.34665 300.47875,7283.68956 C300.47875,7283.03248 299.943419,7282.49847 299.283709,7282.49847 C298.623998,7282.49847 298.089663,7283.03248 298.089663,7283.68956 M288.862673,7288.98792 C288.862673,7291.80286 291.150266,7294.08479 293.972194,7294.08479 C296.794123,7294.08479 299.081716,7291.80286 299.081716,7288.98792 C299.081716,7286.17298 296.794123,7283.89205 293.972194,7283.89205 C291.150266,7283.89205 288.862673,7286.17298 288.862673,7288.98792 M290.655732,7288.98792 C290.655732,7287.16159 292.140329,7285.67967 293.972194,7285.67967 C295.80406,7285.67967 297.288657,7287.16159 297.288657,7288.98792 C297.288657,7290.81525 295.80406,7292.29716 293.972194,7292.29716 C292.140329,7292.29716 290.655732,7290.81525 290.655732,7288.98792"
+                                id="instagram-[#fffffffffff]"
+                              ></path>
+                            </g>
+                          </g>
+                        </g>
+                      </g></svg
+                  ></a>
+                </li>
+                <li class="footer__social_item">
+                  <a href="#"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      stroke=""
+                    >
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g
+                        id="SVGRepo_tracerCarrier"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></g>
+                      <g id="SVGRepo_iconCarrier">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M19.7828 3.91825C20.1313 3.83565 20.3743 3.75444 20.5734 3.66915C20.8524 3.54961 21.0837 3.40641 21.4492 3.16524C21.7563 2.96255 22.1499 2.9449 22.4739 3.11928C22.7979 3.29366 23 3.6319 23 3.99986C23 5.08079 22.8653 5.96673 22.5535 6.7464C22.2911 7.40221 21.9225 7.93487 21.4816 8.41968C21.2954 11.7828 20.3219 14.4239 18.8336 16.4248C17.291 18.4987 15.2386 19.8268 13.0751 20.5706C10.9179 21.3121 8.63863 21.4778 6.5967 21.2267C4.56816 20.9773 2.69304 20.3057 1.38605 19.2892C1.02813 19.0108 0.902313 18.5264 1.07951 18.109C1.25671 17.6916 1.69256 17.4457 2.14144 17.5099C3.42741 17.6936 4.6653 17.4012 5.6832 16.9832C5.48282 16.8742 5.29389 16.7562 5.11828 16.6346C4.19075 15.9925 3.4424 15.1208 3.10557 14.4471C2.96618 14.1684 2.96474 13.8405 3.10168 13.5606C3.17232 13.4161 3.27562 13.293 3.40104 13.1991C2.04677 12.0814 1.49999 10.5355 1.49999 9.49986C1.49999 9.19192 1.64187 8.90115 1.88459 8.71165C1.98665 8.63197 2.10175 8.57392 2.22308 8.53896C2.12174 8.24222 2.0431 7.94241 1.98316 7.65216C1.71739 6.3653 1.74098 4.91284 2.02985 3.75733C2.1287 3.36191 2.45764 3.06606 2.86129 3.00952C3.26493 2.95299 3.6625 3.14709 3.86618 3.50014C4.94369 5.36782 6.93116 6.50943 8.78086 7.18568C9.6505 7.50362 10.4559 7.70622 11.0596 7.83078C11.1899 6.61019 11.5307 5.6036 12.0538 4.80411C12.7439 3.74932 13.7064 3.12525 14.74 2.84698C16.5227 2.36708 18.5008 2.91382 19.7828 3.91825ZM10.7484 9.80845C10.0633 9.67087 9.12171 9.43976 8.09412 9.06408C6.7369 8.56789 5.16088 7.79418 3.84072 6.59571C3.86435 6.81625 3.89789 7.03492 3.94183 7.24766C4.16308 8.31899 4.5742 8.91899 4.94721 9.10549C5.40342 9.3336 5.61484 9.8685 5.43787 10.3469C5.19827 10.9946 4.56809 11.0477 3.99551 10.9046C4.45603 11.595 5.28377 12.2834 6.66439 12.5135C7.14057 12.5929 7.49208 13.0011 7.49986 13.4838C7.50765 13.9665 7.16949 14.3858 6.69611 14.4805L5.82565 14.6546C5.95881 14.7703 6.103 14.8838 6.2567 14.9902C6.95362 15.4727 7.65336 15.6808 8.25746 15.5298C8.70991 15.4167 9.18047 15.6313 9.39163 16.0472C9.60278 16.463 9.49846 16.9696 9.14018 17.2681C8.49626 17.8041 7.74425 18.2342 6.99057 18.5911C6.63675 18.7587 6.24134 18.9241 5.8119 19.0697C6.14218 19.1402 6.48586 19.198 6.84078 19.2417C8.61136 19.4594 10.5821 19.3126 12.4249 18.6792C14.2614 18.0479 15.9589 16.9385 17.2289 15.2312C18.497 13.5262 19.382 11.1667 19.5007 7.96291C19.51 7.71067 19.6144 7.47129 19.7929 7.29281C20.2425 6.84316 20.6141 6.32777 20.7969 5.7143C20.477 5.81403 20.1168 5.90035 19.6878 5.98237C19.3623 6.04459 19.0272 5.94156 18.7929 5.70727C18.0284 4.94274 16.5164 4.43998 15.2599 4.77822C14.6686 4.93741 14.1311 5.28203 13.7274 5.89906C13.3153 6.52904 13 7.51045 13 8.9999C13 9.28288 12.8801 9.5526 12.6701 9.74221C12.1721 10.1917 11.334 9.92603 10.7484 9.80845Z"
+                          fill="#ffffff"
+                        ></path>
+                      </g></svg
+                  ></a>
+                </li>
+                <li class="footer__social_item">
+                  <a href="#"
+                    ><svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g
+                        id="SVGRepo_tracerCarrier"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></g>
+                      <g id="SVGRepo_iconCarrier">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M20 1C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H20ZM20 3C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H15V13.9999H17.0762C17.5066 13.9999 17.8887 13.7245 18.0249 13.3161L18.4679 11.9871C18.6298 11.5014 18.2683 10.9999 17.7564 10.9999H15V8.99992C15 8.49992 15.5 7.99992 16 7.99992H18C18.5523 7.99992 19 7.5522 19 6.99992V6.31393C19 5.99091 18.7937 5.7013 18.4813 5.61887C17.1705 5.27295 16 5.27295 16 5.27295C13.5 5.27295 12 6.99992 12 8.49992V10.9999H10C9.44772 10.9999 9 11.4476 9 11.9999V12.9999C9 13.5522 9.44771 13.9999 10 13.9999H12V21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20Z"
+                          fill="#ffffff"
+                        ></path>
+                      </g></svg
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="select_lang">
+          <div class="list_lang">
+            <ul>
+              <li>
+                <a href="/de/"
+                  ><img
+                    src="./img/flag/de.png"
+                    width="24"
+                    height="24"
+                    alt="flag Deutsch"
+                    loading="lazy"
+                  /><span>Deutsch</span></a
+                >
+              </li>
+            </ul>
+          </div>
+          <button aria-label="open" class="btn_lang">
+            <img
+              src="./img/flag/usa.png"
+              width="24"
+              height="24"
+              alt="flag Australia"
+              loading="lazy"
+            />
+            <span>English</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="1em"
+              viewBox="0 0 448 512"
+            >
+              <path
+                d="M201.4 137.4c12.5-12.5 32.8-12.5 45.3 0l160 160c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L224 205.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l160-160z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div class="footer__copy">
+          <p>
+            Copyright © {$smarty.now|date_format:"%Y"} {$host}. All rights
+            reserved
+          </p>
+        </div>
+      </div>
+      <div class="corner__actions">
+        <div class="form-open__btn pulse">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            stroke="#ffffff"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M3 5.5C3 14.0604 9.93959 21 18.5 21C18.8862 21 19.2691 20.9859 19.6483 20.9581C20.0834 20.9262 20.3009 20.9103 20.499 20.7963C20.663 20.7019 20.8185 20.5345 20.9007 20.364C21 20.1582 21 19.9181 21 19.438V16.6207C21 16.2169 21 16.015 20.9335 15.842C20.8749 15.6891 20.7795 15.553 20.6559 15.4456C20.516 15.324 20.3262 15.255 19.9468 15.117L16.74 13.9509C16.2985 13.7904 16.0777 13.7101 15.8683 13.7237C15.6836 13.7357 15.5059 13.7988 15.3549 13.9058C15.1837 14.0271 15.0629 14.2285 14.8212 14.6314L14 16C11.3501 14.7999 9.2019 12.6489 8 10L9.36863 9.17882C9.77145 8.93713 9.97286 8.81628 10.0942 8.64506C10.2012 8.49408 10.2643 8.31637 10.2763 8.1317C10.2899 7.92227 10.2096 7.70153 10.0491 7.26005L8.88299 4.05321C8.745 3.67376 8.67601 3.48403 8.55442 3.3441C8.44701 3.22049 8.31089 3.12515 8.15802 3.06645C7.98496 3 7.78308 3 7.37932 3H4.56201C4.08188 3 3.84181 3 3.63598 3.09925C3.4655 3.18146 3.29814 3.33701 3.2037 3.50103C3.08968 3.69907 3.07375 3.91662 3.04189 4.35173C3.01413 4.73086 3 5.11378 3 5.5Z"
+                stroke="#ffffff"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </g>
+          </svg>
+        </div>
+        <div class="go-top go-top-visible">
+          <a href="#top" aria-label="Scroll to top">
+            <svg
+              xmlns="https://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              version="1.1"
+              x="0px"
+              y="0px"
+              width="26px"
+              height="16.043px"
+              viewBox="57 35.171 26 16.043"
+              enable-background="new 57 35.171 26 16.043"
+              xml:space="preserve"
+              fill="#000"
+              stroke="#000"
+            >
+              <path
+                d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/customSelect.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/productSelect.js"></script>
+  </body>
+</html>
