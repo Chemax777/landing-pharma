@@ -7,7 +7,7 @@ $main-gradient: linear-gradient(
   rgba(0, 151, 255, 1) 100%
 );
 $bg-sections: #d6f4ff;
-$transition-show-elements: 1s all ease;
+$transition-show-elements: 0.5s all ease-out;
 
 @font-face {
   font-display: swap;
@@ -299,6 +299,9 @@ main {
 
 .anim {
   overflow: hidden !important;
+}
+.no-over {
+  overflow: visible !important;
 }
 .section__banner.anim {
   transition: $transition-show-elements;
@@ -710,7 +713,9 @@ main {
 .banner__med {
   width: 36%;
   img {
-    object-fit: cover;
+    object-fit: contain;
+    width: 100%;
+    height: auto;
   }
   @media screen and (max-width: 1140px) {
     order: -1;
@@ -1669,8 +1674,25 @@ main {
               justify-content: center;
               align-items: center;
               flex-direction: column;
+              a {
+                padding: 10px 5px !important;
+              }
+              .footer__btn {
+                margin-top: 5px;
+              }
             }
           }
+        }
+        .footer__social_list {
+          svg {
+            width: 15px !important;
+          }
+        }
+      }
+      .footer__left {
+        margin-top: 10px;
+        .footer__info_logo {
+          margin: 0 auto 20px auto !important;
         }
       }
     }
@@ -2993,6 +3015,8 @@ main {
 .main-info-product__section {
   margin-bottom: 20px;
   padding: 15px 0;
+  position: relative;
+  z-index: -1;
 }
 .main-info-product__list {
   display: flex;

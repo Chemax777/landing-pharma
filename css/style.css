@@ -348,38 +348,42 @@ main {
   overflow: hidden !important;
 }
 
+.no-over {
+  overflow: visible !important;
+}
+
 .section__banner.anim {
-  -webkit-transition: 1s all ease;
-  transition: 1s all ease;
+  -webkit-transition: 0.5s all ease-out;
+  transition: 0.5s all ease-out;
 }
 .section__banner.anim h1,
 .section__banner.anim p {
   -webkit-transform: translateY(-100px);
           transform: translateY(-100px);
   opacity: 0;
-  -webkit-transition: 1s all ease;
-  transition: 1s all ease;
+  -webkit-transition: 0.5s all ease-out;
+  transition: 0.5s all ease-out;
 }
 .section__banner.anim .features__list {
   -webkit-transform: translateX(-100px);
           transform: translateX(-100px);
   opacity: 0;
-  -webkit-transition: 1s all ease;
-  transition: 1s all ease;
+  -webkit-transition: 0.5s all ease-out;
+  transition: 0.5s all ease-out;
 }
 .section__banner.anim .banner__form {
   -webkit-transform: translateX(100px);
           transform: translateX(100px);
   opacity: 0;
-  -webkit-transition: 1s all ease;
-  transition: 1s all ease;
+  -webkit-transition: 0.5s all ease-out;
+  transition: 0.5s all ease-out;
 }
 .section__banner.anim .banner__med {
   opacity: 0;
   -webkit-transform: translateY(100px);
           transform: translateY(100px);
-  -webkit-transition: 1s all ease;
-  transition: 1s all ease;
+  -webkit-transition: 0.5s all ease-out;
+  transition: 0.5s all ease-out;
 }
 
 .section__banner.anim.element-show .features__list,
@@ -395,8 +399,8 @@ main {
 }
 
 .description-section.anim {
-  -webkit-transition: 1s all ease;
-  transition: 1s all ease;
+  -webkit-transition: 0.5s all ease-out;
+  transition: 0.5s all ease-out;
   -webkit-transform: translateY(-100px);
           transform: translateY(-100px);
   opacity: 0;
@@ -409,8 +413,8 @@ main {
 }
 
 .characteristics-wrapper.anim {
-  -webkit-transition: 1s all ease;
-  transition: 1s all ease;
+  -webkit-transition: 0.5s all ease-out;
+  transition: 0.5s all ease-out;
   -webkit-transform: translateY(100px);
           transform: translateY(100px);
   opacity: 0;
@@ -423,8 +427,8 @@ main {
 }
 
 .advantages-wrapper.anim {
-  -webkit-transition: 1s all ease;
-  transition: 1s all ease;
+  -webkit-transition: 0.5s all ease-out;
+  transition: 0.5s all ease-out;
   -webkit-transform: translateY(-100px);
           transform: translateY(-100px);
   opacity: 0;
@@ -437,8 +441,8 @@ main {
 }
 
 .table-wrapper.anim {
-  -webkit-transition: 1s all ease;
-  transition: 1s all ease;
+  -webkit-transition: 0.5s all ease-out;
+  transition: 0.5s all ease-out;
   -webkit-transform: translateY(100px);
           transform: translateY(100px);
   opacity: 0;
@@ -451,17 +455,17 @@ main {
 }
 
 .compound-wrapper.anim {
-  -webkit-transition: 1s all ease;
-  transition: 1s all ease;
+  -webkit-transition: 0.5s all ease-out;
+  transition: 0.5s all ease-out;
 }
 .compound-wrapper.anim h2 {
-  -webkit-transition: 1s all ease;
-  transition: 1s all ease;
+  -webkit-transition: 0.5s all ease-out;
+  transition: 0.5s all ease-out;
   opacity: 0;
 }
 .compound-wrapper.anim .compound__left {
-  -webkit-transition: 1s all ease;
-  transition: 1s all ease;
+  -webkit-transition: 0.5s all ease-out;
+  transition: 0.5s all ease-out;
   -webkit-transform: translateX(-100px);
           transform: translateX(-100px);
   opacity: 0;
@@ -469,8 +473,8 @@ main {
           transition-delay: 0.3s;
 }
 .compound-wrapper.anim .compound__right {
-  -webkit-transition: 1s all ease;
-  transition: 1s all ease;
+  -webkit-transition: 0.5s all ease-out;
+  transition: 0.5s all ease-out;
   -webkit-transform: translateX(100px);
           transform: translateX(100px);
   opacity: 0;
@@ -478,8 +482,8 @@ main {
           transition-delay: 0.3s;
 }
 .compound-wrapper.anim .compound__med {
-  -webkit-transition: 1s all ease;
-  transition: 1s all ease;
+  -webkit-transition: 0.5s all ease-out;
+  transition: 0.5s all ease-out;
   -webkit-transform: translateY(-100px);
           transform: translateY(-100px);
   opacity: 0;
@@ -497,40 +501,40 @@ main {
 }
 
 .reading-wrapper.anim {
-  -webkit-transition: 1s all ease;
-  transition: 1s all ease;
+  -webkit-transition: 0.5s all ease-out;
+  transition: 0.5s all ease-out;
   -webkit-transform: translateY(-100px);
           transform: translateY(-100px);
   opacity: 0;
 }
 
 .reading-wrapper.anim.element-show {
-  -webkit-transition: 1s all ease;
-  transition: 1s all ease;
+  -webkit-transition: 0.5s all ease-out;
+  transition: 0.5s all ease-out;
   -webkit-transform: translateY(0);
           transform: translateY(0);
   opacity: 1;
 }
 
 .reviews-wrapper.anim {
-  -webkit-transition: 1s all ease;
-  transition: 1s all ease;
+  -webkit-transition: 0.5s all ease-out;
+  transition: 0.5s all ease-out;
 }
 .reviews-wrapper.anim h2 {
-  -webkit-transition: 1s all ease;
-  transition: 1s all ease;
+  -webkit-transition: 0.5s all ease-out;
+  transition: 0.5s all ease-out;
   opacity: 0;
 }
 .reviews-wrapper.anim .reviews {
-  -webkit-transition: 1s all ease;
-  transition: 1s all ease;
+  -webkit-transition: 0.5s all ease-out;
+  transition: 0.5s all ease-out;
   -webkit-transform: translateX(-100px);
           transform: translateX(-100px);
   opacity: 0;
 }
 .reviews-wrapper.anim .review-btn {
-  -webkit-transition: 1s all ease;
-  transition: 1s all ease;
+  -webkit-transition: 0.5s all ease-out;
+  transition: 0.5s all ease-out;
   -webkit-transform: translateY(-100px);
           transform: translateY(-100px);
   opacity: 0;
@@ -547,8 +551,8 @@ main {
 }
 
 .order__section.anim {
-  -webkit-transition: 1s all ease;
-  transition: 1s all ease;
+  -webkit-transition: 0.5s all ease-out;
+  transition: 0.5s all ease-out;
   -webkit-transform: translateY(-100px);
           transform: translateY(-100px);
   opacity: 0;
@@ -564,8 +568,8 @@ main {
   opacity: 0;
   -webkit-transform: translateY(50px);
           transform: translateY(50px);
-  -webkit-transition: 1s all ease;
-  transition: 1s all ease;
+  -webkit-transition: 0.5s all ease-out;
+  transition: 0.5s all ease-out;
 }
 
 .anim.fade-in.element-show {
@@ -814,8 +818,10 @@ main {
   width: 36%;
 }
 .banner__med img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  height: auto;
 }
 @media screen and (max-width: 1140px) {
   .banner__med {
@@ -2051,6 +2057,23 @@ main {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .footer__main .footer__container .footer__right .footer__links ul li a,
+  .footer__main .footer__container .footer__right .footer__contacts ul li a {
+    padding: 10px 5px !important;
+  }
+  .footer__main .footer__container .footer__right .footer__links ul li .footer__btn,
+  .footer__main .footer__container .footer__right .footer__contacts ul li .footer__btn {
+    margin-top: 5px;
+  }
+  .footer__main .footer__container .footer__right .footer__social_list svg {
+    width: 15px !important;
+  }
+  .footer__main .footer__container .footer__left {
+    margin-top: 10px;
+  }
+  .footer__main .footer__container .footer__left .footer__info_logo {
+    margin: 0 auto 20px auto !important;
   }
 }
 .select_lang {
@@ -3666,6 +3689,8 @@ main {
 .main-info-product__section {
   margin-bottom: 20px;
   padding: 15px 0;
+  position: relative;
+  z-index: -1;
 }
 
 .main-info-product__list {

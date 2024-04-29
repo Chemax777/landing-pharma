@@ -310,6 +310,16 @@ function onEntry(entry) {
   });
 }
 let options = { threshold: [0.5] };
+let windowWidth = window.innerWidth;
+windowWidth <= 768
+  ? (options = { threshold: [0.2] })
+  : (options = { threshold: [0.5] });
+window.addEventListener("resize", (e) =>
+  e.target.innerWidth <= 768
+    ? (options = { threshold: [0.2] })
+    : (options = { threshold: [0.5] })
+);
 let observer = new IntersectionObserver(onEntry, options);
 let elements = document.querySelectorAll(".anim");
 elements.forEach((elm) => observer.observe(elm));
+
