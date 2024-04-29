@@ -2493,8 +2493,8 @@ main {
           justify-content: center;
   top: 0px;
   left: 0px;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   z-index: 1000;
   background: rgba(0, 0, 0, 0.2352941176);
   -webkit-backdrop-filter: blur(10px);
@@ -3841,8 +3841,8 @@ main {
   right: 0;
   bottom: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background: rgba(255, 255, 255, 0.262745098);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
