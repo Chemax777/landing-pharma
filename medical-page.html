@@ -54,10 +54,10 @@
               <a href="./all-content.html">Все про ЕД</a>
             </li>
             <li class="nav__item-mobile">
-              <a href="./all-content.html">Відгуки</a>
+              <a href="./review-page.html">Відгуки</a>
             </li>
             <li class="nav__item-mobile">
-              <a href="./all-content.html">FAQ</a>
+              <a href="./faq-page.html">FAQ</a>
             </li>
           </ul>
           <div class="header__order-btn-mobile primary-btn">
@@ -93,10 +93,10 @@
                 <a href="./all-content.html">Все про ЕД</a>
               </li>
               <li class="nav__item">
-                <a href="./all-content.html">Відгуки</a>
+                <a href="./review-page.html">Відгуки</a>
               </li>
               <li class="nav__item">
-                <a href="./all-content.html">FAQ</a>
+                <a href="./faq-page.html">FAQ</a>
               </li>
             </ul>
           </nav>
@@ -179,11 +179,7 @@
                           stroke-linejoin="round"
                         ></g>
                         <g id="SVGRepo_iconCarrier">
-                          <circle
-                            cx="256"
-                            cy="256"
-                            r="256"
-                          ></circle>
+                          <circle cx="256" cy="256" r="256"></circle>
                           <g>
                             <rect
                               x="240"
@@ -319,7 +315,7 @@
             </div>
             <section>
               <div class="container__sections">
-                <section class="product__section">
+                <section class="product__section anim fade-in">
                   <div class="product__banner">
                     <div class="product__discount">
                       <div class="discount__text">Discount</div>
@@ -333,7 +329,6 @@
                       title="Название препарата"
                       width="500"
                       height="500"
-                      loading="lazy"
                     />
                   </div>
                   <div class="product__main">
@@ -385,7 +380,6 @@
                           title="Название препарата"
                           width="500"
                           height="500"
-                          loading="lazy"
                         />
                       </div>
                       <div class="product__code">
@@ -584,7 +578,681 @@
                     </form>
                   </div>
                 </section>
-                <section class="same-products__section">
+                <section class="main-info-product__section anim fade-in">
+                  <ul class="main-info-product__list">
+                    <li class="main-info-product__item">
+                      <a href="#">
+                        <div class="main-info-product__img">
+                          <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g
+                              id="SVGRepo_tracerCarrier"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></g>
+                            <g id="SVGRepo_iconCarrier">
+                              <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M6 2C3.79086 2 2 3.79086 2 6V7C2 9.20914 3.79086 11 6 11H7C9.20914 11 11 9.20914 11 7V6C11 3.79086 9.20914 2 7 2H6ZM17 2C14.7909 2 13 3.79086 13 6V7C13 9.20914 14.7909 11 17 11H18C20.2091 11 22 9.20914 22 7V6C22 3.79086 20.2091 2 18 2H17ZM6 13C3.79086 13 2 14.7909 2 17V18C2 20.2091 3.79086 22 6 22H7C9.20914 22 11 20.2091 11 18V17C11 14.7909 9.20914 13 7 13H6ZM17 13C14.7909 13 13 14.7909 13 17V18C13 20.2091 14.7909 22 17 22H18C20.2091 22 22 20.2091 22 18V17C22 14.7909 20.2091 13 18 13H17Z"
+                                fill="#000000"
+                              ></path>
+                            </g>
+                          </svg>
+                        </div>
+                        <div class="main-info-product__text">
+                          <p class="main-info-product__title">
+                            Active substance
+                          </p>
+                          <p class="main-info-product__info">Tretinoin</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="main-info-product__item">
+                      <div class="main-info-product__img">
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <path
+                              d="M12 11C12.5523 11 13 11.4477 13 12V14H15C15.5523 14 16 14.4477 16 15C16 15.5523 15.5523 16 15 16H13V18C13 18.5523 12.5523 19 12 19C11.4477 19 11 18.5523 11 18V16H9C8.44771 16 8 15.5523 8 15C8 14.4477 8.44771 14 9 14H11V12C11 11.4477 11.4477 11 12 11Z"
+                              fill="#0F0F0F"
+                            ></path>
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M8 1C6.89543 1 6 1.89543 6 3V4C6 5.10457 6.89543 6 8 6V8.38197L5.65836 9.55279C4.64201 10.061 4 11.0998 4 12.2361V20C4 21.6569 5.34315 23 7 23H17C18.6569 23 20 21.6569 20 20V12.2361C20 11.0998 19.358 10.061 18.3416 9.55279L16 8.38197V6C17.1046 6 18 5.10457 18 4V3C18 1.89543 17.1046 1 16 1H8ZM14 6H10V8.38197C10 9.13951 9.57199 9.83204 8.89443 10.1708L6.55279 11.3416C6.214 11.511 6 11.8573 6 12.2361V20C6 20.5523 6.44772 21 7 21H17C17.5523 21 18 20.5523 18 20V12.2361C18 11.8573 17.786 11.511 17.4472 11.3416L15.1056 10.1708C14.428 9.83204 14 9.13951 14 8.38197V6ZM8 4H16V3H8V4Z"
+                              fill="#0F0F0F"
+                            ></path>
+                          </g>
+                        </svg>
+                      </div>
+                      <div class="main-info-product__text">
+                        <p class="main-info-product__title">Form</p>
+                        <p class="main-info-product__info">Tube</p>
+                      </div>
+                    </li>
+                    <li class="main-info-product__item">
+                      <div class="main-info-product__img">
+                        <svg
+                          fill="#000000"
+                          height="200px"
+                          width="200px"
+                          version="1.1"
+                          id="Layer_1"
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          viewBox="0 0 128 128"
+                          xml:space="preserve"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <path
+                              d="M109.4,37.2c7.4,1.8,12.9,8.5,12.9,16.4v61c0,1.9-1.5,3.4-3.4,3.4H85.8c-1.9,0-3.4-1.5-3.4-3.4v-61c0-8,5.5-14.7,13-16.4 l0-27.3h14.1V37.2z"
+                            ></path>
+                            <path
+                              d="M60.4,113.9l-19.6-3.8V72.9l29.1-29.8H5.2l29.1,29.8v37.2l-19.6,3.8c0,0-2.4,0.4-2.4,3.8h50.5 C62.8,114.3,60.4,113.9,60.4,113.9"
+                            ></path>
+                          </g>
+                        </svg>
+                      </div>
+                      <div class="main-info-product__text">
+                        <p class="main-info-product__title">With Alcohol</p>
+                        <p class="main-info-product__info">Banned</p>
+                      </div>
+                    </li>
+                    <li class="main-info-product__item">
+                      <div class="main-info-product__img">
+                        <svg viewBox="0 0 640 512">
+                          <path
+                            d="M0 224.2C0 100.6 100.2 0 224 0h24c95.2 0 181.2 69.3 197.3 160.2c2.3 13 6.8 25.7 15.1 36l42 52.6c6.2 7.8 9.6 17.4 9.6 27.4c0 24.2-19.6 43.8-43.8 43.8H448v0 32L339.2 365.6c-11 1.4-19.2 10.7-19.2 21.8c0 11.6 9 21.2 20.6 21.9L448 416v16c0 26.5-21.5 48-48 48H320v8c0 13.3-10.7 24-24 24H256v0H96c-17.7 0-32-14.3-32-32V407.3c0-16.7-6.9-32.5-17.1-45.8C16.6 322.4 0 274.1 0 224.2zm352-.2a32 32 0 1 0 0-64 32 32 0 1 0 0 64zM464 384a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zm152-24a24 24 0 1 1 0 48 24 24 0 1 1 0-48zM592 480a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zM552 312a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm40-24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zM552 408a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"
+                          ></path>
+                        </svg>
+                      </div>
+                      <div class="main-info-product__text">
+                        <p class="main-info-product__title">Allergy</p>
+                        <p class="main-info-product__info">Carefully</p>
+                      </div>
+                    </li>
+                    <li class="main-info-product__item">
+                      <div class="main-info-product__img">
+                        <svg class="card__icon" viewBox="0 0 384 512">
+                          <path
+                            d="M192 0a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM120 383c-13.8-3.6-24-16.1-24-31V296.9l-4.6 7.6c-9.1 15.1-28.8 20-43.9 10.9s-20-28.8-10.9-43.9l58.3-97c15-24.9 40.3-41.5 68.7-45.6c4.1-.6 8.2-1 12.5-1h1.1 12.5H192c1.4 0 2.8 .1 4.1 .3c35.7 2.9 65.4 29.3 72.1 65l6.1 32.5c44.3 8.6 77.7 47.5 77.7 94.3v32c0 17.7-14.3 32-32 32H304 264v96c0 17.7-14.3 32-32 32s-32-14.3-32-32V384h-8-8v96c0 17.7-14.3 32-32 32s-32-14.3-32-32V383z"
+                          ></path>
+                        </svg>
+                      </div>
+                      <div class="main-info-product__text">
+                        <p class="main-info-product__title">Pregnancy</p>
+                        <p class="main-info-product__info">Banned</p>
+                      </div>
+                    </li>
+                    <li class="main-info-product__item">
+                      <div class="main-info-product__img">
+                        <svg
+                          viewBox="0 0 48 48"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <path
+                              d="M42.9822 28.942C42.9835 30.542 41.6646 31.8002 39.9846 31.8016C38.3046 31.803 36.9835 30.5469 36.9822 28.9469C36.9809 27.3469 39.978 23.8016 39.978 23.8016C39.978 23.8016 42.981 27.4563 42.9822 28.942Z"
+                              fill="#333333"
+                            ></path>
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M24.1257 17.5979L41.8448 17.5833C43.0201 17.5824 43.9737 18.5344 43.9747 19.7097C43.9756 20.885 43.0236 21.8385 41.8483 21.8395L41.8432 21.8395C41.9291 21.672 41.9761 21.4901 41.976 21.3C41.9753 20.4716 41.0793 19.8007 39.9747 19.8016C38.8702 19.8025 37.9753 20.4748 37.976 21.3033C37.9761 21.4934 38.0234 21.6752 38.1096 21.8426L25.0875 21.8532L25.0884 22.9173L31.9773 22.9116C33.0818 22.9107 33.978 23.8054 33.9789 24.91L33.9791 25.1661C33.98 26.2707 33.0853 27.1669 31.9808 27.1678L25.0919 27.1734L25.0928 28.2375L30.8705 28.2327C31.9751 28.2318 32.8713 29.1265 32.8722 30.2311L32.8724 30.4873C32.8733 31.5918 31.9786 32.488 30.874 32.4889L22.874 32.4954L22.8749 33.5595L26.986 33.5561C28.0906 33.5552 28.9867 34.4499 28.9876 35.5545L28.9878 35.8106C28.9887 36.9152 28.094 37.8114 26.9895 37.8123L19.545 37.8184L15.4457 37.8217C9.1186 37.8269 3.98529 32.702 3.98011 26.3749C3.97629 21.7203 6.78906 17.5261 11.0968 15.763L23.9795 10.4902C24.9531 10.0917 26.073 10.402 26.7027 11.2448C27.583 12.423 27.1516 14.113 25.8142 14.725L23.7088 15.6885C22.7317 16.1357 23.0512 17.5987 24.1257 17.5979Z"
+                              fill="#333333"
+                            ></path>
+                          </g>
+                        </svg>
+                      </div>
+                      <div class="main-info-product__text">
+                        <p class="main-info-product__title">Diabetic</p>
+                        <p class="main-info-product__info">Carefully</p>
+                      </div>
+                    </li>
+                    <li class="main-info-product__item">
+                      <div class="main-info-product__img">
+                        <svg
+                          fill="#000000"
+                          viewBox="0 -9.81 122.88 122.88"
+                          version="1.1"
+                          id="Layer_1"
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          style="enable-background: new 0 0 122.88 103.26"
+                          xml:space="preserve"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <style type="text/css">
+                              .st0 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                              }
+                            </style>
+                            <g>
+                              <path
+                                class="st0"
+                                d="M117.95,42.04v61.22h-14.31V93.8h-84.4v9.46l-14.31,0V42.04H0v-9.41h12.04l6.71-20.88 C20.73,5.59,24.03,0,30.49,0h64.39c6.46,0,10.18,5.48,11.74,11.74l5.19,20.88h11.06v9.41H117.95L117.95,42.04L117.95,42.04z M40.01,74.91h42.27v9.97l-42.27,0V74.91L40.01,74.91L40.01,74.91z M9.72,51.69c10.77,0.34,17.36,4.85,19.05,14.26H9.72V51.69 L9.72,51.69z M111.8,51.69c-10.77,0.34-17.36,4.85-19.05,14.26h19.05V51.69L111.8,51.69z M17.18,32.62h88.52l-3.79-17.51 c-1.04-4.8-4.03-8.95-8.95-8.95H31.74c-4.92,0-7.44,4.26-8.95,8.95L17.18,32.62L17.18,32.62L17.18,32.62z"
+                              ></path>
+                            </g>
+                          </g>
+                        </svg>
+                      </div>
+                      <div class="main-info-product__text">
+                        <p class="main-info-product__title">Drivers</p>
+                        <p class="main-info-product__info">Carefully</p>
+                      </div>
+                    </li>
+                    <li class="main-info-product__item">
+                      <div class="main-info-product__img">
+                        <svg
+                          fill="#000000"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <path
+                              d="M18,1H6A3,3,0,0,0,3,4V22a1,1,0,0,0,1.8.6L6.829,19.9l1.276,2.552a1,1,0,0,0,.8.549.981.981,0,0,0,.89-.4L12,19.667,14.2,22.6a.983.983,0,0,0,.89.4,1,1,0,0,0,.8-.549L17.171,19.9,19.2,22.6a1,1,0,0,0,.8.4,1,1,0,0,0,1-1V4A3,3,0,0,0,18,1Zm1,18-1.2-1.6a.983.983,0,0,0-.89-.4,1,1,0,0,0-.8.549l-1.276,2.552L12.8,17.4a1,1,0,0,0-1.6,0L9.171,20.105,7.9,17.553A1,1,0,0,0,7.09,17a.987.987,0,0,0-.89.4L5,19V4A1,1,0,0,1,6,3H18a1,1,0,0,1,1,1ZM17,9a1,1,0,0,1-1,1H8A1,1,0,0,1,8,8h8A1,1,0,0,1,17,9Zm-4,4a1,1,0,0,1-1,1H8a1,1,0,0,1,0-2h4A1,1,0,0,1,13,13Z"
+                            ></path>
+                          </g>
+                        </svg>
+                      </div>
+                      <div class="main-info-product__text">
+                        <p class="main-info-product__title">
+                          Medical prescription
+                        </p>
+                        <p class="main-info-product__info">Over the counter</p>
+                      </div>
+                    </li>
+                  </ul>
+                </section>
+                <div class="container__sections">
+                  <section class="anim fade-in">
+                    <h2 class="no-border">Lorem</h2>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Itaque nobis modi corrupti quisquam! Soluta ipsam porro
+                      voluptatem facere nemo iure est. Iste est culpa aliquid,
+                      minima obcaecati qui a repellendus? Obcaecati voluptate
+                      rem totam dolorem optio repellat dolorum amet ducimus
+                      eveniet ut blanditiis placeat sunt, ea numquam ullam at.
+                      Iusto minus, modi a id quos iure quis excepturi ab
+                      voluptate?
+                    </p>
+                    <div class="table-content">
+                      <table>
+                        <thead>
+                          <tr>
+                            <th>Характеристика</th>
+                            <th>Описание</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Lorem</td>
+                            <td>
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit.
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Lorem</td>
+                            <td>
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit.
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Lorem</td>
+                            <td>
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit.
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Lorem</td>
+                            <td>
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit.
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Lorem</td>
+                            <td>
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit.
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Lorem</td>
+                            <td>
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit.
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </section>
+                  <section class="anim fade-in">
+                    <h2 class="no-border">Lorem, ipsum dolor.</h2>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Beatae, officia asperiores. Officia mollitia libero
+                      impedit labore repellat quisquam quasi ipsa magni
+                      laboriosam nihil? Dignissimos eos dicta hic voluptas
+                      doloremque! Ipsa? Ex veritatis, itaque placeat dolorum
+                      tempora, magnam provident iste vel vero incidunt quaerat
+                      quia commodi vitae. Numquam maiores distinctio, fugit ab,
+                      ipsam temporibus ipsa id, quos veritatis reprehenderit
+                      repellat harum? Temporibus, dolores. Rerum, laboriosam
+                      reprehenderit! Voluptate, libero ipsa. Architecto, quas
+                      tempore. Deserunt sequi officia necessitatibus enim minus,
+                      repudiandae nihil, aliquid eum porro atque, cupiditate
+                      placeat debitis illum! Quibusdam, a natus! Maxime animi
+                      eligendi repellat nulla hic magni voluptatum error
+                      accusamus cumque neque beatae sapiente, consectetur rerum
+                      eos a. Veniam, fugit a nesciunt non iure reiciendis!
+                      Officia quod eveniet non. Quo.
+                    </p>
+                    <ul>
+                      <li>Lorem ipsum dolor sit amet consectetur.</li>
+                      <li>Lorem ipsum dolor sit amet consectetur.</li>
+                      <li>Lorem ipsum dolor sit amet consectetur.</li>
+                    </ul>
+                  </section>
+                  <section class="anim fade-in">
+                    <h2 class="no-border">
+                      Lorem ipsum dolor sit amet consectetur.
+                    </h2>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Vel, rerum?
+                    </p>
+                    <ul>
+                      <li>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Illum, quas.
+                      </li>
+                      <li>
+                        Cupiditate dolorem quibusdam quia iste assumenda eos
+                        quas esse facere.
+                      </li>
+                      <li>
+                        Quibusdam omnis necessitatibus temporibus consequatur.
+                        Laudantium dolores a nostrum laboriosam?
+                      </li>
+                      <li>
+                        Dignissimos possimus nemo eos error minus provident
+                        recusandae facilis sunt.
+                      </li>
+                      <li>
+                        Sint laborum quos ex eligendi minima eius, vitae
+                        explicabo asperiores.
+                      </li>
+                      <li>
+                        Ducimus laudantium debitis excepturi quibusdam. Nemo
+                        ipsam accusamus non dolorem?
+                      </li>
+                    </ul>
+                  </section>
+                  <section class="anim fade-in">
+                    <h2 class="no-border">FAQ</h2>
+                    <ul class="acc-list">
+                      <li class="acc-item">
+                        <div
+                          class="acc-inner"
+                          itemprop="mainEntity"
+                          itemscope=""
+                          itemtype="https://schema.org/Question"
+                        >
+                          <button
+                            aria-label="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+                            class="acc-head"
+                          >
+                            <h3 class="acc-title" itemprop="name">
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit.
+                            </h3>
+                            <span class="arrow"
+                              ><img
+                                loading="lazy"
+                                src="./img/icons/arrowFaq.svg"
+                                alt="icon arrow"
+                                width="25"
+                                height="25"
+                            /></span>
+                          </button>
+                          <div
+                            class="acc-body"
+                            itemprop="acceptedAnswer"
+                            itemscope=""
+                            itemtype="https://schema.org/Answer"
+                          >
+                            <div itemprop="text">
+                              <p>
+                                Lorem ipsum, dolor sit amet consectetur
+                                adipisicing elit. Molestias, autem culpa. Esse
+                                saepe sit dolor beatae eligendi illo, nam at
+                                reprehenderit expedita in fugit tenetur ipsam
+                                ipsa repellendus earum commodi! Odio illum
+                                tempora nostrum cum minima enim deserunt amet
+                                quidem recusandae porro. Necessitatibus quia
+                                dolorem dolorum amet recusandae, illo repellat
+                                sequi labore animi nesciunt distinctio nemo. In
+                                sint ipsa quisquam. Porro quas suscipit nisi
+                                fugit molestiae harum earum quis sequi magni
+                                reiciendis vitae repellendus aliquam accusamus,
+                                ex soluta aspernatur expedita doloremque
+                                nesciunt quos ad eveniet nostrum totam? Ipsum,
+                                consectetur ut!
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="acc-item">
+                        <div
+                          class="acc-inner"
+                          itemprop="mainEntity"
+                          itemscope=""
+                          itemtype="https://schema.org/Question"
+                        >
+                          <button
+                            aria-label="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+                            class="acc-head"
+                          >
+                            <h3 class="acc-title" itemprop="name">
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit.
+                            </h3>
+                            <span class="arrow"
+                              ><img
+                                loading="lazy"
+                                src="./img/icons/arrowFaq.svg"
+                                alt="icon arrow"
+                                width="25"
+                                height="25"
+                            /></span>
+                          </button>
+                          <div
+                            class="acc-body"
+                            itemprop="acceptedAnswer"
+                            itemscope=""
+                            itemtype="https://schema.org/Answer"
+                          >
+                            <div itemprop="text">
+                              <p>
+                                Lorem ipsum, dolor sit amet consectetur
+                                adipisicing elit. Molestias, autem culpa. Esse
+                                saepe sit dolor beatae eligendi illo, nam at
+                                reprehenderit expedita in fugit tenetur ipsam
+                                ipsa repellendus earum commodi! Odio illum
+                                tempora nostrum cum minima enim deserunt amet
+                                quidem recusandae porro. Necessitatibus quia
+                                dolorem dolorum amet recusandae, illo repellat
+                                sequi labore animi nesciunt distinctio nemo. In
+                                sint ipsa quisquam. Porro quas suscipit nisi
+                                fugit molestiae harum earum quis sequi magni
+                                reiciendis vitae repellendus aliquam accusamus,
+                                ex soluta aspernatur expedita doloremque
+                                nesciunt quos ad eveniet nostrum totam? Ipsum,
+                                consectetur ut!
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="acc-item">
+                        <div
+                          class="acc-inner"
+                          itemprop="mainEntity"
+                          itemscope=""
+                          itemtype="https://schema.org/Question"
+                        >
+                          <button
+                            aria-label="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+                            class="acc-head"
+                          >
+                            <h3 class="acc-title" itemprop="name">
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit.
+                            </h3>
+                            <span class="arrow"
+                              ><img
+                                loading="lazy"
+                                src="./img/icons/arrowFaq.svg"
+                                alt="icon arrow"
+                                width="25"
+                                height="25"
+                            /></span>
+                          </button>
+                          <div
+                            class="acc-body"
+                            itemprop="acceptedAnswer"
+                            itemscope=""
+                            itemtype="https://schema.org/Answer"
+                          >
+                            <div itemprop="text">
+                              <p>
+                                Lorem ipsum, dolor sit amet consectetur
+                                adipisicing elit. Molestias, autem culpa. Esse
+                                saepe sit dolor beatae eligendi illo, nam at
+                                reprehenderit expedita in fugit tenetur ipsam
+                                ipsa repellendus earum commodi! Odio illum
+                                tempora nostrum cum minima enim deserunt amet
+                                quidem recusandae porro. Necessitatibus quia
+                                dolorem dolorum amet recusandae, illo repellat
+                                sequi labore animi nesciunt distinctio nemo. In
+                                sint ipsa quisquam. Porro quas suscipit nisi
+                                fugit molestiae harum earum quis sequi magni
+                                reiciendis vitae repellendus aliquam accusamus,
+                                ex soluta aspernatur expedita doloremque
+                                nesciunt quos ad eveniet nostrum totam? Ipsum,
+                                consectetur ut!
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="acc-item">
+                        <div
+                          class="acc-inner"
+                          itemprop="mainEntity"
+                          itemscope=""
+                          itemtype="https://schema.org/Question"
+                        >
+                          <button
+                            aria-label="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+                            class="acc-head"
+                          >
+                            <h3 class="acc-title" itemprop="name">
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit.
+                            </h3>
+                            <span class="arrow"
+                              ><img
+                                loading="lazy"
+                                src="./img/icons/arrowFaq.svg"
+                                alt="icon arrow"
+                                width="25"
+                                height="25"
+                            /></span>
+                          </button>
+                          <div
+                            class="acc-body"
+                            itemprop="acceptedAnswer"
+                            itemscope=""
+                            itemtype="https://schema.org/Answer"
+                          >
+                            <div itemprop="text">
+                              <p>
+                                Lorem ipsum, dolor sit amet consectetur
+                                adipisicing elit. Molestias, autem culpa. Esse
+                                saepe sit dolor beatae eligendi illo, nam at
+                                reprehenderit expedita in fugit tenetur ipsam
+                                ipsa repellendus earum commodi! Odio illum
+                                tempora nostrum cum minima enim deserunt amet
+                                quidem recusandae porro. Necessitatibus quia
+                                dolorem dolorum amet recusandae, illo repellat
+                                sequi labore animi nesciunt distinctio nemo. In
+                                sint ipsa quisquam. Porro quas suscipit nisi
+                                fugit molestiae harum earum quis sequi magni
+                                reiciendis vitae repellendus aliquam accusamus,
+                                ex soluta aspernatur expedita doloremque
+                                nesciunt quos ad eveniet nostrum totam? Ipsum,
+                                consectetur ut!
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="acc-item">
+                        <div
+                          class="acc-inner"
+                          itemprop="mainEntity"
+                          itemscope=""
+                          itemtype="https://schema.org/Question"
+                        >
+                          <button
+                            aria-label="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+                            class="acc-head"
+                          >
+                            <h3 class="acc-title" itemprop="name">
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit.
+                            </h3>
+                            <span class="arrow"
+                              ><img
+                                loading="lazy"
+                                src="./img/icons/arrowFaq.svg"
+                                alt="icon arrow"
+                                width="25"
+                                height="25"
+                            /></span>
+                          </button>
+                          <div
+                            class="acc-body"
+                            itemprop="acceptedAnswer"
+                            itemscope=""
+                            itemtype="https://schema.org/Answer"
+                          >
+                            <div itemprop="text">
+                              <p>
+                                Lorem ipsum, dolor sit amet consectetur
+                                adipisicing elit. Molestias, autem culpa. Esse
+                                saepe sit dolor beatae eligendi illo, nam at
+                                reprehenderit expedita in fugit tenetur ipsam
+                                ipsa repellendus earum commodi! Odio illum
+                                tempora nostrum cum minima enim deserunt amet
+                                quidem recusandae porro. Necessitatibus quia
+                                dolorem dolorum amet recusandae, illo repellat
+                                sequi labore animi nesciunt distinctio nemo. In
+                                sint ipsa quisquam. Porro quas suscipit nisi
+                                fugit molestiae harum earum quis sequi magni
+                                reiciendis vitae repellendus aliquam accusamus,
+                                ex soluta aspernatur expedita doloremque
+                                nesciunt quos ad eveniet nostrum totam? Ipsum,
+                                consectetur ut!
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="acc-item">
+                        <div
+                          class="acc-inner"
+                          itemprop="mainEntity"
+                          itemscope=""
+                          itemtype="https://schema.org/Question"
+                        >
+                          <button
+                            aria-label="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+                            class="acc-head"
+                          >
+                            <h3 class="acc-title" itemprop="name">
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit.
+                            </h3>
+                            <span class="arrow"
+                              ><img
+                                loading="lazy"
+                                src="./img/icons/arrowFaq.svg"
+                                alt="icon arrow"
+                                width="25"
+                                height="25"
+                            /></span>
+                          </button>
+                          <div
+                            class="acc-body"
+                            itemprop="acceptedAnswer"
+                            itemscope=""
+                            itemtype="https://schema.org/Answer"
+                          >
+                            <div itemprop="text">
+                              <p>
+                                Lorem ipsum, dolor sit amet consectetur
+                                adipisicing elit. Molestias, autem culpa. Esse
+                                saepe sit dolor beatae eligendi illo, nam at
+                                reprehenderit expedita in fugit tenetur ipsam
+                                ipsa repellendus earum commodi! Odio illum
+                                tempora nostrum cum minima enim deserunt amet
+                                quidem recusandae porro. Necessitatibus quia
+                                dolorem dolorum amet recusandae, illo repellat
+                                sequi labore animi nesciunt distinctio nemo. In
+                                sint ipsa quisquam. Porro quas suscipit nisi
+                                fugit molestiae harum earum quis sequi magni
+                                reiciendis vitae repellendus aliquam accusamus,
+                                ex soluta aspernatur expedita doloremque
+                                nesciunt quos ad eveniet nostrum totam? Ipsum,
+                                consectetur ut!
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </section>
+                </div>
+                <section class="same-products__section anim fade-in">
                   <h2 class="no-border">Similar drugs</h2>
                   <ul class="products__list">
                     <li
@@ -879,7 +1547,7 @@
                     </li>
                   </ul>
                 </section>
-                <section class="review__section">
+                <section class="review__section anim fade-in">
                   <h2 class="no-border" id="reviews">Reviews (4)</h2>
                   <div class="reviews__section-product">
                     <div class="reviews">

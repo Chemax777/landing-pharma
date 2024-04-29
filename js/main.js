@@ -19,6 +19,9 @@ const accordBtns = document.querySelectorAll(".acc-head");
 const selectMainOrder = document.querySelector("#select-1");
 const counterOrderSection = document.querySelector(".counter-order");
 const orderOptions = document.querySelectorAll(".order-option");
+const feedbackBtn = document.querySelector(".review-btn");
+const modalComment = document.querySelector(".modal__comment");
+const closeCommentModalBtn = document.querySelector(".close-comment-modal");
 
 let validation = {
   email: false,
@@ -274,6 +277,30 @@ if (orderOptions) {
   });
 }
 
+if (feedbackBtn) {
+  feedbackBtn.addEventListener("click", () => {
+    const body = document.querySelector("body");
+    modalComment.classList.add("show-modal-comment");
+    body.classList.toggle("scroll-lock");
+  });
+}
+if (modalComment) {
+  modalComment.addEventListener("click", (e) => {
+    if (e.target.classList.contains("modal__comment")) {
+      const body = document.querySelector("body");
+      body.classList.toggle("scroll-lock");
+      modalComment.classList.remove("show-modal-comment");
+    }
+  });
+}
+
+if (closeCommentModalBtn) {
+  closeCommentModalBtn.addEventListener("click", () => {
+    const body = document.querySelector("body");
+    body.classList.toggle("scroll-lock");
+    modalComment.classList.remove("show-modal-comment");
+  });
+}
 // Animation
 function onEntry(entry) {
   entry.forEach((change) => {

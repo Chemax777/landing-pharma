@@ -1,14 +1,23 @@
-const selectDose = new ItcCustomSelect("#select-dose");
+const selectDoseSelector = document.querySelector("#select-dose");
 const quantityInput = document.querySelector("#quantity");
 const countSection = document.querySelector(".count__section");
 const newPriceSection = document.querySelector(".new-price_number");
 const oldPriceSection = document.querySelector(".old-price_number");
 const selectOptions = document.querySelectorAll(".itc-select__option");
 
-let priceTotal = document.querySelector(".new-price_number").textContent;
+let priceTotalSelector = document.querySelector(".new-price_number");
+let priceTotal = priceTotalSelector
+  ? document.querySelector(".new-price_number").textContent
+  : null;
 let counter = 1;
-let selectedPrice = document.querySelector(".new-price_number").textContent;
-let discount = document.querySelector(".discount__text-value").textContent;
+let selectedPriceSelector = document.querySelector(".new-price_number");
+let selectedPrice = selectedPriceSelector
+  ? document.querySelector(".new-price_number").textContent
+  : null;
+let discountSelector = document.querySelector(".discount__text-value");
+let discount = discountSelector
+  ? document.querySelector(".discount__text-value").textContent
+  : null;
 let oldPrice;
 
 const updateQuantity = (newValue) => {
@@ -59,32 +68,39 @@ function handleFileSelect(event) {
 
 const uploadInput = document.querySelector("#upload-photo");
 
+if (selectDoseSelector) {
+  const selectDose = new ItcCustomSelect("#select-dose");
+}
+
 selectOptions.forEach((option) => {
   option.addEventListener("click", (e) => {
     selectedPrice = e.target.dataset.price;
     updatePrice();
   });
 });
+if (countSection) {
+  countSection.addEventListener("click", (e) => {
+    if (e.target.classList.contains("btn-plus")) {
+      ++counter;
+      updateQuantity(counter);
+      updatePrice();
+    }
+    if (e.target.classList.contains("btn-minus")) {
+      if (counter <= 1) return;
+      --counter;
+      updateQuantity(counter);
+      updatePrice();
+    }
+  });
+}
 
-countSection.addEventListener("click", (e) => {
-  if (e.target.classList.contains("btn-plus")) {
-    ++counter;
+if (quantityInput) {
+  quantityInput.addEventListener("input", (e) => {
+    counter = e.target.value;
     updateQuantity(counter);
     updatePrice();
-  }
-  if (e.target.classList.contains("btn-minus")) {
-    if (counter <= 1) return;
-    --counter;
-    updateQuantity(counter);
-    updatePrice();
-  }
-});
-
-quantityInput.addEventListener("input", (e) => {
-  counter = e.target.value;
-  updateQuantity(counter);
-  updatePrice();
-});
+  });
+}
 
 nameReviewInput.addEventListener("blur", (e) => {
   validationOnEmpty(e, "name");
