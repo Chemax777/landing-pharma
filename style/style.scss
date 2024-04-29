@@ -2121,6 +2121,7 @@ main {
   align-items: flex-start;
   gap: 50px;
   margin: 25px 0;
+  padding: 15px 0;
   @media screen and (max-width: 840px) {
     flex-direction: column;
     justify-content: center;
@@ -2991,6 +2992,7 @@ main {
 }
 .main-info-product__section {
   margin-bottom: 20px;
+  padding: 15px 0;
 }
 .main-info-product__list {
   display: flex;
