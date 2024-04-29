@@ -3132,6 +3132,7 @@ main {
     background: #0c8ede;
     max-width: 500px;
     position: relative;
+    margin: 10px;
     @media screen and (max-width: 768px) {
       overflow-y: scroll;
     }
@@ -3154,6 +3155,11 @@ main {
           background: #ff0008;
           padding: 3px 10px;
           border-radius: 5px;
+        }
+        @media screen and (max-width: 1024px) {
+          .comment__textarea {
+            height: auto;
+          }
         }
       }
     }

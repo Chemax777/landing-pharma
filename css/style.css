@@ -3858,6 +3858,7 @@ main {
   background: #0c8ede;
   max-width: 500px;
   position: relative;
+  margin: 10px;
 }
 @media screen and (max-width: 768px) {
   .modal__comment .review__comment {
@@ -3881,6 +3882,11 @@ main {
   background: #ff0008;
   padding: 3px 10px;
   border-radius: 5px;
+}
+@media screen and (max-width: 1024px) {
+  .modal__comment .review__comment .comment__form .comment__input_wrapper .comment__textarea {
+    height: auto;
+  }
 }
 
 .modal__comment.show-modal-comment {
