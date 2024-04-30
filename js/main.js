@@ -4,7 +4,7 @@ const closeMobileBtn = document.querySelector(".close-mobile");
 const selectLang = document.querySelector(".select_lang");
 const [...itemsMobile] = document.querySelectorAll(".nav__item-mobile");
 const orderBtnMobile = document.querySelector(".header__order-btn-mobile");
-const openFormBtn = document.querySelector(".form-open__btn");
+const openFormBtn = document.querySelector(".corner-action__order-btn");
 const closeFormBtn = document.querySelector(".close-modal-btn");
 const modal = document.querySelector(".modal-wrapper");
 const modalWrapper = document.querySelector(".modal-wrapper");
@@ -22,6 +22,7 @@ const orderOptions = document.querySelectorAll(".order-option");
 const feedbackBtn = document.querySelector(".review-btn");
 const modalComment = document.querySelector(".modal__comment");
 const closeCommentModalBtn = document.querySelector(".close-comment-modal");
+const closeBottomSection = document.querySelector(".close-corner-order");
 
 let validation = {
   email: false,
@@ -85,7 +86,7 @@ if (selectLang) {
 }
 
 window.addEventListener("scroll", () => {
-  const goTop = document.querySelector(".corner__actions");
+  const goTop = document.querySelector(".go-top");
   if (window.scrollY > 80) {
     goTop.classList.add("go-top-visible");
   } else {
@@ -301,6 +302,12 @@ if (closeCommentModalBtn) {
     modalComment.classList.remove("show-modal-comment");
   });
 }
+if (closeBottomSection) {
+  closeBottomSection.addEventListener("click", () => {
+    const bottomSection = document.querySelector(".corner-action__order");
+    bottomSection.classList.add("close-corner-section")
+  });
+}
 // Animation
 function onEntry(entry) {
   entry.forEach((change) => {
@@ -309,7 +316,7 @@ function onEntry(entry) {
     }
   });
 }
-let options = { threshold: [0.5] };
+let options = { threshold: [0.4] };
 let windowWidth = window.innerWidth;
 windowWidth <= 768
   ? (options = { threshold: [0.2] })
@@ -317,9 +324,8 @@ windowWidth <= 768
 window.addEventListener("resize", (e) =>
   e.target.innerWidth <= 768
     ? (options = { threshold: [0.2] })
-    : (options = { threshold: [0.5] })
+    : (options = { threshold: [0.4] })
 );
 let observer = new IntersectionObserver(onEntry, options);
 let elements = document.querySelectorAll(".anim");
 elements.forEach((elm) => observer.observe(elm));
-

@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy</title>
+    <link rel="stylesheet" href="../style/reset.css" />
+    <link rel="stylesheet" href="../style/normalize.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="burger">
+        <img
+          src="./img/icons/burger.svg"
+          width="35"
+          height="35"
+          alt="burger icon"
+        />
+      </div>
+      <aside>
+        <nav class="header__nav-mobile">
+          <div class="nav__logo-mobile">
+            <a href="./">
+              <img
+                src="./img/logo.jpg"
+                alt="logo"
+                width="160"
+                height="75"
+                loading="lazy"
+              />
+            </a>
+            <div class="close-mobile">
+              <img
+                src="./img/icons/close.svg"
+                alt="close"
+                width="35"
+                height="35"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <ul class="nav__list-mobile">
+            <li class="nav__item-mobile">
+              <a href="./instruction-page.html">Інструкція</a>
+            </li>
+            <li class="nav__item-mobile">
+              <a href="./beware-of-counterfeits.html">Уникайте підробок</a>
+            </li>
+            <li class="nav__item-mobile">
+              <a href="./shiping-page.html">Доставка</a>
+            </li>
+            <li class="nav__item-mobile">
+              <a href="./all-about-ed-page.html">Все про ЕД</a>
+            </li>
+            <li class="nav__item-mobile">
+              <a href="./review-page.html">Відгуки</a>
+            </li>
+            <li class="nav__item-mobile">
+              <a href="./faq-page.html">FAQ</a>
+            </li>
+          </ul>
+          <!-- <div class="header__order-btn-mobile primary-btn">
+              <a href="#order">Заказать</a>
+            </div> -->
+        </nav>
+      </aside>
+      <div class="header">
+        <div class="header__container">
+          <div class="header__logo">
+            <a href="./">
+              <img
+                src="./img/logo.jpg"
+                alt="logo"
+                width="192"
+                height="90"
+                loading="lazy"
+              />
+            </a>
+          </div>
+          <nav class="header__nav-desktop">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="./instruction-page.html">Інструкція</a>
+              </li>
+              <li class="nav__item">
+                <a href="./beware-of-counterfeits.html">Уникайте підробок</a>
+              </li>
+              <li class="nav__item">
+                <a href="./shiping-page.html">Доставка</a>
+              </li>
+              <li class="nav__item">
+                <a href="./all-about-ed-page.html">Все про ЕД</a>
+              </li>
+              <li class="nav__item">
+                <a href="./review-page.html">Відгуки</a>
+              </li>
+              <li class="nav__item">
+                <a href="./faq-page.html">FAQ</a>
+              </li>
+            </ul>
+          </nav>
+          <!-- <div class="header__order-btn primary-btn">
+              <a href="#order">Заказать</a>
+            </div> -->
+        </div>
+      </div>
+      <div class="aside-overlay"></div>
+      <div class="modal-wrapper">
+        <div class="modal">
+          <div class="banner__form">
+            <div class="close-modal-btn">
+              <svg
+                fill="#fff"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z"
+                  fill="#fff"
+                />
+              </svg>
+            </div>
+            <div class="title__form">ЧТОБЫ ЗАКАЗАТЬ ПРОСТО ЗАПОЛНИТЕ ФОРМУ</div>
+            <form class="form-wrapper">
+              <div class="form__text">
+                <div>Закажите со скидкой <span class="discont">65%</span></div>
+                <div>осталось <span>10</span> упаковок</div>
+                <!-- <div class="region">
+                    Ваш регион
+                    <span>
+                      <img
+                        src="./img/flag/usa.png"
+                        alt="название страны"
+                        width="18"
+                        height="18"
+                      />
+                      страна
+                    </span>
+                  </div> -->
+              </div>
+              <!-- <div class="form__input-wrapper">
+                  <label for="nameModal">Введите email</label>
+                  <input
+                    class="mail-inp"
+                    id="nameModal"
+                    type="text"
+                    placeholder="example@gamil.com"
+                    required
+                  />
+                  <span class="warning">Проверьте правильность email</span>
+                </div>
+                <div class="form__input-wrapper">
+                  <label for="telModal">Введите телефон</label>
+                  <input
+                    id="telModal"
+                    class="tel"
+                    type="tel"
+                    placeholder="Ваш номер телефона"
+                    required
+                  />
+                  <span class="warning">Проверьте правильность телефона</span>
+                </div> -->
+              <div class="form__counter-wrapper">
+                <div class="counter-title">Количество упаковок</div>
+                <div class="counter">
+                  <div class="counter-left">
+                    <button aria-label="+" class="counter-plus">
+                      <svg
+                        version="1.1"
+                        id="Layer_1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 512 512"
+                        xml:space="preserve"
+                        fill="#000000"
+                      >
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g
+                          id="SVGRepo_tracerCarrier"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></g>
+                        <g id="SVGRepo_iconCarrier">
+                          <circle cx="256" cy="256" r="256"></circle>
+                          <g>
+                            <rect
+                              x="240"
+                              y="120"
+                              style="fill: #ffffff"
+                              width="32"
+                              height="272"
+                            ></rect>
+                            <rect
+                              x="120"
+                              y="240"
+                              style="fill: #ffffff"
+                              width="272"
+                              height="32"
+                            ></rect>
+                          </g>
+                        </g>
+                      </svg>
+                    </button>
+                    <div class="counter-value">1</div>
+                    <button aria-label="-" class="counter-minus">
+                      <svg
+                        viewBox="0 0 48 48"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="#25b6d2"
+                        stroke="#25b6d2"
+                      >
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g
+                          id="SVGRepo_tracerCarrier"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></g>
+                        <g id="SVGRepo_iconCarrier">
+                          <title>70 Basic icons by Xicons.co</title>
+                          <path
+                            d="M24,3A21,21,0,1,0,45,24,21,21,0,0,0,24,3Z"
+                            fill="#ffffff8bcc4"
+                          ></path>
+                          <path
+                            d="M32,26H16a2,2,0,0,1,0-4H32A2,2,0,0,1,32,26Z"
+                            fill="#ffffff"
+                          ></path>
+                        </g>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="counter__right">
+                    <div class="counter-total">
+                      Итого <span class="total-number">100</span> USD + доставка
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-actions">
+                <div class="form-btn primary-btn">
+                  <button
+                    class="get-order-btn"
+                    aria-label="Заказать сейчас"
+                    type="submit"
+                  >
+                    Заказать сейчас
+                  </button>
+                </div>
+                <div class="form-btn secondary-btn">
+                  <button aria-label="Скачать инструкцию">
+                    Скачать инструкцию
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="main">
+        <div class="main__container">
+          <div class="container__sections">
+            <section class="anim fade-in">
+              <h1>Kamagra Master Privacy Policy</h1>
+              <h2>1. Introduction</h2>
+              <p>
+                Welcome to Kamagra Master. We respect your privacy and are
+                committed to protecting your personal information. This privacy
+                policy explains how we collect, use and share your personal data
+                when you use our website.
+              </p>
+            </section>
+            <section class="anim fade-in">
+              <h2>2. Data collection</h2>
+              <p>
+                We collect information about you in a number of ways. This
+                includes information you provide to us when you register on our
+                site, place an order, or communicate with our customer service
+                department. The types of data we may collect include your name,
+                email address, postal address, telephone number and payment
+                details.
+              </p>
+            </section>
+            <section class="anim fade-in">
+              <h2>3. Use of information</h2>
+              <p>
+                We use the information collected for the following purposes:
+              </p>
+              <ul>
+                <li>Process your orders and manage your account.</li>
+                <li>
+                  Communicate with you regarding updates to your order or
+                  requests.
+                </li>
+                <li>To improve our products and services.</li>
+                <li>Carrying out market analysis and research.</li>
+                <li>
+                  Inform you about our promotions and products, if you have
+                  chosen to receive these communications.
+                </li>
+              </ul>
+            </section>
+            <section class="anim fade-in">
+              <h2>4. Data sharing</h2>
+              <p>
+                We do not sell or rent your personal information to third
+                parties. However, we may share your information with trusted
+                partners who assist us in operating our website, conducting our
+                business, or servicing our users, so long as those parties agree
+                to keep this information confidential. We may also share your
+                information where required to do so by law.
+              </p>
+            </section>
+            <section class="anim fade-in">
+              <h2>5. Data security</h2>
+              <p>
+                We take the security of your data very seriously. We have put in
+                place appropriate security measures to prevent unauthorised
+                access or unlawful processing of your personal information.
+              </p>
+            </section>
+            <section class="anim fade-in">
+              <h2>6. Your rights</h2>
+              <p>
+                You have the right to request access to, correction of, or
+                deletion of your personal data held by us. You may also object
+                to us processing your personal data for specific reasons
+                relating to your particular situation.
+              </p>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+        <div class="footer__main">
+          <div class="footer__container">
+            <div class="footer__left">
+              <div class="footer__info">
+                <div class="footer__info_logo">
+                  <a href="./"
+                    ><img
+                      src="./img/logo.jpg"
+                      alt="logo"
+                      loading="lazy"
+                      width="120"
+                      height="85"
+                  /></a>
+                </div>
+                <p class="footer__info_text">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Dignissimos, ea voluptate vero velit maiores officia animi
+                  optio.Dignissimos, ea voluptate vero velit maiores officia animi
+                  optio Lorem ipsum dolor sit amet consectetur adipisicing.
+                </p>
+              </div>
+            </div>
+            <div class="footer__right">
+              <div class="footer__links">
+                <div class="footer__title">Навигация</div>
+                <ul class="footer__links_list">
+                  <li class="footer__links_item"><a href="./about.html">Про нас</a></li>
+                  <li class="footer__links_item">
+                    <a href="#">Зв'яжіться з нами</a>
+                  </li>
+                  <li class="footer__links_item">
+                    <a href="./privacy-policy.html">Політика конфіденційності</a>
+                  </li>
+                  <li class="footer__links_item">
+                    <a href="./conditions-of-use.html">Умови використання</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer__contacts">
+                <div class="footer__title">Контакты</div>
+                <ul class="footer__contacts_list">
+                  <li class="footer__contacts_item">
+                    <a href="tel:+00000000000"
+                      ><svg
+                        height="200px"
+                        width="200px"
+                        version="1.1"
+                        id="_x32_"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 512 512"
+                        xml:space="preserve"
+                        fill="#ffffff"
+                      >
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g
+                          id="SVGRepo_tracerCarrier"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></g>
+                        <g id="SVGRepo_iconCarrier">
+                          <style type="text/css">
+                            .st0 {
+                              fill: #ffffff;
+                            }
+                          </style>
+                          <g>
+                            <path
+                              class="st0"
+                              d="M94.811,21.696c-35.18,22.816-42.091,94.135-28.809,152.262c10.344,45.266,32.336,105.987,69.42,163.165 c34.886,53.79,83.557,102.022,120.669,129.928c47.657,35.832,115.594,58.608,150.774,35.792 c17.789-11.537,44.218-43.058,45.424-48.714c0,0-15.498-23.896-18.899-29.14l-51.972-80.135 c-3.862-5.955-28.082-0.512-40.386,6.457c-16.597,9.404-31.882,34.636-31.882,34.636c-11.38,6.575-20.912,0.024-40.828-9.142 c-24.477-11.262-51.997-46.254-73.9-77.947c-20.005-32.923-40.732-72.322-41.032-99.264c-0.247-21.922-2.341-33.296,8.304-41.006 c0,0,29.272-3.666,44.627-14.984c11.381-8.392,26.228-28.286,22.366-34.242l-51.972-80.134c-3.401-5.244-18.899-29.14-18.899-29.14 C152.159-1.117,112.6,10.159,94.811,21.696z"
+                            ></path>
+                          </g>
+                        </g></svg
+                      ><span>+000000000000</span></a
+                    >
+                  </li>
+                  <li class="footer__contacts_item">
+                    <a href="mailto: example@gmail.com">
+                      <svg
+                        viewBox="0 -2.5 20 20"
+                        version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        fill="#ffffff"
+                      >
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g
+                          id="SVGRepo_tracerCarrier"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></g>
+                        <g id="SVGRepo_iconCarrier">
+                          <title>email [#000000]</title>
+                          <desc>Created with Sketch.</desc>
+                          <defs></defs>
+                          <g
+                            id="Page-1"
+                            stroke="none"
+                            stroke-width="1"
+                            fill="none"
+                            fill-rule="evenodd"
+                          >
+                            <g
+                              id="Dribbble-Light-Preview"
+                              transform="translate(-340.000000, -922.000000)"
+                              fill="#ffffff"
+                            >
+                              <g
+                                id="icons"
+                                transform="translate(56.000000, 160.000000)"
+                              >
+                                <path
+                                  d="M294,774.474 L284,765.649 L284,777 L304,777 L304,765.649 L294,774.474 Z M294.001,771.812 L284,762.981 L284,762 L304,762 L304,762.981 L294.001,771.812 Z"
+                                  id="email-[#000000]"
+                                ></path>
+                              </g>
+                            </g>
+                          </g>
+                        </g>
+                      </svg>
+                      <span>example@gmail.com</span>
+                    </a>
+                  </li>
+                  <li class="footer__contact_item">
+                    <div class="footer__btn primary-btn">
+                      <a href="#"
+                        ><svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M22 10.787c0 4.854-4.253 8.788-9.5 8.788a10.22 10.22 0 0 1-2.684-.355c-1.881 1.241-4.233 1.617-5.485 1.73-.286.027-.434-.347-.24-.559.595-.65 1.431-1.803 1.715-3.368C4.073 15.43 3 13.225 3 10.787 3 5.934 7.253 2 12.5 2S22 5.934 22 10.787z"
+                              fill="#ffffff"
+                            ></path>
+                          </g></svg
+                        ><span>Чат 24/7</span></a
+                      >
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer__social">
+                <div class="footer__title">Мы в соц. сетях</div>
+                <ul class="footer__social_list">
+                  <li class="footer__social_item">
+                    <a href="#"
+                      ><svg
+                        viewBox="0 0 20 20"
+                        version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        fill="#ffffff"
+                        stroke="#ffffff"
+                      >
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g
+                          id="SVGRepo_tracerCarrier"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></g>
+                        <g id="SVGRepo_iconCarrier">
+                          <title>instagram [#fffffffffff]</title>
+                          <desc>Created with Sketch.</desc>
+                          <defs></defs>
+                          <g
+                            id="Page-1"
+                            stroke="none"
+                            stroke-width="1"
+                            fill="none"
+                            fill-rule="evenodd"
+                          >
+                            <g
+                              id="Dribbble-Light-Preview"
+                              transform="translate(-340.000000, -7439.000000)"
+                              fill="#ffffff"
+                            >
+                              <g
+                                id="icons"
+                                transform="translate(56.000000, 160.000000)"
+                              >
+                                <path
+                                  d="M289.869652,7279.12273 C288.241769,7279.19618 286.830805,7279.5942 285.691486,7280.72871 C284.548187,7281.86918 284.155147,7283.28558 284.081514,7284.89653 C284.035742,7285.90201 283.768077,7293.49818 284.544207,7295.49028 C285.067597,7296.83422 286.098457,7297.86749 287.454694,7298.39256 C288.087538,7298.63872 288.809936,7298.80547 289.869652,7298.85411 C298.730467,7299.25511 302.015089,7299.03674 303.400182,7295.49028 C303.645956,7294.859 303.815113,7294.1374 303.86188,7293.08031 C304.26686,7284.19677 303.796207,7282.27117 302.251908,7280.72871 C301.027016,7279.50685 299.5862,7278.67508 289.869652,7279.12273 M289.951245,7297.06748 C288.981083,7297.0238 288.454707,7296.86201 288.103459,7296.72603 C287.219865,7296.3826 286.556174,7295.72155 286.214876,7294.84312 C285.623823,7293.32944 285.819846,7286.14023 285.872583,7284.97693 C285.924325,7283.83745 286.155174,7282.79624 286.959165,7281.99226 C287.954203,7280.99968 289.239792,7280.51332 297.993144,7280.90837 C299.135448,7280.95998 300.179243,7281.19026 300.985224,7281.99226 C301.980262,7282.98483 302.473801,7284.28014 302.071806,7292.99991 C302.028024,7293.96767 301.865833,7294.49274 301.729513,7294.84312 C300.829003,7297.15085 298.757333,7297.47145 289.951245,7297.06748 M298.089663,7283.68956 C298.089663,7284.34665 298.623998,7284.88065 299.283709,7284.88065 C299.943419,7284.88065 300.47875,7284.34665 300.47875,7283.68956 C300.47875,7283.03248 299.943419,7282.49847 299.283709,7282.49847 C298.623998,7282.49847 298.089663,7283.03248 298.089663,7283.68956 M288.862673,7288.98792 C288.862673,7291.80286 291.150266,7294.08479 293.972194,7294.08479 C296.794123,7294.08479 299.081716,7291.80286 299.081716,7288.98792 C299.081716,7286.17298 296.794123,7283.89205 293.972194,7283.89205 C291.150266,7283.89205 288.862673,7286.17298 288.862673,7288.98792 M290.655732,7288.98792 C290.655732,7287.16159 292.140329,7285.67967 293.972194,7285.67967 C295.80406,7285.67967 297.288657,7287.16159 297.288657,7288.98792 C297.288657,7290.81525 295.80406,7292.29716 293.972194,7292.29716 C292.140329,7292.29716 290.655732,7290.81525 290.655732,7288.98792"
+                                  id="instagram-[#fffffffffff]"
+                                ></path>
+                              </g>
+                            </g>
+                          </g>
+                        </g></svg
+                    ></a>
+                  </li>
+                  <li class="footer__social_item">
+                    <a href="#"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        stroke=""
+                      >
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g
+                          id="SVGRepo_tracerCarrier"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></g>
+                        <g id="SVGRepo_iconCarrier">
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M19.7828 3.91825C20.1313 3.83565 20.3743 3.75444 20.5734 3.66915C20.8524 3.54961 21.0837 3.40641 21.4492 3.16524C21.7563 2.96255 22.1499 2.9449 22.4739 3.11928C22.7979 3.29366 23 3.6319 23 3.99986C23 5.08079 22.8653 5.96673 22.5535 6.7464C22.2911 7.40221 21.9225 7.93487 21.4816 8.41968C21.2954 11.7828 20.3219 14.4239 18.8336 16.4248C17.291 18.4987 15.2386 19.8268 13.0751 20.5706C10.9179 21.3121 8.63863 21.4778 6.5967 21.2267C4.56816 20.9773 2.69304 20.3057 1.38605 19.2892C1.02813 19.0108 0.902313 18.5264 1.07951 18.109C1.25671 17.6916 1.69256 17.4457 2.14144 17.5099C3.42741 17.6936 4.6653 17.4012 5.6832 16.9832C5.48282 16.8742 5.29389 16.7562 5.11828 16.6346C4.19075 15.9925 3.4424 15.1208 3.10557 14.4471C2.96618 14.1684 2.96474 13.8405 3.10168 13.5606C3.17232 13.4161 3.27562 13.293 3.40104 13.1991C2.04677 12.0814 1.49999 10.5355 1.49999 9.49986C1.49999 9.19192 1.64187 8.90115 1.88459 8.71165C1.98665 8.63197 2.10175 8.57392 2.22308 8.53896C2.12174 8.24222 2.0431 7.94241 1.98316 7.65216C1.71739 6.3653 1.74098 4.91284 2.02985 3.75733C2.1287 3.36191 2.45764 3.06606 2.86129 3.00952C3.26493 2.95299 3.6625 3.14709 3.86618 3.50014C4.94369 5.36782 6.93116 6.50943 8.78086 7.18568C9.6505 7.50362 10.4559 7.70622 11.0596 7.83078C11.1899 6.61019 11.5307 5.6036 12.0538 4.80411C12.7439 3.74932 13.7064 3.12525 14.74 2.84698C16.5227 2.36708 18.5008 2.91382 19.7828 3.91825ZM10.7484 9.80845C10.0633 9.67087 9.12171 9.43976 8.09412 9.06408C6.7369 8.56789 5.16088 7.79418 3.84072 6.59571C3.86435 6.81625 3.89789 7.03492 3.94183 7.24766C4.16308 8.31899 4.5742 8.91899 4.94721 9.10549C5.40342 9.3336 5.61484 9.8685 5.43787 10.3469C5.19827 10.9946 4.56809 11.0477 3.99551 10.9046C4.45603 11.595 5.28377 12.2834 6.66439 12.5135C7.14057 12.5929 7.49208 13.0011 7.49986 13.4838C7.50765 13.9665 7.16949 14.3858 6.69611 14.4805L5.82565 14.6546C5.95881 14.7703 6.103 14.8838 6.2567 14.9902C6.95362 15.4727 7.65336 15.6808 8.25746 15.5298C8.70991 15.4167 9.18047 15.6313 9.39163 16.0472C9.60278 16.463 9.49846 16.9696 9.14018 17.2681C8.49626 17.8041 7.74425 18.2342 6.99057 18.5911C6.63675 18.7587 6.24134 18.9241 5.8119 19.0697C6.14218 19.1402 6.48586 19.198 6.84078 19.2417C8.61136 19.4594 10.5821 19.3126 12.4249 18.6792C14.2614 18.0479 15.9589 16.9385 17.2289 15.2312C18.497 13.5262 19.382 11.1667 19.5007 7.96291C19.51 7.71067 19.6144 7.47129 19.7929 7.29281C20.2425 6.84316 20.6141 6.32777 20.7969 5.7143C20.477 5.81403 20.1168 5.90035 19.6878 5.98237C19.3623 6.04459 19.0272 5.94156 18.7929 5.70727C18.0284 4.94274 16.5164 4.43998 15.2599 4.77822C14.6686 4.93741 14.1311 5.28203 13.7274 5.89906C13.3153 6.52904 13 7.51045 13 8.9999C13 9.28288 12.8801 9.5526 12.6701 9.74221C12.1721 10.1917 11.334 9.92603 10.7484 9.80845Z"
+                            fill="#ffffff"
+                          ></path>
+                        </g></svg
+                    ></a>
+                  </li>
+                  <li class="footer__social_item">
+                    <a href="#"
+                      ><svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g
+                          id="SVGRepo_tracerCarrier"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></g>
+                        <g id="SVGRepo_iconCarrier">
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M20 1C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H20ZM20 3C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H15V13.9999H17.0762C17.5066 13.9999 17.8887 13.7245 18.0249 13.3161L18.4679 11.9871C18.6298 11.5014 18.2683 10.9999 17.7564 10.9999H15V8.99992C15 8.49992 15.5 7.99992 16 7.99992H18C18.5523 7.99992 19 7.5522 19 6.99992V6.31393C19 5.99091 18.7937 5.7013 18.4813 5.61887C17.1705 5.27295 16 5.27295 16 5.27295C13.5 5.27295 12 6.99992 12 8.49992V10.9999H10C9.44772 10.9999 9 11.4476 9 11.9999V12.9999C9 13.5522 9.44771 13.9999 10 13.9999H12V21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20Z"
+                            fill="#ffffff"
+                          ></path>
+                        </g></svg
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="select_lang">
+            <div class="list_lang">
+              <ul>
+                <li>
+                  <a href="/de/"
+                    ><img
+                      src="./img/flag/de.png"
+                      width="24"
+                      height="24"
+                      alt="flag Deutsch"
+                      loading="lazy"
+                    /><span>Deutsch</span></a
+                  >
+                </li>
+              </ul>
+            </div>
+            <button aria-label="open" class="btn_lang">
+              <img
+                src="./img/flag/usa.png"
+                width="24"
+                height="24"
+                alt="flag Australia"
+                loading="lazy"
+              />
+              <span>English</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1em"
+                viewBox="0 0 448 512"
+              >
+                <path
+                  d="M201.4 137.4c12.5-12.5 32.8-12.5 45.3 0l160 160c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L224 205.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l160-160z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div class="footer__copy">
+            <p>
+              Copyright © {$smarty.now|date_format:"%Y"} {$host}. All rights
+              reserved
+            </p>
+          </div>
+        </div>
+        <div class="corner__actions">
+          <!-- <div class="form-open__btn pulse">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              stroke="#ffffff"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M3 5.5C3 14.0604 9.93959 21 18.5 21C18.8862 21 19.2691 20.9859 19.6483 20.9581C20.0834 20.9262 20.3009 20.9103 20.499 20.7963C20.663 20.7019 20.8185 20.5345 20.9007 20.364C21 20.1582 21 19.9181 21 19.438V16.6207C21 16.2169 21 16.015 20.9335 15.842C20.8749 15.6891 20.7795 15.553 20.6559 15.4456C20.516 15.324 20.3262 15.255 19.9468 15.117L16.74 13.9509C16.2985 13.7904 16.0777 13.7101 15.8683 13.7237C15.6836 13.7357 15.5059 13.7988 15.3549 13.9058C15.1837 14.0271 15.0629 14.2285 14.8212 14.6314L14 16C11.3501 14.7999 9.2019 12.6489 8 10L9.36863 9.17882C9.77145 8.93713 9.97286 8.81628 10.0942 8.64506C10.2012 8.49408 10.2643 8.31637 10.2763 8.1317C10.2899 7.92227 10.2096 7.70153 10.0491 7.26005L8.88299 4.05321C8.745 3.67376 8.67601 3.48403 8.55442 3.3441C8.44701 3.22049 8.31089 3.12515 8.15802 3.06645C7.98496 3 7.78308 3 7.37932 3H4.56201C4.08188 3 3.84181 3 3.63598 3.09925C3.4655 3.18146 3.29814 3.33701 3.2037 3.50103C3.08968 3.69907 3.07375 3.91662 3.04189 4.35173C3.01413 4.73086 3 5.11378 3 5.5Z"
+                  stroke="#ffffff"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </g>
+            </svg>
+          </div> -->
+          <div class="go-top">
+            <a href="#top" aria-label="Scroll to top">
+              <svg
+                xmlns="https://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                version="1.1"
+                x="0px"
+                y="0px"
+                width="26px"
+                height="16.043px"
+                viewBox="57 35.171 26 16.043"
+                enable-background="new 57 35.171 26 16.043"
+                xml:space="preserve"
+                fill="#000"
+                stroke="#000"
+              >
+                <path
+                  d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+          <div class="corner-action__order">
+            <div class="corner-action__container">
+              <button class="close-corner-order">
+                <svg
+                  fill="#fff"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z"
+                    fill="#fff"
+                  />
+                </svg>
+              </button>
+              <div class="corner-action__order-content">
+                <div class="corner-action__order-title">
+                  To order, simply fill in the form
+                </div>
+                <div class="corner-action__order-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
+                  accusamus commodi atque exercitationem cum id.
+                </div>
+              </div>
+              <div class="corner-action__order-btn primary-btn">
+                <button>Purchase</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
