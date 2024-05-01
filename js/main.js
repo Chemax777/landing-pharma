@@ -9,16 +9,17 @@ const closeFormBtn = document.querySelector(".close-modal-btn");
 const modal = document.querySelector(".modal-wrapper");
 const modalWrapper = document.querySelector(".modal-wrapper");
 const countersForm = document.querySelectorAll(".counter");
-let counterNumber = 1;
-let currentPrice = 45.82;
+
 const allTelsInput = document.querySelectorAll(".tel");
 const allEmailInput = document.querySelectorAll(".mail-inp");
 const getOrderBtns = document.querySelectorAll(".get-order-btn");
 const swiperSection = document.querySelector(".swiper__section");
 const accordBtns = document.querySelectorAll(".acc-head");
-const selectMainOrder = document.querySelector("#select-1");
-const counterOrderSection = document.querySelector(".counter-order");
-const orderOptions = document.querySelectorAll(".order-option");
+const selectMainOrder = document.querySelector("#select-main-bottom");
+// const selectBannerFormMed = document.querySelector("#select-banner-form-med");
+// const selectBannerFormDose = document.querySelector("#select-banner-form-dose");
+// const counterOrderSection = document.querySelector(".counter-order");
+// const orderOptions = document.querySelectorAll(".order-option");
 const feedbackBtn = document.querySelector(".review-btn");
 const modalComment = document.querySelector(".modal__comment");
 const closeCommentModalBtn = document.querySelector(".close-comment-modal");
@@ -27,6 +28,7 @@ const closeBottomSection = document.querySelector(".close-corner-order");
 let validation = {
   email: false,
   tel: false,
+  prep: false,
 };
 
 const openMobileNav = () => {
@@ -55,7 +57,7 @@ function validateEmail(email) {
 }
 
 if (selectMainOrder) {
-  const select1 = new ItcCustomSelect("#select-1");
+  const select1 = new ItcCustomSelect("#select-main-bottom");
 }
 
 itemsMobile.forEach((item) => item.addEventListener("click", closeMobileNav));
@@ -118,13 +120,127 @@ if (modal) {
     }
   });
 }
+let counterNumber = 1;
+let currentPrice = 49.49;
+let totalPrice = document.querySelectorAll(".total-number");
+
+//main page selects
+const bannerSelectFormMed = document.querySelector("#select-banner-form-med");
+const bannerSelectFormDose = document.querySelector("#select-banner-form-dose");
+if (bannerSelectFormMed && bannerSelectFormDose) {
+  const selectMed = new ItcCustomSelect("#select-banner-form-med");
+  const selectDose = new ItcCustomSelect("#select-banner-form-dose");
+  bannerSelectFormMed.addEventListener("click", (e) => {
+    let [...allDoseElem] = bannerSelectFormDose.querySelectorAll(
+      ".itc-select__option"
+    );
+    const toggleDose = bannerSelectFormDose.querySelector(
+      ".itc-select__toggle"
+    );
+    if (!e.target.classList.contains("itc-select__option")) return;
+    bannerSelectFormDose.querySelector(".itc-select__toggle").disabled = false;
+    allDoseElem.forEach((el) => el.classList.remove("hide-option"));
+    allDoseElem
+      .filter((el) => e.target.dataset.value !== el.dataset.prep)
+      .forEach((el) => el.classList.add("hide-option"));
+    toggleDose.textContent = "Выбрать дозировку";
+    validation.prep = false;
+  });
+
+  bannerSelectFormDose.addEventListener("click", (e) => {
+    if (!e.target.classList.contains("itc-select__option")) return;
+    currentPrice = e.target.dataset.price;
+    totalPrice.forEach(
+      (el) => (el.textContent = (currentPrice * counterNumber).toFixed(2))
+    );
+    validation.prep = true;
+  });
+}
+
+//popup selects
+const bannerSelectFormMedPop = document.querySelector(
+  "#select-banner-form-med-popup"
+);
+const bannerSelectFormDosePop = document.querySelector(
+  "#select-banner-form-dose-popup"
+);
+if (bannerSelectFormMedPop && bannerSelectFormDosePop) {
+  const selectMed = new ItcCustomSelect("#select-banner-form-med-popup");
+  const selectDose = new ItcCustomSelect("#select-banner-form-dose-popup");
+  bannerSelectFormMedPop.addEventListener("click", (e) => {
+    let [...allDoseElem] = bannerSelectFormDosePop.querySelectorAll(
+      ".itc-select__option"
+    );
+    const toggleDose = bannerSelectFormDosePop.querySelector(
+      ".itc-select__toggle"
+    );
+    if (!e.target.classList.contains("itc-select__option")) return;
+    bannerSelectFormDosePop.querySelector(
+      ".itc-select__toggle"
+    ).disabled = false;
+    allDoseElem.forEach((el) => el.classList.remove("hide-option"));
+    allDoseElem
+      .filter((el) => e.target.dataset.value !== el.dataset.prep)
+      .forEach((el) => el.classList.add("hide-option"));
+    toggleDose.textContent = "Выбрать дозировку";
+    validation.prep = false;
+  });
+
+  bannerSelectFormDosePop.addEventListener("click", (e) => {
+    if (!e.target.classList.contains("itc-select__option")) return;
+    currentPrice = e.target.dataset.price;
+    totalPrice.forEach(
+      (el) => (el.textContent = (currentPrice * counterNumber).toFixed(2))
+    );
+    validation.prep = true;
+  });
+}
+//Main page bottom
+const bannerSelectFormMedBottom = document.querySelector(
+  "#select-banner-form-med-bottom-main"
+);
+const bannerSelectFormDoseBottom = document.querySelector(
+  "#select-banner-form-dose-bottom-main"
+);
+if (bannerSelectFormMedBottom && bannerSelectFormDoseBottom) {
+  const selectMed = new ItcCustomSelect("#select-banner-form-med-bottom-main");
+  const selectDose = new ItcCustomSelect(
+    "#select-banner-form-dose-bottom-main"
+  );
+  bannerSelectFormMedBottom.addEventListener("click", (e) => {
+    let [...allDoseElem] = bannerSelectFormDoseBottom.querySelectorAll(
+      ".itc-select__option"
+    );
+    const toggleDose = bannerSelectFormDoseBottom.querySelector(
+      ".itc-select__toggle"
+    );
+    if (!e.target.classList.contains("itc-select__option")) return;
+    bannerSelectFormDoseBottom.querySelector(
+      ".itc-select__toggle"
+    ).disabled = false;
+    allDoseElem.forEach((el) => el.classList.remove("hide-option"));
+    allDoseElem
+      .filter((el) => e.target.dataset.value !== el.dataset.prep)
+      .forEach((el) => el.classList.add("hide-option"));
+    toggleDose.textContent = "Выбрать дозировку";
+    validation.prep = false;
+  });
+
+  bannerSelectFormDoseBottom.addEventListener("click", (e) => {
+    if (!e.target.classList.contains("itc-select__option")) return;
+    currentPrice = e.target.dataset.price;
+    totalPrice.forEach(
+      (el) => (el.textContent = (currentPrice * counterNumber).toFixed(2))
+    );
+    validation.prep = true;
+  });
+}
 
 countersForm.forEach((counter) => {
   counter.addEventListener("click", (e) => {
     e.preventDefault();
     const valueInputs = document.querySelectorAll(".counter-value");
-    let totalPrice = document.querySelectorAll(".total-number");
-    const price = 100;
+    const price = currentPrice;
     const culcPrice = (quantity, price) => {
       return quantity * price;
     };
@@ -134,7 +250,7 @@ countersForm.forEach((counter) => {
         input.innerText = counterNumber;
       });
       totalPrice.forEach((totalEl) => {
-        totalEl.innerText = culcPrice(counterNumber, price);
+        totalEl.innerText = culcPrice(counterNumber, price).toFixed(2);
       });
     }
     if (e.target.closest(".counter-minus")) {
@@ -144,65 +260,65 @@ countersForm.forEach((counter) => {
         input.innerText = counterNumber;
       });
       totalPrice.forEach((totalEl) => {
-        totalEl.innerText = culcPrice(counterNumber, price);
+        totalEl.innerText = culcPrice(counterNumber, price).toFixed(2);
       });
     }
   });
 });
 
-window.addEventListener("DOMContentLoaded", function () {
-  [].forEach.call(document.querySelectorAll(".tel"), function (input) {
-    var keyCode;
-    function mask(event) {
-      event.keyCode && (keyCode = event.keyCode);
-      var pos = this.selectionStart;
-      if (pos < 3) event.preventDefault();
-      var matrix = "+38 (___)-___-__-__",
-        i = 0,
-        def = matrix.replace(/\D/g, ""),
-        val = this.value.replace(/\D/g, ""),
-        new_value = matrix.replace(/[_\d]/g, function (a) {
-          return i < val.length ? val.charAt(i++) || def.charAt(i) : a;
-        });
-      i = new_value.indexOf("_");
-      if (i != -1) {
-        i < 5 && (i = 3);
-        new_value = new_value.slice(0, i);
-      }
-      var reg = matrix
-        .substr(0, this.value.length)
-        .replace(/_+/g, function (a) {
-          return "\\d{1," + a.length + "}";
-        })
-        .replace(/[+()]/g, "\\$&");
-      reg = new RegExp("^" + reg + "$");
-      if (
-        !reg.test(this.value) ||
-        this.value.length < 5 ||
-        (keyCode > 47 && keyCode < 58)
-      )
-        this.value = new_value;
-      if (event.type == "blur" && this.value.length < 5) this.value = "";
-    }
+// window.addEventListener("DOMContentLoaded", function () {
+//   [].forEach.call(document.querySelectorAll(".tel"), function (input) {
+//     var keyCode;
+//     function mask(event) {
+//       event.keyCode && (keyCode = event.keyCode);
+//       var pos = this.selectionStart;
+//       if (pos < 3) event.preventDefault();
+//       var matrix = "+38 (___)-___-__-__",
+//         i = 0,
+//         def = matrix.replace(/\D/g, ""),
+//         val = this.value.replace(/\D/g, ""),
+//         new_value = matrix.replace(/[_\d]/g, function (a) {
+//           return i < val.length ? val.charAt(i++) || def.charAt(i) : a;
+//         });
+//       i = new_value.indexOf("_");
+//       if (i != -1) {
+//         i < 5 && (i = 3);
+//         new_value = new_value.slice(0, i);
+//       }
+//       var reg = matrix
+//         .substr(0, this.value.length)
+//         .replace(/_+/g, function (a) {
+//           return "\\d{1," + a.length + "}";
+//         })
+//         .replace(/[+()]/g, "\\$&");
+//       reg = new RegExp("^" + reg + "$");
+//       if (
+//         !reg.test(this.value) ||
+//         this.value.length < 5 ||
+//         (keyCode > 47 && keyCode < 58)
+//       )
+//         this.value = new_value;
+//       if (event.type == "blur" && this.value.length < 5) this.value = "";
+//     }
 
-    input.addEventListener("input", mask, false);
-    input.addEventListener("focus", mask, false);
-    input.addEventListener("blur", mask, false);
-    input.addEventListener("keydown", mask, false);
-  });
-});
+//     input.addEventListener("input", mask, false);
+//     input.addEventListener("focus", mask, false);
+//     input.addEventListener("blur", mask, false);
+//     input.addEventListener("keydown", mask, false);
+//   });
+// });
 
-allTelsInput.forEach((telInput) => {
-  telInput.addEventListener("blur", (e) => {
-    if (e.target.value.length < 19) {
-      e.target.parentElement.classList.add("warning-input");
-      validation.tel = false;
-    } else {
-      e.target.parentElement.classList.remove("warning-input");
-      validation.tel = true;
-    }
-  });
-});
+// allTelsInput.forEach((telInput) => {
+//   telInput.addEventListener("blur", (e) => {
+//     if (e.target.value.length < 19) {
+//       e.target.parentElement.classList.add("warning-input");
+//       validation.tel = false;
+//     } else {
+//       e.target.parentElement.classList.remove("warning-input");
+//       validation.tel = true;
+//     }
+//   });
+// });
 
 allEmailInput.forEach((emailInput) => {
   emailInput.addEventListener("blur", (e) => {
@@ -215,13 +331,24 @@ allEmailInput.forEach((emailInput) => {
     }
   });
 });
+// getOrderBtns.forEach((btn) => {
+//   btn.addEventListener("click", (e) => {
+//     e.preventDefault();
+//     if (validation.email && validation.tel) {
+//       alert("Спасибо за заказ!");
+//     } else {
+//       alert("Проверьте данные!");
+//     }
+//   });
+// });
+
 getOrderBtns.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     e.preventDefault();
-    if (validation.email && validation.tel) {
+    if (validation.prep) {
       alert("Спасибо за заказ!");
     } else {
-      alert("Проверьте данные!");
+      alert("Выберите дозировку!");
     }
   });
 });
@@ -234,6 +361,9 @@ if (swiperSection) {
     navigation: {
       nextEl: swiperButtonNext,
       prevEl: swiperButtonPrev,
+    },
+    pagination: {
+      el: ".swiper-pagination",
     },
   });
 }
@@ -253,30 +383,30 @@ if (accordBtns) {
     });
   });
 }
-if (counterOrderSection) {
-  counterOrderSection.addEventListener("click", (e) => {
-    const totalPrice = document.querySelector(".order__price-number");
-    let culc;
-    if (
-      e.target.closest(".counter-plus") ||
-      e.target.closest(".counter-minus")
-    ) {
-      culc = currentPrice * counterNumber;
-      totalPrice.textContent = culc.toFixed(2);
-    }
-  });
-}
-if (orderOptions) {
-  orderOptions.forEach((option) => {
-    option.addEventListener("click", (e) => {
-      const totalPrice = document.querySelector(".order__price-number");
-      let culc;
-      currentPrice = e.target.dataset.price;
-      culc = currentPrice * counterNumber;
-      totalPrice.textContent = culc.toFixed(2);
-    });
-  });
-}
+// if (counterOrderSection) {
+//   counterOrderSection.addEventListener("click", (e) => {
+//     const totalPrice = document.querySelector(".order__price-number");
+//     let culc;
+//     if (
+//       e.target.closest(".counter-plus") ||
+//       e.target.closest(".counter-minus")
+//     ) {
+//       culc = currentPrice * counterNumber;
+//       totalPrice.textContent = culc.toFixed(2);
+//     }
+//   });
+// }
+// if (orderOptions) {
+//   orderOptions.forEach((option) => {
+//     option.addEventListener("click", (e) => {
+//       const totalPrice = document.querySelector(".order__price-number");
+//       let culc;
+//       currentPrice = e.target.dataset.price;
+//       culc = currentPrice * counterNumber;
+//       totalPrice.textContent = culc.toFixed(2);
+//     });
+//   });
+// }
 
 if (feedbackBtn) {
   feedbackBtn.addEventListener("click", () => {
@@ -305,7 +435,7 @@ if (closeCommentModalBtn) {
 if (closeBottomSection) {
   closeBottomSection.addEventListener("click", () => {
     const bottomSection = document.querySelector(".corner-action__order");
-    bottomSection.classList.add("close-corner-section")
+    bottomSection.classList.add("close-corner-section");
   });
 }
 // Animation

@@ -872,10 +872,20 @@ main {
     }
   }
   .form__counter-wrapper {
-    margin-top: 15px;
+    margin-top: 25px;
     .counter-title {
       font-size: 18px;
       margin-bottom: 15px;
+    }
+    .form__select {
+      margin-bottom: 15px;
+      .itc-select {
+        width: 100%;
+        .itc-select__options {
+          color: #000;
+          text-align: left;
+        }
+      }
     }
     .counter {
       display: flex;
@@ -944,7 +954,9 @@ main {
     }
   }
 }
-
+.itc-select__option.hide-option {
+  display: none;
+}
 .primary-btn {
   background: $main-gradient;
   border-radius: 25px;
@@ -1433,22 +1445,32 @@ main {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      @media screen and (max-width: 460px) {
+      @media screen and (max-width: 760px) {
         flex-direction: column;
         gap: 15px;
+      }
+      .form__select {
+        width: 32%;
+        @media screen and (max-width: 760px) {
+          width: 100%;
+        }
+        .itc-select {
+          width: 100%;
+        }
       }
       .counter-order {
         display: flex;
         justify-content: space-between;
         align-items: center;
         position: relative;
-        width: 28%;
-        @media screen and (max-width: 460px) {
+        width: 32%;
+        @media screen and (max-width: 760px) {
           width: 100%;
         }
         .counter-minus,
         .counter-plus {
           width: 35px;
+          padding: 0;
           svg,
           path {
             transition: all 0.4s;
@@ -1468,7 +1490,7 @@ main {
           }
         }
         svg {
-          width: 25px;
+          width: 15px;
           height: auto;
           fill: $main-color;
           stroke: $main-color;
@@ -1482,7 +1504,7 @@ main {
         }
         .counter-minus {
           position: absolute;
-          right: 10px;
+          right: 0;
           @media screen and (max-width: 510px) {
             right: 0;
           }
@@ -1536,14 +1558,14 @@ main {
     justify-content: space-between;
     align-items: flex-start;
     gap: 15px;
-    padding: 20px 10px 20px 10px;
+    padding: 30px 15px 30px 15px;
     .footer__left {
       width: 25%;
       .footer__info {
         .footer__info_logo {
           width: 120px;
           // float: left;
-          margin: 0 0 10px 0;
+          margin: 0 0 20px 0;
           img {
             width: 100%;
             height: auto;
@@ -1566,7 +1588,7 @@ main {
         font-weight: 700;
         text-align: left;
         width: 100%;
-        margin-bottom: 15px;
+        margin-bottom: 25px;
       }
       .footer__links {
         .footer__links_list {
@@ -1574,7 +1596,7 @@ main {
           justify-content: flex-start;
           align-items: flex-start;
           flex-direction: column;
-          gap: 15px;
+          gap: 25px;
           a {
             font-size: 18px;
             padding: 5px 10px 5px 0;
@@ -1602,14 +1624,16 @@ main {
               }
             }
             a {
-              display: block;
+              display: flex;
+              justify-content: center;
+              align-items: center;
               transition: all 0.4s;
               padding: 8px 10px;
               border-radius: 50%;
               background: $main-color;
               backdrop-filter: blur(10px);
               svg {
-                width: 25px;
+                width: 15px;
                 height: auto;
               }
             }
@@ -1622,7 +1646,7 @@ main {
           justify-content: flex-start;
           align-items: flex-start;
           flex-direction: column;
-          gap: 10px;
+          gap: 20px;
           a {
             font-size: 18px;
             padding: 0 10px 5px 0;
@@ -1689,9 +1713,9 @@ main {
       }
       .footer__left {
         width: 100%;
-        .footer__info_logo {
-          margin: 0 auto 10px auto !important;
-        }
+        // .footer__info_logo {
+        //   margin: 0 auto 10px auto !important;
+        // }
       }
     }
   }
@@ -2921,6 +2945,13 @@ main {
     transition: all 0.1s;
   }
 }
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #07a01b;
+}
 
 .content-image {
   margin-bottom: 15px;
@@ -3020,6 +3051,7 @@ main {
 .acc-list {
   padding: 0 !important;
   list-style-type: none;
+  margin-bottom: 20px;
 }
 
 .acc-item {
@@ -3422,7 +3454,8 @@ main {
   @media screen and (max-width: 992px) {
     flex-direction: column;
     gap: 10px;
-    .review__left, .review__right {
+    .review__left,
+    .review__right {
       width: 100%;
     }
     .review__right {
