@@ -316,15 +316,15 @@ function onEntry(entry) {
     }
   });
 }
-let options = { threshold: [0.4] };
+let options = { threshold: [0.35] };
 let windowWidth = window.innerWidth;
 windowWidth <= 768
   ? (options = { threshold: [0.2] })
-  : (options = { threshold: [0.5] });
+  : (options = { threshold: [0.35] });
 window.addEventListener("resize", (e) =>
   e.target.innerWidth <= 768
     ? (options = { threshold: [0.2] })
-    : (options = { threshold: [0.4] })
+    : (options = { threshold: [0.35] })
 );
 let observer = new IntersectionObserver(onEntry, options);
 let elements = document.querySelectorAll(".anim");
