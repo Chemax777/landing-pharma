@@ -1356,9 +1356,14 @@ main {
     }
     .review__head {
       display: flex;
-      justify-content: flex-start;
       align-items: center;
       gap: 15px;
+      width: 100%;
+      .review__date {
+        margin-left: auto;
+        font-size: 14px;
+        color: #8f8f8f;
+      }
       .review__author-photo {
         img {
           width: 70px;
@@ -3363,6 +3368,73 @@ main {
     }
     p {
       margin: 0;
+    }
+  }
+}
+
+.review__page {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  min-height: 100vh;
+  position: relative;
+  .review__left {
+    width: 70%;
+  }
+  .review__right {
+    width: 28%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    .review__right_container {
+      height: 98%;
+    }
+    .banner__form {
+      width: 100%;
+      background: $from-top-gradient;
+      position: sticky;
+      top: 70px;
+      margin-top: 30px;
+      flex: 1;
+      margin-bottom: 20px;
+      @media screen and (max-width: 1200px) {
+        .counter__right {
+          .counter-total {
+            text-align: center;
+          }
+        }
+      }
+      @media screen and (max-width: 1070px) {
+        .counter-left {
+          width: 150px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 992px) {
+    flex-direction: column;
+    gap: 10px;
+    .review__left, .review__right {
+      width: 100%;
+    }
+    .review__right {
+      position: static;
+      height: auto;
+      max-width: auto;
+      .banner__form {
+        position: static;
+        max-width: 400px;
+        margin: 0 auto 20px auto;
+        .counter-left {
+          width: 190px;
+          @media screen and (max-width: 370px) {
+            width: 150px;
+          }
+        }
+      }
     }
   }
 }

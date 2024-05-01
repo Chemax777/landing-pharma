@@ -1626,13 +1626,16 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   gap: 15px;
+  width: 100%;
+}
+.reviews .review-item .review__head .review__date {
+  margin-left: auto;
+  font-size: 14px;
+  color: #8f8f8f;
 }
 .reviews .review-item .review__head .review__author-photo img {
   width: 70px;
@@ -4149,4 +4152,85 @@ main {
 }
 .info__cards .info__card p {
   margin: 0;
+}
+
+.review__page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 20px;
+  min-height: 100vh;
+  position: relative;
+}
+.review__page .review__left {
+  width: 70%;
+}
+.review__page .review__right {
+  width: 28%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+}
+.review__page .review__right .review__right_container {
+  height: 98%;
+}
+.review__page .review__right .banner__form {
+  width: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgb(12, 123, 134)), color-stop(25%, rgb(1, 121, 162)), to(rgb(0, 151, 255)));
+  background: linear-gradient(0deg, rgb(12, 123, 134) 0%, rgb(1, 121, 162) 25%, rgb(0, 151, 255) 100%);
+  position: sticky;
+  top: 70px;
+  margin-top: 30px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 1200px) {
+  .review__page .review__right .banner__form .counter__right .counter-total {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1070px) {
+  .review__page .review__right .banner__form .counter-left {
+    width: 150px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .review__page {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
+  }
+  .review__page .review__left, .review__page .review__right {
+    width: 100%;
+  }
+  .review__page .review__right {
+    position: static;
+    height: auto;
+    max-width: auto;
+  }
+  .review__page .review__right .banner__form {
+    position: static;
+    max-width: 400px;
+    margin: 0 auto 20px auto;
+  }
+  .review__page .review__right .banner__form .counter-left {
+    width: 190px;
+  }
+}
+@media screen and (max-width: 992px) and (max-width: 370px) {
+  .review__page .review__right .banner__form .counter-left {
+    width: 150px;
+  }
 }
