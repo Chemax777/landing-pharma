@@ -3400,6 +3400,11 @@ main {
       margin-top: 30px;
       flex: 1;
       margin-bottom: 20px;
+      .form-btn {
+        a {
+          text-align: center;
+        }
+      }
       @media screen and (max-width: 1200px) {
         .counter__right {
           .counter-total {

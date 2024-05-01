@@ -4194,6 +4194,9 @@ main {
           flex: 1;
   margin-bottom: 20px;
 }
+.review__page .review__right .banner__form .form-btn a {
+  text-align: center;
+}
 @media screen and (max-width: 1200px) {
   .review__page .review__right .banner__form .counter__right .counter-total {
     text-align: center;
