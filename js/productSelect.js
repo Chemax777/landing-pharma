@@ -101,37 +101,47 @@ if (quantityInput) {
     updatePrice();
   });
 }
+if(nameReviewInput) {
+  nameReviewInput.addEventListener("blur", (e) => {
+    validationOnEmpty(e, "name");
+  });
+}
 
-nameReviewInput.addEventListener("blur", (e) => {
-  validationOnEmpty(e, "name");
-});
+if(commentReviewInput) {
+  commentReviewInput.addEventListener("blur", (e) => {
+    validationOnEmpty(e, "comment");
+  });
+}
 
-commentReviewInput.addEventListener("blur", (e) => {
-  validationOnEmpty(e, "comment");
-});
+if(emailReviewInput) {
+  emailReviewInput.addEventListener("blur", (e) => {
+    if (!validateEmail(e.target.value)) {
+      e.target.parentElement.classList.add("show-warning");
+      validationProductReview.email = false;
+    } else {
+      e.target.parentElement.classList.remove("show-warning");
+      validationProductReview.email = true;
+    }
+  });
+}
 
-emailReviewInput.addEventListener("blur", (e) => {
-  if (!validateEmail(e.target.value)) {
-    e.target.parentElement.classList.add("show-warning");
-    validationProductReview.email = false;
-  } else {
-    e.target.parentElement.classList.remove("show-warning");
-    validationProductReview.email = true;
-  }
-});
+if(reviewFormSubmitBtn) {
+  reviewFormSubmitBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    console.log(validationProductReview);
+    if (
+      validationProductReview.email &&
+      validationProductReview.name &&
+      validationProductReview.comment
+    ) {
+      alert("Спасибо за заказ!");
+    } else {
+      alert("Проверьте данные!");
+    }
+  });
+}
 
-reviewFormSubmitBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  console.log(validationProductReview);
-  if (
-    validationProductReview.email &&
-    validationProductReview.name &&
-    validationProductReview.comment
-  ) {
-    alert("Спасибо за заказ!");
-  } else {
-    alert("Проверьте данные!");
-  }
-});
+if(uploadInput) {
+  uploadInput.addEventListener("change", handleFileSelect);
+}
 
-uploadInput.addEventListener("change", handleFileSelect);

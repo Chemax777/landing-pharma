@@ -23,22 +23,27 @@
           <div class="nav__logo-mobile">
             <a href="./">
               <img
-                src="./img/logo.jpg"
+                src="./img/logo.svg"
                 alt="logo"
                 width="160"
                 height="75"
                 loading="lazy"
               />
             </a>
-            <div class="close-mobile">
-              <img
-                src="./img/icons/close.svg"
-                alt="close"
-                width="35"
-                height="35"
-                loading="lazy"
-              />
-            </div>
+            <button aria-label="close" class="close-mobile">
+              <svg
+                fill="#057a96"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z"
+                  fill="#057a96"
+                />
+              </svg>
+            </button>
           </div>
           <ul class="nav__list-mobile">
             <li class="nav__item-mobile">
@@ -70,7 +75,7 @@
           <div class="header__logo">
             <a href="./">
               <img
-                src="./img/logo.jpg"
+                src="./img/logo.svg"
                 alt="logo"
                 width="192"
                 height="90"
@@ -166,7 +171,10 @@
               <div class="form__counter-wrapper">
                 <!-- <div class="counter-title">Количество упаковок</div> -->
                 <div class="form__select">
-                  <div class="itc-select select-banner-form-med" id="select-banner-form-med-popup">
+                  <div
+                    class="itc-select select-banner-form-med"
+                    id="select-banner-form-med-popup"
+                  >
                     <button
                       type="button"
                       class="itc-select__toggle"
@@ -216,7 +224,10 @@
                   </div>
                 </div>
                 <div class="form__select">
-                  <div class="itc-select select-banner-form-dose" id="select-banner-form-dose-popup">
+                  <div
+                    class="itc-select select-banner-form-dose"
+                    id="select-banner-form-dose-popup"
+                  >
                     <button
                       type="button"
                       class="itc-select__toggle"
@@ -356,6 +367,32 @@
                 </div>
                 <div class="counter">
                   <div class="counter-left">
+                    <button aria-label="-" class="counter-minus">
+                      <svg
+                        viewBox="0 0 48 48"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="#25b6d2"
+                        stroke="#25b6d2"
+                      >
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g
+                          id="SVGRepo_tracerCarrier"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></g>
+                        <g id="SVGRepo_iconCarrier">
+                          <path
+                            d="M24,3A21,21,0,1,0,45,24,21,21,0,0,0,24,3Z"
+                            fill="#ffffff8bcc4"
+                          ></path>
+                          <path
+                            d="M32,26H16a2,2,0,0,1,0-4H32A2,2,0,0,1,32,26Z"
+                            fill="#ffffff"
+                          ></path>
+                        </g>
+                      </svg>
+                    </button>
+                    <div class="counter-value">1</div>
                     <button aria-label="+" class="counter-plus">
                       <svg
                         version="1.1"
@@ -393,36 +430,11 @@
                         </g>
                       </svg>
                     </button>
-                    <div class="counter-value">1</div>
-                    <button aria-label="-" class="counter-minus">
-                      <svg
-                        viewBox="0 0 48 48"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="#25b6d2"
-                        stroke="#25b6d2"
-                      >
-                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                        <g
-                          id="SVGRepo_tracerCarrier"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        ></g>
-                        <g id="SVGRepo_iconCarrier">
-                          <path
-                            d="M24,3A21,21,0,1,0,45,24,21,21,0,0,0,24,3Z"
-                            fill="#ffffff8bcc4"
-                          ></path>
-                          <path
-                            d="M32,26H16a2,2,0,0,1,0-4H32A2,2,0,0,1,32,26Z"
-                            fill="#ffffff"
-                          ></path>
-                        </g>
-                      </svg>
-                    </button>
                   </div>
                   <div class="counter__right">
                     <div class="counter-total">
-                      Итого <span class="total-number">100</span> USD + доставка
+                      Итого <span class="total-number">49.49</span> USD +
+                      доставка
                     </div>
                   </div>
                 </div>
@@ -492,7 +504,7 @@
               <div class="footer__info_logo">
                 <a href="./"
                   ><img
-                    src="./img/logo.jpg"
+                    src="./img/logo.svg"
                     alt="logo"
                     loading="lazy"
                     width="120"
@@ -854,13 +866,15 @@
               </div>
             </div>
             <div class="corner-action__order-btn primary-btn">
-              <button>Purchase</button>
+              <button aria-label="purchase">Purchase</button>
             </div>
           </div>
         </div>
       </div>
     </footer>
+    <script src="./js/swiper.js"></script>
     <script src="./js/customSelect.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/productSelect.js"></script>
   </body>
 </html>

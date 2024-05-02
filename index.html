@@ -24,22 +24,27 @@
           <div class="nav__logo-mobile">
             <a href="./">
               <img
-                src="./img/logo.jpg"
+                src="./img/logo.svg"
                 alt="logo"
                 width="160"
                 height="75"
                 loading="lazy"
               />
             </a>
-            <div class="close-mobile">
-              <img
-                src="./img/icons/close.svg"
-                alt="close"
-                width="35"
-                height="35"
-                loading="lazy"
-              />
-            </div>
+            <button aria-label="close" class="close-mobile">
+              <svg
+                fill="#057a96"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z"
+                  fill="#057a96"
+                />
+              </svg>
+            </button>
           </div>
           <ul class="nav__list-mobile">
             <li class="nav__item-mobile">
@@ -71,7 +76,7 @@
           <div class="header__logo">
             <a href="./">
               <img
-                src="./img/logo.jpg"
+                src="./img/logo.svg"
                 alt="logo"
                 width="192"
                 height="90"
@@ -167,7 +172,10 @@
               <div class="form__counter-wrapper">
                 <!-- <div class="counter-title">Количество упаковок</div> -->
                 <div class="form__select">
-                  <div class="itc-select select-banner-form-med" id="select-banner-form-med-popup">
+                  <div
+                    class="itc-select select-banner-form-med"
+                    id="select-banner-form-med-popup"
+                  >
                     <button
                       type="button"
                       class="itc-select__toggle"
@@ -217,7 +225,10 @@
                   </div>
                 </div>
                 <div class="form__select">
-                  <div class="itc-select select-banner-form-dose" id="select-banner-form-dose-popup">
+                  <div
+                    class="itc-select select-banner-form-dose"
+                    id="select-banner-form-dose-popup"
+                  >
                     <button
                       type="button"
                       class="itc-select__toggle"
@@ -357,6 +368,32 @@
                 </div>
                 <div class="counter">
                   <div class="counter-left">
+                    <button aria-label="-" class="counter-minus">
+                      <svg
+                        viewBox="0 0 48 48"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="#25b6d2"
+                        stroke="#25b6d2"
+                      >
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g
+                          id="SVGRepo_tracerCarrier"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></g>
+                        <g id="SVGRepo_iconCarrier">
+                          <path
+                            d="M24,3A21,21,0,1,0,45,24,21,21,0,0,0,24,3Z"
+                            fill="#ffffff8bcc4"
+                          ></path>
+                          <path
+                            d="M32,26H16a2,2,0,0,1,0-4H32A2,2,0,0,1,32,26Z"
+                            fill="#ffffff"
+                          ></path>
+                        </g>
+                      </svg>
+                    </button>
+                    <div class="counter-value">1</div>
                     <button aria-label="+" class="counter-plus">
                       <svg
                         version="1.1"
@@ -394,36 +431,11 @@
                         </g>
                       </svg>
                     </button>
-                    <div class="counter-value">1</div>
-                    <button aria-label="-" class="counter-minus">
-                      <svg
-                        viewBox="0 0 48 48"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="#25b6d2"
-                        stroke="#25b6d2"
-                      >
-                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                        <g
-                          id="SVGRepo_tracerCarrier"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        ></g>
-                        <g id="SVGRepo_iconCarrier">
-                          <path
-                            d="M24,3A21,21,0,1,0,45,24,21,21,0,0,0,24,3Z"
-                            fill="#ffffff8bcc4"
-                          ></path>
-                          <path
-                            d="M32,26H16a2,2,0,0,1,0-4H32A2,2,0,0,1,32,26Z"
-                            fill="#ffffff"
-                          ></path>
-                        </g>
-                      </svg>
-                    </button>
                   </div>
                   <div class="counter__right">
                     <div class="counter-total">
-                      Итого <span class="total-number">49.49</span> USD + доставка
+                      Итого <span class="total-number">49.49</span> USD +
+                      доставка
                     </div>
                   </div>
                 </div>
@@ -933,7 +945,10 @@
                   <div class="form__counter-wrapper">
                     <!-- <div class="counter-title">Количество упаковок</div> -->
                     <div class="form__select">
-                      <div class="itc-select select-banner-form-med" id="select-banner-form-med">
+                      <div
+                        class="itc-select select-banner-form-med"
+                        id="select-banner-form-med"
+                      >
                         <button
                           type="button"
                           class="itc-select__toggle"
@@ -983,7 +998,10 @@
                       </div>
                     </div>
                     <div class="form__select">
-                      <div class="itc-select select-banner-form-dose" id="select-banner-form-dose">
+                      <div
+                        class="itc-select select-banner-form-dose"
+                        id="select-banner-form-dose"
+                      >
                         <button
                           type="button"
                           class="itc-select__toggle"
@@ -1123,6 +1141,32 @@
                     </div>
                     <div class="counter">
                       <div class="counter-left">
+                        <button aria-label="-" class="counter-minus">
+                          <svg
+                            viewBox="0 0 48 48"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="#25b6d2"
+                            stroke="#25b6d2"
+                          >
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g
+                              id="SVGRepo_tracerCarrier"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></g>
+                            <g id="SVGRepo_iconCarrier">
+                              <path
+                                d="M24,3A21,21,0,1,0,45,24,21,21,0,0,0,24,3Z"
+                                fill="#ffffff8bcc4"
+                              ></path>
+                              <path
+                                d="M32,26H16a2,2,0,0,1,0-4H32A2,2,0,0,1,32,26Z"
+                                fill="#ffffff"
+                              ></path>
+                            </g>
+                          </svg>
+                        </button>
+                        <div class="counter-value">1</div>
                         <button aria-label="+" class="counter-plus">
                           <svg
                             version="1.1"
@@ -1157,32 +1201,6 @@
                                   height="32"
                                 ></rect>
                               </g>
-                            </g>
-                          </svg>
-                        </button>
-                        <div class="counter-value">1</div>
-                        <button aria-label="-" class="counter-minus">
-                          <svg
-                            viewBox="0 0 48 48"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="#25b6d2"
-                            stroke="#25b6d2"
-                          >
-                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                            <g
-                              id="SVGRepo_tracerCarrier"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            ></g>
-                            <g id="SVGRepo_iconCarrier">
-                              <path
-                                d="M24,3A21,21,0,1,0,45,24,21,21,0,0,0,24,3Z"
-                                fill="#ffffff8bcc4"
-                              ></path>
-                              <path
-                                d="M32,26H16a2,2,0,0,1,0-4H32A2,2,0,0,1,32,26Z"
-                                fill="#ffffff"
-                              ></path>
                             </g>
                           </svg>
                         </button>
@@ -1442,7 +1460,7 @@
                       <div class="product__top">
                         <a href="./medical-page.html">
                           <div class="product-item__discount">
-                            <span>Discount</span><span>-65%</span>
+                            <span>-65%</span>
                           </div>
                           <picture>
                             <img
@@ -1478,7 +1496,7 @@
                                 d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"
                               ></path>
                             </svg>
-                            Purchase</a
+                            <span>Purchase</span></a
                           >
                         </div>
                       </div>
@@ -1500,7 +1518,7 @@
                       <div class="product__top">
                         <a href="./medical-page.html">
                           <div class="product-item__discount">
-                            <span>Discount</span><span>-65%</span>
+                            <span>-65%</span>
                           </div>
                           <picture>
                             <img
@@ -1536,7 +1554,7 @@
                                 d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"
                               ></path>
                             </svg>
-                            Purchase</a
+                            <span>Purchase</span></a
                           >
                         </div>
                       </div>
@@ -1558,7 +1576,7 @@
                       <div class="product__top">
                         <a href="./medical-page.html">
                           <div class="product-item__discount">
-                            <span>Discount</span><span>-65%</span>
+                            <span>-65%</span>
                           </div>
                           <picture>
                             <img
@@ -1594,7 +1612,7 @@
                                 d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"
                               ></path>
                             </svg>
-                            Purchase</a
+                            <span>Purchase</span></a
                           >
                         </div>
                       </div>
@@ -1616,7 +1634,7 @@
                       <div class="product__top">
                         <a href="./medical-page.html">
                           <div class="product-item__discount">
-                            <span>Discount</span><span>-65%</span>
+                            <span>-65%</span>
                           </div>
                           <picture>
                             <img
@@ -1652,7 +1670,7 @@
                                 d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"
                               ></path>
                             </svg>
-                            Purchase</a
+                            <span>Purchase</span></a
                           >
                         </div>
                       </div>
@@ -1674,7 +1692,7 @@
                       <div class="product__top">
                         <a href="./medical-page.html">
                           <div class="product-item__discount">
-                            <span>Discount</span><span>-65%</span>
+                            <span>-65%</span>
                           </div>
                           <picture>
                             <img
@@ -1710,7 +1728,7 @@
                                 d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"
                               ></path>
                             </svg>
-                            Purchase</a
+                            <span>Purchase</span></a
                           >
                         </div>
                       </div>
@@ -1732,7 +1750,7 @@
                       <div class="product__top">
                         <a href="./medical-page.html">
                           <div class="product-item__discount">
-                            <span>Discount</span><span>-65%</span>
+                            <span>-65%</span>
                           </div>
                           <picture>
                             <img
@@ -1768,7 +1786,7 @@
                                 d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"
                               ></path>
                             </svg>
-                            Purchase</a
+                            <span>Purchase</span></a
                           >
                         </div>
                       </div>
@@ -3014,7 +3032,10 @@
                 </p>
                 <div class="order__actions">
                   <div class="form__select">
-                    <div class="itc-select select-banner-form-med" id="select-banner-form-med-bottom-main">
+                    <div
+                      class="itc-select select-banner-form-med"
+                      id="select-banner-form-med-bottom-main"
+                    >
                       <button
                         type="button"
                         class="itc-select__toggle"
@@ -3064,7 +3085,10 @@
                     </div>
                   </div>
                   <div class="form__select">
-                    <div class="itc-select select-banner-form-dose" id="select-banner-form-dose-bottom-main">
+                    <div
+                      class="itc-select select-banner-form-dose"
+                      id="select-banner-form-dose-bottom-main"
+                    >
                       <button
                         type="button"
                         class="itc-select__toggle"
@@ -3203,50 +3227,6 @@
                     </div>
                   </div>
                   <div class="counter-order counter">
-                    <button aria-label="+" type="button" class="counter-plus">
-                      <svg
-                        viewBox="0 0 32 32"
-                        version="1.1"
-                        xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                        xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
-                        fill="#000000"
-                      >
-                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                        <g
-                          id="SVGRepo_tracerCarrier"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        ></g>
-                        <g id="SVGRepo_iconCarrier">
-                          <title>plus</title>
-                          <desc>Created with Sketch Beta.</desc>
-                          <defs></defs>
-                          <g
-                            id="Page-1"
-                            stroke="none"
-                            stroke-width="1"
-                            fill="none"
-                            fill-rule="evenodd"
-                            sketch:type="MSPage"
-                          >
-                            <g
-                              id="Icon-Set-Filled"
-                              sketch:type="MSLayerGroup"
-                              transform="translate(-362.000000, -1037.000000)"
-                              fill="#000000"
-                            >
-                              <path
-                                d="M390,1049 L382,1049 L382,1041 C382,1038.79 380.209,1037 378,1037 C375.791,1037 374,1038.79 374,1041 L374,1049 L366,1049 C363.791,1049 362,1050.79 362,1053 C362,1055.21 363.791,1057 366,1057 L374,1057 L374,1065 C374,1067.21 375.791,1069 378,1069 C380.209,1069 382,1067.21 382,1065 L382,1057 L390,1057 C392.209,1057 394,1055.21 394,1053 C394,1050.79 392.209,1049 390,1049"
-                                id="plus"
-                                sketch:type="MSShapeGroup"
-                              ></path>
-                            </g>
-                          </g>
-                        </g>
-                      </svg>
-                    </button>
-                    <div class="counter-value">1</div>
                     <button aria-label="-" class="counter-minus">
                       <svg
                         viewBox="0 -12 32 32"
@@ -3290,11 +3270,58 @@
                         </g>
                       </svg>
                     </button>
+                    <div class="counter-value">1</div>
+                    <button aria-label="+" type="button" class="counter-plus">
+                      <svg
+                        viewBox="0 0 32 32"
+                        version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+                        fill="#000000"
+                      >
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g
+                          id="SVGRepo_tracerCarrier"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></g>
+                        <g id="SVGRepo_iconCarrier">
+                          <title>plus</title>
+                          <desc>Created with Sketch Beta.</desc>
+                          <defs></defs>
+                          <g
+                            id="Page-1"
+                            stroke="none"
+                            stroke-width="1"
+                            fill="none"
+                            fill-rule="evenodd"
+                            sketch:type="MSPage"
+                          >
+                            <g
+                              id="Icon-Set-Filled"
+                              sketch:type="MSLayerGroup"
+                              transform="translate(-362.000000, -1037.000000)"
+                              fill="#000000"
+                            >
+                              <path
+                                d="M390,1049 L382,1049 L382,1041 C382,1038.79 380.209,1037 378,1037 C375.791,1037 374,1038.79 374,1041 L374,1049 L366,1049 C363.791,1049 362,1050.79 362,1053 C362,1055.21 363.791,1057 366,1057 L374,1057 L374,1065 C374,1067.21 375.791,1069 378,1069 C380.209,1069 382,1067.21 382,1065 L382,1057 L390,1057 C392.209,1057 394,1055.21 394,1053 C394,1050.79 392.209,1049 390,1049"
+                                id="plus"
+                                sketch:type="MSShapeGroup"
+                              ></path>
+                            </g>
+                          </g>
+                        </g>
+                      </svg>
+                    </button>
                   </div>
                 </div>
                 <div class="order__bottom">
                   <div class="order__price">
-                    <p>от <span class="total-number">49.49</span> USD</p>
+                    <p class="order__price_old">60.49 USD</p>
+                    <p class="order__price_new">
+                      от <span class="total-number">49.49</span> USD
+                    </p>
                   </div>
                   <div class="order-btn primary-btn get-order-btn">
                     <button aria-label="Заказать">Заказать</button>
@@ -3314,7 +3341,7 @@
               <div class="footer__info_logo">
                 <a href="./"
                   ><img
-                    src="./img/logo.jpg"
+                    src="./img/logo.svg"
                     alt="logo"
                     loading="lazy"
                     width="120"
@@ -3676,7 +3703,7 @@
               </div>
             </div>
             <div class="corner-action__order-btn primary-btn">
-              <button>Purchase</button>
+              <button aria-label="purchase">Purchase</button>
             </div>
           </div>
         </div>
@@ -3685,5 +3712,6 @@
     <script src="./js/swiper.js"></script>
     <script src="./js/customSelect.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/productSelect.js"></script>
   </body>
 </html>
