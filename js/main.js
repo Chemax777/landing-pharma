@@ -364,6 +364,7 @@ if (swiperSection) {
     },
     pagination: {
       el: ".swiper-pagination",
+      clickable: true,
     },
   });
 }
