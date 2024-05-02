@@ -14,6 +14,8 @@ $from-top-gradient: linear-gradient(
 );
 $bg-sections: #d6f4ff;
 $transition-show-elements: 0.5s all ease-out;
+// $header-footer-bg: #defbf8;
+$header-footer-bg: #f7fbfb;
 
 @font-face {
   font-display: swap;
@@ -78,7 +80,8 @@ main {
   z-index: 90;
   width: 100%;
   height: 60px;
-  background: $main-gradient;
+  // background: $main-gradient;
+  background: $header-footer-bg;
   border-bottom: 3px solid #06adb5;
 
   &__container {
@@ -146,12 +149,13 @@ main {
         align-items: center;
 
         a {
-          color: #fff;
+          color: #000;
           font-weight: 700;
           padding: 10px;
+          font-size: 14px;
 
           &:hover {
-            color: $active-color;
+            color: $main-color;
           }
         }
       }
@@ -189,22 +193,30 @@ main {
   display: none;
   position: fixed;
   z-index: 101;
-  top: 5px;
+  top: 8px;
   left: 10px;
-  width: 30px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
   justify-content: center;
   align-items: center;
+  padding: 0;
+  background: $main-color;
+  border-radius: 50%;
 
   @media screen and (max-width: 1065px) {
     display: flex;
   }
 
   svg {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     fill: #fff;
+    stroke: #fff;
+    path {
+      fill: #fff;
+      stroke: #fff;
+    }
   }
 }
 
@@ -212,9 +224,9 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background: #fff;
+  background: $header-footer-bg;
   border-right: 2px;
-  color: $main-color;
+  color: #000;
   position: fixed;
   top: 0;
   left: 0;
@@ -295,7 +307,7 @@ main {
       }
 
       a {
-        color: $main-color;
+        color: #000;
         text-transform: uppercase;
         font-size: 18px;
         font-weight: 700;
@@ -1603,7 +1615,8 @@ main {
 }
 
 .footer__main {
-  background: $main-gradient;
+  background: $header-footer-bg;
+  box-shadow: 0 -2px 3px rgba(0, 0, 0, 0.05);
   padding-bottom: 20px;
   .footer__container {
     display: flex;
@@ -1632,7 +1645,7 @@ main {
           }
         }
         .footer__info_text {
-          color: #fff;
+          color: #000;
         }
       }
     }
@@ -1644,7 +1657,7 @@ main {
       gap: 25px;
       .footer__title {
         font-size: 22px;
-        color: #fff;
+        color: #000;
         font-weight: 700;
         text-align: left;
         width: 100%;
@@ -1661,8 +1674,9 @@ main {
             font-size: 18px;
             padding: 5px 10px 5px 0;
             transition: all 0.4s;
+            color: #000;
             &:hover {
-              color: $active-color;
+              color: $main-color;
             }
           }
         }
@@ -1676,7 +1690,7 @@ main {
           justify-content: flex-start;
           align-items: center;
           gap: 30px;
-          background: #ffffff7b;
+          background: #c3c3c338;
           .footer__social_item {
             &:hover {
               a {
@@ -1715,16 +1729,20 @@ main {
             justify-content: center;
             align-items: center;
             gap: 10px;
+            color: #000;
             svg {
               width: 15px;
               height: 15px;
               transition: all 0.4s;
+              path {
+                fill: #000;
+              }
             }
             &:hover {
-              color: $active-color;
+              color: $main-color;
               svg {
                 path {
-                  fill: $active-color;
+                  fill: $main-color;
                 }
               }
             }
@@ -1735,9 +1753,14 @@ main {
               width: 100%;
               overflow: hidden;
               svg {
-                width: 20px;
-                height: 20px;
+                width: 18px;
+                height: 18px;
                 transition: all 0.4s;
+                margin-bottom: 2px;
+                path {
+                  fill: #fff;
+                  stroke: #fff;
+                }
               }
               a {
                 width: 100%;
@@ -1746,8 +1769,12 @@ main {
                 align-items: center;
                 padding: 12px 20px;
                 background: #07a01b;
+                color: #fff;
               }
               &:hover {
+                a {
+                  color: $active-color;
+                }
                 path {
                   fill: $active-color;
                   stroke: $active-color;
@@ -2017,7 +2044,7 @@ main {
   max-width: 1280px;
   text-align: center;
   p {
-    color: #dcd9d9;
+    color: #3c3c3c;
     line-height: 1.4;
     padding: 0 5px;
   }
@@ -3555,4 +3582,110 @@ main {
       }
     }
   }
+}
+
+
+.form_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.form_container form {
+  min-width: 270px;
+  max-width: 600px;
+  width: 45%;
+  color: #fff !important;
+}
+
+.form_container input {
+  width: auto;
+}
+
+.form_container input,
+.form_container textarea {
+  padding: 12px;
+  background: #d8d2d2;
+  border: 2px solid #000;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  resize: none;
+}
+
+.form_container input::-webkit-input-placeholder,
+.form_container textarea::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.form_container input::-moz-placeholder,
+.form_container textarea::-moz-placeholder {
+  color: #fff;
+}
+
+.form_container input:-ms-input-placeholder,
+.form_container textarea:-ms-input-placeholder {
+  color: #fff;
+}
+
+.form_container input::-ms-input-placeholder,
+.form_container textarea::-ms-input-placeholder {
+  color: #fff;
+}
+
+.form_container input::-webkit-input-placeholder, .form_container textarea::-webkit-input-placeholder {
+  color: #111111;
+}
+
+.form_container input::-moz-placeholder, .form_container textarea::-moz-placeholder {
+  color: #111111;
+}
+
+.form_container input:-ms-input-placeholder, .form_container textarea:-ms-input-placeholder {
+  color: #111111;
+}
+
+.form_container input::-ms-input-placeholder, .form_container textarea::-ms-input-placeholder {
+  color: #111111;
+}
+
+.form_container input::placeholder,
+.form_container textarea::placeholder {
+  color: #111111;
+}
+
+.form_container span {
+  color: #fff;
+}
+
+.form_container div {
+  text-align: center;
+}
+
+.form_container button:hover {
+  opacity: 0.7;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  color: #fff;
+}
+
+.form_container label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
