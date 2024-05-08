@@ -11,73 +11,141 @@
   </head>
   <body>
     <header>
-        <button aria-label="open menu" class="burger">
-          <svg
-            fill="none"
-            height="24"
-            viewBox="0 0 24 24"
-            width="24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g clip-path="url(#clip0_105_1724)">
-              <path
-                d="M3 6.00098H21M3 12.001H21M3 18.001H21"
-                stroke="#fff"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+      <button aria-label="open menu" class="burger">
+        <svg
+          fill="none"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g clip-path="url(#clip0_105_1724)">
+            <path
+              d="M3 6.00098H21M3 12.001H21M3 18.001H21"
+              stroke="#fff"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+          </g>
+          <defs>
+            <clipPath id="clip0_105_1724">
+              <rect
+                fill="white"
+                height="24"
+                transform="translate(0 0.000976562)"
+                width="24"
               />
-            </g>
-            <defs>
-              <clipPath id="clip0_105_1724">
-                <rect
-                  fill="white"
-                  height="24"
-                  transform="translate(0 0.000976562)"
-                  width="24"
-                />
-              </clipPath>
-            </defs>
-          </svg>
-        </button>
-        <aside>
-          <nav class="header__nav-mobile">
-            <div class="nav__logo-mobile">
-              <a href="./">
-                <img
-                  src="./img/logo/logo-hub.webp"
-                  alt="logo"
-                  width="160"
-                  height="75"
-                  loading="lazy"
-                />
-              </a>
-              <button aria-label="close" class="close-mobile">
-                <svg
+            </clipPath>
+          </defs>
+        </svg>
+      </button>
+      <aside>
+        <nav class="header__nav-mobile">
+          <div class="nav__logo-mobile">
+            <a href="./">
+              <img
+                src="./img/logo/logo-hub.webp"
+                alt="logo"
+                width="160"
+                height="75"
+                loading="lazy"
+              />
+            </a>
+            <button aria-label="close" class="close-mobile">
+              <svg
+                fill="#057a96"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z"
                   fill="#057a96"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+                />
+              </svg>
+            </button>
+          </div>
+          <ul class="nav__list-mobile">
+            <li class="nav__item-mobile toggle-meds-mobile">
+              <a href="./all-goods-page.html">Препараты</a>
+              <button class="toggle-meds-mobile__btn">
+                <svg viewBox="0 0 512 512">
                   <path
-                    d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z"
-                    fill="#057a96"
-                  />
+                    d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+                  ></path>
                 </svg>
               </button>
-            </div>
-            <ul class="nav__list-mobile">
-              <li class="nav__item-mobile toggle-meds-mobile">
-                <a href="#">Препараты</a>
-                <button class="toggle-meds-mobile__btn">
+              <div class="meds__section-mobile">
+                <div class="meds__group">
+                  <div class="meds__title">
+                    <a href="./dose-category.html">Дозировка</a>
+                  </div>
+                  <ul class="meds__list">
+                    <li class="meds__list_item"><a href="#">200mg</a></li>
+                    <li class="meds__list_item"><a href="#">150mg</a></li>
+                    <li class="meds__list_item"><a href="#">100mg</a></li>
+                    <li class="meds__list_item"><a href="#">50mg</a></li>
+                    <li class="meds__list_item"><a href="#">25mg</a></li>
+                    <li class="meds__list_item"><a href="#">5mg</a></li>
+                  </ul>
+                </div>
+                <div class="meds__group">
+                  <div class="meds__title">
+                    <a href="./package-category.html">Упаковка</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav__item-mobile">
+              <a href="./instruction-page.html">Інструкція</a>
+            </li>
+            <li class="nav__item-mobile">
+              <a href="./beware-of-counterfeits.html">Уникайте підробок</a>
+            </li>
+            <li class="nav__item-mobile">
+              <a href="./shiping-page.html">Доставка</a>
+            </li>
+            <li class="nav__item-mobile">
+              <a href="./all-about-ed-page.html">Все про ЕД</a>
+            </li>
+            <li class="nav__item-mobile">
+              <a href="./review-page.html">Відгуки</a>
+            </li>
+            <li class="nav__item-mobile">
+              <a href="./faq-page.html">FAQ</a>
+            </li>
+          </ul>
+          <!-- <div class="header__order-btn-mobile primary-btn">
+            <a href="#order">Заказать</a>
+          </div> -->
+        </nav>
+      </aside>
+      <div class="header">
+        <div class="header__container">
+          <div class="header__logo">
+            <a href="./">
+              <img
+                src="./img/logo/logo-hub.webp"
+                alt="logo"
+                width="192"
+                height="90"
+                loading="lazy"
+              />
+            </a>
+          </div>
+          <nav class="header__nav-desktop">
+            <ul class="nav__list">
+              <li class="nav__item meds-toggler">
+                <a href="./all-goods-page.html"
+                  >Препараты
                   <svg viewBox="0 0 512 512">
                     <path
                       d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
-                    ></path>
-                  </svg>
-                </button>
-                <div class="meds__section-mobile">
+                    ></path></svg
+                ></a>
+                <div class="meds__section">
                   <div class="meds__group">
                     <div class="meds__title">
                       <a href="./dose-category.html">Дозировка</a>
@@ -98,452 +166,384 @@
                   </div>
                 </div>
               </li>
-              <li class="nav__item-mobile">
+              <li class="nav__item">
                 <a href="./instruction-page.html">Інструкція</a>
               </li>
-              <li class="nav__item-mobile">
+              <li class="nav__item">
                 <a href="./beware-of-counterfeits.html">Уникайте підробок</a>
               </li>
-              <li class="nav__item-mobile">
+              <li class="nav__item">
                 <a href="./shiping-page.html">Доставка</a>
               </li>
-              <li class="nav__item-mobile">
+              <li class="nav__item">
                 <a href="./all-about-ed-page.html">Все про ЕД</a>
               </li>
-              <li class="nav__item-mobile">
+              <li class="nav__item">
                 <a href="./review-page.html">Відгуки</a>
               </li>
-              <li class="nav__item-mobile">
+              <li class="nav__item">
                 <a href="./faq-page.html">FAQ</a>
               </li>
             </ul>
-            <!-- <div class="header__order-btn-mobile primary-btn">
-              <a href="#order">Заказать</a>
-            </div> -->
           </nav>
-        </aside>
-        <div class="header">
-          <div class="header__container">
-            <div class="header__logo">
-              <a href="./">
-                <img
-                  src="./img/logo/logo-hub.webp"
-                  alt="logo"
-                  width="192"
-                  height="90"
-                  loading="lazy"
+          <!-- <div class="header__order-btn primary-btn">
+            <a href="#order">Заказать</a>
+          </div> -->
+        </div>
+      </div>
+      <div class="aside-overlay"></div>
+      <div class="modal-wrapper">
+        <div class="modal">
+          <div class="banner__form">
+            <div class="close-modal-btn">
+              <svg
+                fill="#fff"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z"
+                  fill="#fff"
                 />
-              </a>
+              </svg>
             </div>
-            <nav class="header__nav-desktop">
-              <ul class="nav__list">
-                <li class="nav__item meds-toggler">
-                  <a href="#"
-                    >Препараты
-                    <svg viewBox="0 0 512 512">
-                      <path
-                        d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
-                      ></path></svg
-                  ></a>
-                  <div class="meds__section">
-                    <div class="meds__group">
-                      <div class="meds__title">
-                        <a href="./dose-category.html">Дозировка</a>
-                      </div>
-                      <ul class="meds__list">
-                        <li class="meds__list_item"><a href="#">200mg</a></li>
-                        <li class="meds__list_item"><a href="#">150mg</a></li>
-                        <li class="meds__list_item"><a href="#">100mg</a></li>
-                        <li class="meds__list_item"><a href="#">50mg</a></li>
-                        <li class="meds__list_item"><a href="#">25mg</a></li>
-                        <li class="meds__list_item"><a href="#">5mg</a></li>
+            <div class="title__form">ЧТОБЫ ЗАКАЗАТЬ ПРОСТО ЗАПОЛНИТЕ ФОРМУ</div>
+            <form class="form-wrapper">
+              <div class="form__text">
+                <div>Закажите со скидкой <span class="discont">65%</span></div>
+                <div>осталось <span>10</span> упаковок</div>
+                <!-- <div class="region">
+                  Ваш регион
+                  <span>
+                    <img
+                      src="./img/flag/usa.png"
+                      alt="название страны"
+                      width="18"
+                      height="18"
+                    />
+                    страна
+                  </span>
+                </div> -->
+              </div>
+              <!-- <div class="form__input-wrapper">
+                <label for="nameModal">Введите email</label>
+                <input
+                  class="mail-inp"
+                  id="nameModal"
+                  type="text"
+                  placeholder="example@gamil.com"
+                  required
+                />
+                <span class="warning">Проверьте правильность email</span>
+              </div>
+              <div class="form__input-wrapper">
+                <label for="telModal">Введите телефон</label>
+                <input
+                  id="telModal"
+                  class="tel"
+                  type="tel"
+                  placeholder="Ваш номер телефона"
+                  required
+                />
+                <span class="warning">Проверьте правильность телефона</span>
+              </div> -->
+              <div class="form__counter-wrapper">
+                <!-- <div class="counter-title">Количество упаковок</div> -->
+                <div class="form__select">
+                  <div
+                    class="itc-select select-banner-form-med"
+                    id="select-banner-form-med-popup"
+                  >
+                    <button
+                      type="button"
+                      class="itc-select__toggle"
+                      name="med"
+                      data-select="toggle"
+                      data-index="0"
+                      aria-label="Выбрать препарат"
+                    >
+                      Выбрать препарат
+                    </button>
+                    <div class="itc-select__dropdown">
+                      <ul class="itc-select__options">
+                        <li
+                          class="itc-select__option order-option"
+                          data-select="option"
+                          data-value="Kamagra Soft"
+                          data-index="0"
+                        >
+                          Kamagra Soft
+                        </li>
+                        <li
+                          class="itc-select__option order-option"
+                          data-select="option"
+                          data-value="Kamagra Polo"
+                          data-index="1"
+                        >
+                          Kamagra Polo
+                        </li>
+                        <li
+                          class="itc-select__option order-option"
+                          data-select="option"
+                          data-value="Kamagra"
+                          data-index="2"
+                        >
+                          Kamagra
+                        </li>
+                        <li
+                          class="itc-select__option order-option"
+                          data-select="option"
+                          data-value="Kamagra Gold"
+                          data-index="3"
+                        >
+                          Kamagra Gold
+                        </li>
                       </ul>
                     </div>
-                    <div class="meds__group">
-                      <div class="meds__title">
-                        <a href="./package-category.html">Упаковка</a>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="nav__item">
-                  <a href="./instruction-page.html">Інструкція</a>
-                </li>
-                <li class="nav__item">
-                  <a href="./beware-of-counterfeits.html">Уникайте підробок</a>
-                </li>
-                <li class="nav__item">
-                  <a href="./shiping-page.html">Доставка</a>
-                </li>
-                <li class="nav__item">
-                  <a href="./all-about-ed-page.html">Все про ЕД</a>
-                </li>
-                <li class="nav__item">
-                  <a href="./review-page.html">Відгуки</a>
-                </li>
-                <li class="nav__item">
-                  <a href="./faq-page.html">FAQ</a>
-                </li>
-              </ul>
-            </nav>
-            <!-- <div class="header__order-btn primary-btn">
-              <a href="#order">Заказать</a>
-            </div> -->
-          </div>
-        </div>
-        <div class="aside-overlay"></div>
-        <div class="modal-wrapper">
-          <div class="modal">
-            <div class="banner__form">
-              <div class="close-modal-btn">
-                <svg
-                  fill="#fff"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z"
-                    fill="#fff"
-                  />
-                </svg>
-              </div>
-              <div class="title__form">ЧТОБЫ ЗАКАЗАТЬ ПРОСТО ЗАПОЛНИТЕ ФОРМУ</div>
-              <form class="form-wrapper">
-                <div class="form__text">
-                  <div>Закажите со скидкой <span class="discont">65%</span></div>
-                  <div>осталось <span>10</span> упаковок</div>
-                  <!-- <div class="region">
-                    Ваш регион
-                    <span>
-                      <img
-                        src="./img/flag/usa.png"
-                        alt="название страны"
-                        width="18"
-                        height="18"
-                      />
-                      страна
-                    </span>
-                  </div> -->
-                </div>
-                <!-- <div class="form__input-wrapper">
-                  <label for="nameModal">Введите email</label>
-                  <input
-                    class="mail-inp"
-                    id="nameModal"
-                    type="text"
-                    placeholder="example@gamil.com"
-                    required
-                  />
-                  <span class="warning">Проверьте правильность email</span>
-                </div>
-                <div class="form__input-wrapper">
-                  <label for="telModal">Введите телефон</label>
-                  <input
-                    id="telModal"
-                    class="tel"
-                    type="tel"
-                    placeholder="Ваш номер телефона"
-                    required
-                  />
-                  <span class="warning">Проверьте правильность телефона</span>
-                </div> -->
-                <div class="form__counter-wrapper">
-                  <!-- <div class="counter-title">Количество упаковок</div> -->
-                  <div class="form__select">
-                    <div
-                      class="itc-select select-banner-form-med"
-                      id="select-banner-form-med-popup"
-                    >
-                      <button
-                        type="button"
-                        class="itc-select__toggle"
-                        name="med"
-                        data-select="toggle"
-                        data-index="0"
-                        aria-label="Выбрать препарат"
-                      >
-                        Выбрать препарат
-                      </button>
-                      <div class="itc-select__dropdown">
-                        <ul class="itc-select__options">
-                          <li
-                            class="itc-select__option order-option"
-                            data-select="option"
-                            data-value="Kamagra Soft"
-                            data-index="0"
-                          >
-                            Kamagra Soft
-                          </li>
-                          <li
-                            class="itc-select__option order-option"
-                            data-select="option"
-                            data-value="Kamagra Polo"
-                            data-index="1"
-                          >
-                            Kamagra Polo
-                          </li>
-                          <li
-                            class="itc-select__option order-option"
-                            data-select="option"
-                            data-value="Kamagra"
-                            data-index="2"
-                          >
-                            Kamagra
-                          </li>
-                          <li
-                            class="itc-select__option order-option"
-                            data-select="option"
-                            data-value="Kamagra Gold"
-                            data-index="3"
-                          >
-                            Kamagra Gold
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form__select">
-                    <div
-                      class="itc-select select-banner-form-dose"
-                      id="select-banner-form-dose-popup"
-                    >
-                      <button
-                        type="button"
-                        class="itc-select__toggle"
-                        name="med"
-                        data-select="toggle"
-                        data-index="0"
-                        aria-label="Выбрать дозировку"
-                        disabled
-                      >
-                        Выбрать дозировку
-                      </button>
-                      <div class="itc-select__dropdown">
-                        <ul class="itc-select__options">
-                          <li
-                            class="itc-select__option order-option"
-                            data-select="option"
-                            data-value="100mg soft tab * 60"
-                            data-index="0"
-                            data-price="49.49"
-                            data-prep="Kamagra Soft"
-                          >
-                            100mg soft tab * 60
-                          </li>
-                          <li
-                            class="itc-select__option order-option"
-                            data-select="option"
-                            data-value="100mg soft tab * 120"
-                            data-index="1"
-                            data-price="264.17"
-                            data-prep="Kamagra Soft"
-                          >
-                            100mg soft tab * 120
-                          </li>
-                          <li
-                            class="itc-select__option order-option"
-                            data-select="option"
-                            data-value="100mg soft tab * 12"
-                            data-index="2"
-                            data-price="49.49"
-                            data-prep="Kamagra Soft"
-                          >
-                            100mg soft tab * 12
-                          </li>
-                          <li
-                            class="itc-select__option order-option"
-                            data-select="option"
-                            data-value="100mg soft tab * 32"
-                            data-index="3"
-                            data-price="79.26"
-                            data-prep="Kamagra Soft"
-                          >
-                            100mg soft tab * 32
-                          </li>
-                          <li
-                            class="itc-select__option order-option"
-                            data-select="option"
-                            data-value="100mg soft tab * 92"
-                            data-index="4"
-                            data-price="210.96"
-                            data-prep="Kamagra Soft"
-                          >
-                            100mg soft tab * 92
-                          </li>
-                          <li
-                            class="itc-select__option order-option"
-                            data-select="option"
-                            data-value="100mg * 12"
-                            data-index="5"
-                            data-price="50.41"
-                            data-prep="Kamagra Polo"
-                          >
-                            100mg * 12
-                          </li>
-                          <li
-                            class="itc-select__option order-option"
-                            data-select="option"
-                            data-value="100mg * 20"
-                            data-index="6"
-                            data-price="64.17"
-                            data-prep="Kamagra Polo"
-                          >
-                            100mg * 20
-                          </li>
-                          <li
-                            class="itc-select__option order-option"
-                            data-select="option"
-                            data-value="100mg * 20"
-                            data-index="8"
-                            data-price="88.02"
-                            data-prep="Kamagra Polo"
-                          >
-                            100mg * 32
-                          </li>
-                          <li
-                            class="itc-select__option order-option"
-                            data-select="option"
-                            data-value="100mg * 12"
-                            data-index="9"
-                            data-price="45.18"
-                            data-prep="Kamagra"
-                          >
-                            100mg * 12
-                          </li>
-                          <li
-                            class="itc-select__option order-option"
-                            data-select="option"
-                            data-value="100mg * 32"
-                            data-index="10"
-                            data-price="68.76"
-                            data-prep="Kamagra"
-                          >
-                            100mg * 32
-                          </li>
-                          <li
-                            class="itc-select__option order-option"
-                            data-select="option"
-                            data-value="100mg * 12"
-                            data-index="11"
-                            data-price="45.18"
-                            data-prep="Kamagra Gold"
-                          >
-                            100mg * 12
-                          </li>
-                          <li
-                            class="itc-select__option order-option"
-                            data-select="option"
-                            data-value="100mg * 20"
-                            data-index="12"
-                            data-price="55"
-                            data-prep="Kamagra Gold"
-                          >
-                            100mg * 20
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="counter">
-                    <div class="counter-left">
-                      <button aria-label="-" class="counter-minus">
-                        <svg
-                          viewBox="0 0 48 48"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="#25b6d2"
-                          stroke="#25b6d2"
-                        >
-                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                          <g
-                            id="SVGRepo_tracerCarrier"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          ></g>
-                          <g id="SVGRepo_iconCarrier">
-                            <path
-                              d="M24,3A21,21,0,1,0,45,24,21,21,0,0,0,24,3Z"
-                              fill="#ffffff8bcc4"
-                            ></path>
-                            <path
-                              d="M32,26H16a2,2,0,0,1,0-4H32A2,2,0,0,1,32,26Z"
-                              fill="#ffffff"
-                            ></path>
-                          </g>
-                        </svg>
-                      </button>
-                      <div class="counter-value">1</div>
-                      <button aria-label="+" class="counter-plus">
-                        <svg
-                          version="1.1"
-                          id="Layer_1"
-                          xmlns="http://www.w3.org/2000/svg"
-                          xmlns:xlink="http://www.w3.org/1999/xlink"
-                          viewBox="0 0 512 512"
-                          xml:space="preserve"
-                          fill="#000000"
-                        >
-                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                          <g
-                            id="SVGRepo_tracerCarrier"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          ></g>
-                          <g id="SVGRepo_iconCarrier">
-                            <circle cx="256" cy="256" r="256"></circle>
-                            <g>
-                              <rect
-                                x="240"
-                                y="120"
-                                style="fill: #ffffff"
-                                width="32"
-                                height="272"
-                              ></rect>
-                              <rect
-                                x="120"
-                                y="240"
-                                style="fill: #ffffff"
-                                width="272"
-                                height="32"
-                              ></rect>
-                            </g>
-                          </g>
-                        </svg>
-                      </button>
-                    </div>
-                    <div class="counter__right">
-                      <div class="counter-total">
-                        Итого <span class="total-number">49.49</span> USD +
-                        доставка
-                      </div>
-                    </div>
                   </div>
                 </div>
-                <div class="form-actions">
-                  <div class="form-btn primary-btn">
+                <div class="form__select">
+                  <div
+                    class="itc-select select-banner-form-dose"
+                    id="select-banner-form-dose-popup"
+                  >
                     <button
-                      class="get-order-btn"
-                      aria-label="Заказать сейчас"
-                      type="submit"
+                      type="button"
+                      class="itc-select__toggle"
+                      name="med"
+                      data-select="toggle"
+                      data-index="0"
+                      aria-label="Выбрать дозировку"
+                      disabled
                     >
-                      Заказать сейчас
+                      Выбрать дозировку
+                    </button>
+                    <div class="itc-select__dropdown">
+                      <ul class="itc-select__options">
+                        <li
+                          class="itc-select__option order-option"
+                          data-select="option"
+                          data-value="100mg soft tab * 60"
+                          data-index="0"
+                          data-price="49.49"
+                          data-prep="Kamagra Soft"
+                        >
+                          100mg soft tab * 60
+                        </li>
+                        <li
+                          class="itc-select__option order-option"
+                          data-select="option"
+                          data-value="100mg soft tab * 120"
+                          data-index="1"
+                          data-price="264.17"
+                          data-prep="Kamagra Soft"
+                        >
+                          100mg soft tab * 120
+                        </li>
+                        <li
+                          class="itc-select__option order-option"
+                          data-select="option"
+                          data-value="100mg soft tab * 12"
+                          data-index="2"
+                          data-price="49.49"
+                          data-prep="Kamagra Soft"
+                        >
+                          100mg soft tab * 12
+                        </li>
+                        <li
+                          class="itc-select__option order-option"
+                          data-select="option"
+                          data-value="100mg soft tab * 32"
+                          data-index="3"
+                          data-price="79.26"
+                          data-prep="Kamagra Soft"
+                        >
+                          100mg soft tab * 32
+                        </li>
+                        <li
+                          class="itc-select__option order-option"
+                          data-select="option"
+                          data-value="100mg soft tab * 92"
+                          data-index="4"
+                          data-price="210.96"
+                          data-prep="Kamagra Soft"
+                        >
+                          100mg soft tab * 92
+                        </li>
+                        <li
+                          class="itc-select__option order-option"
+                          data-select="option"
+                          data-value="100mg * 12"
+                          data-index="5"
+                          data-price="50.41"
+                          data-prep="Kamagra Polo"
+                        >
+                          100mg * 12
+                        </li>
+                        <li
+                          class="itc-select__option order-option"
+                          data-select="option"
+                          data-value="100mg * 20"
+                          data-index="6"
+                          data-price="64.17"
+                          data-prep="Kamagra Polo"
+                        >
+                          100mg * 20
+                        </li>
+                        <li
+                          class="itc-select__option order-option"
+                          data-select="option"
+                          data-value="100mg * 20"
+                          data-index="8"
+                          data-price="88.02"
+                          data-prep="Kamagra Polo"
+                        >
+                          100mg * 32
+                        </li>
+                        <li
+                          class="itc-select__option order-option"
+                          data-select="option"
+                          data-value="100mg * 12"
+                          data-index="9"
+                          data-price="45.18"
+                          data-prep="Kamagra"
+                        >
+                          100mg * 12
+                        </li>
+                        <li
+                          class="itc-select__option order-option"
+                          data-select="option"
+                          data-value="100mg * 32"
+                          data-index="10"
+                          data-price="68.76"
+                          data-prep="Kamagra"
+                        >
+                          100mg * 32
+                        </li>
+                        <li
+                          class="itc-select__option order-option"
+                          data-select="option"
+                          data-value="100mg * 12"
+                          data-index="11"
+                          data-price="45.18"
+                          data-prep="Kamagra Gold"
+                        >
+                          100mg * 12
+                        </li>
+                        <li
+                          class="itc-select__option order-option"
+                          data-select="option"
+                          data-value="100mg * 20"
+                          data-index="12"
+                          data-price="55"
+                          data-prep="Kamagra Gold"
+                        >
+                          100mg * 20
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="counter">
+                  <div class="counter-left">
+                    <button aria-label="-" class="counter-minus">
+                      <svg
+                        viewBox="0 0 48 48"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="#25b6d2"
+                        stroke="#25b6d2"
+                      >
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g
+                          id="SVGRepo_tracerCarrier"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></g>
+                        <g id="SVGRepo_iconCarrier">
+                          <path
+                            d="M24,3A21,21,0,1,0,45,24,21,21,0,0,0,24,3Z"
+                            fill="#ffffff8bcc4"
+                          ></path>
+                          <path
+                            d="M32,26H16a2,2,0,0,1,0-4H32A2,2,0,0,1,32,26Z"
+                            fill="#ffffff"
+                          ></path>
+                        </g>
+                      </svg>
+                    </button>
+                    <div class="counter-value">1</div>
+                    <button aria-label="+" class="counter-plus">
+                      <svg
+                        version="1.1"
+                        id="Layer_1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 512 512"
+                        xml:space="preserve"
+                        fill="#000000"
+                      >
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g
+                          id="SVGRepo_tracerCarrier"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></g>
+                        <g id="SVGRepo_iconCarrier">
+                          <circle cx="256" cy="256" r="256"></circle>
+                          <g>
+                            <rect
+                              x="240"
+                              y="120"
+                              style="fill: #ffffff"
+                              width="32"
+                              height="272"
+                            ></rect>
+                            <rect
+                              x="120"
+                              y="240"
+                              style="fill: #ffffff"
+                              width="272"
+                              height="32"
+                            ></rect>
+                          </g>
+                        </g>
+                      </svg>
                     </button>
                   </div>
-                  <div class="form-btn secondary-btn">
-                    <a
-                      href="./instruction-page.html"
-                      aria-label="Скачать инструкцию"
-                    >
-                      Скачать инструкцию
-                    </a>
+                  <div class="counter__right">
+                    <div class="counter-total">
+                      Итого <span class="total-number">49.49</span> USD +
+                      доставка
+                    </div>
                   </div>
                 </div>
-              </form>
-            </div>
+              </div>
+              <div class="form-actions">
+                <div class="form-btn primary-btn">
+                  <button
+                    class="get-order-btn"
+                    aria-label="Заказать сейчас"
+                    type="submit"
+                  >
+                    Заказать сейчас
+                  </button>
+                </div>
+                <div class="form-btn secondary-btn">
+                  <a
+                    href="./instruction-page.html"
+                    aria-label="Скачать инструкцию"
+                  >
+                    Скачать инструкцию
+                  </a>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
-      </header>
+      </div>
+    </header>
     <main>
       <div class="main">
         <div class="main__container">

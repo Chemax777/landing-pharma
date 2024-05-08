@@ -2564,6 +2564,7 @@ main {
 }
 
 .corner__actions {
+  z-index: 10;
   bottom: 0;
   position: fixed;
   display: block;
@@ -4784,4 +4785,11 @@ main {
   font-size: 24px;
   color: #000;
   font-weight: 700;
+}
+
+.all-goods__section {
+  margin-bottom: 20px;
+}
+.all-goods__section .products__list .products__list-item {
+  border: 1px solid #057a96 !important;
 }
