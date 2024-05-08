@@ -44,7 +44,7 @@
           <div class="nav__logo-mobile">
             <a href="./">
               <img
-                src="./img/logo/logo.svg"
+                src="./img/logo/logo-hub.webp"
                 alt="logo"
                 width="160"
                 height="75"
@@ -67,6 +67,36 @@
             </button>
           </div>
           <ul class="nav__list-mobile">
+            <li class="nav__item-mobile toggle-meds-mobile">
+              <a href="#">Препараты</a>
+              <button class="toggle-meds-mobile__btn">
+                <svg viewBox="0 0 512 512">
+                  <path
+                    d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+                  ></path>
+                </svg>
+              </button>
+              <div class="meds__section-mobile">
+                <div class="meds__group">
+                  <div class="meds__title">
+                    <a href="./dose-category.html">Дозировка</a>
+                  </div>
+                  <ul class="meds__list">
+                    <li class="meds__list_item"><a href="#">200mg</a></li>
+                    <li class="meds__list_item"><a href="#">150mg</a></li>
+                    <li class="meds__list_item"><a href="#">100mg</a></li>
+                    <li class="meds__list_item"><a href="#">50mg</a></li>
+                    <li class="meds__list_item"><a href="#">25mg</a></li>
+                    <li class="meds__list_item"><a href="#">5mg</a></li>
+                  </ul>
+                </div>
+                <div class="meds__group">
+                  <div class="meds__title">
+                    <a href="./package-category.html">Упаковка</a>
+                  </div>
+                </div>
+              </div>
+            </li>
             <li class="nav__item-mobile">
               <a href="./instruction-page.html">Інструкція</a>
             </li>
@@ -96,7 +126,7 @@
           <div class="header__logo">
             <a href="./">
               <img
-                src="./img/logo/logo.svg"
+                src="./img/logo/logo-hub.webp"
                 alt="logo"
                 width="192"
                 height="90"
@@ -106,6 +136,35 @@
           </div>
           <nav class="header__nav-desktop">
             <ul class="nav__list">
+              <li class="nav__item meds-toggler">
+                <a href="#"
+                  >Препараты
+                  <svg viewBox="0 0 512 512">
+                    <path
+                      d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+                    ></path></svg
+                ></a>
+                <div class="meds__section">
+                  <div class="meds__group">
+                    <div class="meds__title">
+                      <a href="./dose-category.html">Дозировка</a>
+                    </div>
+                    <ul class="meds__list">
+                      <li class="meds__list_item"><a href="#">200mg</a></li>
+                      <li class="meds__list_item"><a href="#">150mg</a></li>
+                      <li class="meds__list_item"><a href="#">100mg</a></li>
+                      <li class="meds__list_item"><a href="#">50mg</a></li>
+                      <li class="meds__list_item"><a href="#">25mg</a></li>
+                      <li class="meds__list_item"><a href="#">5mg</a></li>
+                    </ul>
+                  </div>
+                  <div class="meds__group">
+                    <div class="meds__title">
+                      <a href="./package-category.html">Упаковка</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
               <li class="nav__item">
                 <a href="./instruction-page.html">Інструкція</a>
               </li>
@@ -475,212 +534,6 @@
                     href="./instruction-page.html"
                     aria-label="Скачать инструкцию"
                   >
-                    Скачать инструкцию
-                  </a>
-                </div>
-              </div>
-            </form>
-          </div>
-          <div class="banner__form">
-            <div class="title__form">ЧТОБЫ ЗАКАЗАТЬ ПРОСТО ЗАПОЛНИТЕ ФОРМУ</div>
-            <form onsubmit="return check_dose(this)" action="/bp/checkout.php" target="_blank" method="POST" class="form-wrapper">
-              <input type="hidden" name="data" value="">
-              <div class="form__text">
-                <div>Закажите со скидкой <span class="discont">65%</span></div>
-                <!-- <div>осталось <span>10</span> упаковок</div>
-                        <div class="region">
-                          Ваш регион
-                          <span>
-                            <img
-                              src="{$dir}/img/flag/usa.png"
-                              alt="название страны"
-                              width="18"
-                              height="18"
-                            />
-                            страна
-                          </span>
-                        </div> -->
-              </div>
-              <!-- <div class="form__input-wrapper">
-                        <label for="name">Введите email</label>
-                        <input
-                          class="mail-inp"
-                          id="name"
-                          type="text"
-                          placeholder="example@gmail.com"
-                          required
-                        />
-                        <span class="warning">Проверьте правильность email</span>
-                      </div>
-                      <div class="form__input-wrapper">
-                        <label for="tel">Введите телефон</label>
-                        <input
-                          id="tel"
-                          type="tel"
-                          class="tel"
-                          placeholder="Ваш номер телефона"
-                          required
-                        />
-                        <span class="warning">Проверьте правильность телефона</span>
-                      </div> -->
-              <div class="form__counter-wrapper">
-                <!-- <div class="counter-title">Количество упаковок</div> -->
-                <div class="form__select">
-                  <div
-                    class="itc-select select-banner-form-med"
-                    id="select-banner-form-med"
-                  >
-                    <button
-                      type="button"
-                      class="itc-select__toggle"
-                      name="med"
-                      data-select="toggle"
-                      data-index="0"
-                      aria-label="Выбрать препарат"
-                    >
-                      Выбрать препарат
-                    </button>
-                    <div class="itc-select__dropdown">
-                      <ul class="itc-select__options">
-                        {foreach $goods as $good}
-                        <li
-                          class="itc-select__option order-option"
-                          data-select="option"
-                          data-value="{$good.name}"
-                          data-slide="kamagra-{$good.id}"
-                          data-type="kamagra-{$good.id}"
-                        >
-                          {$good.name}
-                        </li>
-                        {/foreach}
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="form__select">
-                  <div
-                    class="itc-select select-banner-form-dose"
-                    id="select-banner-form-dose"
-                  >
-                    <button
-                      type="button"
-                      class="itc-select__toggle"
-                      name="med"
-                      data-select="toggle"
-                      data-index="0"
-                      aria-label="Выбрать дозировку"
-                      disabled
-                    >
-                      Выбрать дозировку
-                    </button>
-                    <div class="itc-select__dropdown">
-                      <ul class="itc-select__options">
-                        {foreach $goods as $good}
-                        {foreach $good.data as $k=>$dt}
-                        <li
-                          class="itc-select__option order-option"
-                          data-select="option"
-                          data-value="{$dt.shop_unit|regex_replace:'/^[^{0-9}]*/':''}"
-                          data-price="{$dt.price}"
-                          data-prep="{$good.name}"
-                          data="{$dt.data}"
-                        >
-                          {$dt.shop_unit|regex_replace:'/^[^{0-9}]*/':''}
-                        </li>
-                        {/foreach}
-                        {/foreach}
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="counter">
-                  <div class="counter-left">
-                    <button aria-label="-" class="counter-minus">
-                      <svg
-                        viewBox="0 0 48 48"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="#25b6d2"
-                        stroke="#25b6d2"
-                      >
-                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                        <g
-                          id="SVGRepo_tracerCarrier"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        ></g>
-                        <g id="SVGRepo_iconCarrier">
-                          <path
-                            d="M24,3A21,21,0,1,0,45,24,21,21,0,0,0,24,3Z"
-                            fill="#ffffff8bcc4"
-                          ></path>
-                          <path
-                            d="M32,26H16a2,2,0,0,1,0-4H32A2,2,0,0,1,32,26Z"
-                            fill="#ffffff"
-                          ></path>
-                        </g>
-                      </svg>
-                    </button>
-                    <div class="counter-value">1</div>
-                    <button aria-label="+" class="counter-plus">
-                      <svg
-                        version="1.1"
-                        id="Layer_1"
-                        xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                        viewBox="0 0 512 512"
-                        xml:space="preserve"
-                        fill="#000000"
-                      >
-                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                        <g
-                          id="SVGRepo_tracerCarrier"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        ></g>
-                        <g id="SVGRepo_iconCarrier">
-                          <circle cx="256" cy="256" r="256"></circle>
-                          <g>
-                            <rect
-                              x="240"
-                              y="120"
-                              style="fill: #ffffff"
-                              width="32"
-                              height="272"
-                            ></rect>
-                            <rect
-                              x="120"
-                              y="240"
-                              style="fill: #ffffff"
-                              width="272"
-                              height="32"
-                            ></rect>
-                          </g>
-                        </g>
-                      </svg>
-                    </button>
-                  </div>
-                  <div class="counter__right">
-                    <div class="counter-total">
-                      Итого 
-                      {foreach $goods as $good}
-                      <span class="total-number">{$good.price}</span> {$countries.$country.currency} + доставка
-                      {break}{/foreach}
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="form-actions">
-                <div class="form-btn primary-btn">
-                  <button
-                    class="get-order-btn"
-                    aria-label="Заказать сейчас"
-                    type="submit"
-                  >
-                    Заказать сейчас
-                  </button>
-                </div>
-                <div class="form-btn secondary-btn">
-                  <a href="./instruction-page" aria-label="Скачать инструкцию">
                     Скачать инструкцию
                   </a>
                 </div>

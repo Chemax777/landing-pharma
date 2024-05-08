@@ -60,10 +60,10 @@ if (selectMainOrder) {
   const select1 = new ItcCustomSelect("#select-main-bottom");
 }
 
-itemsMobile.forEach((item) => item.addEventListener("click", closeMobileNav));
-if (orderBtnMobile) {
-  orderBtnMobile.addEventListener("click", closeMobileNav);
-}
+// itemsMobile.forEach((item) => item.addEventListener("click", closeMobileNav));
+// if (orderBtnMobile) {
+//   orderBtnMobile.addEventListener("click", closeMobileNav);
+// }
 
 burger.addEventListener("click", openMobileNav);
 closeMobileBtn.addEventListener("click", closeMobileNav);
@@ -460,3 +460,10 @@ window.addEventListener("resize", (e) =>
 let observer = new IntersectionObserver(onEntry, options);
 let elements = document.querySelectorAll(".anim");
 elements.forEach((elm) => observer.observe(elm));
+
+const toggleMedsMobile = document.querySelector(".toggle-meds-mobile__btn");
+
+toggleMedsMobile.addEventListener("click", () => {
+  const medsSectionMobile = document.querySelector(".toggle-meds-mobile");
+  medsSectionMobile.classList.toggle("show-mobile-meds");
+});
