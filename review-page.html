@@ -481,6 +481,212 @@
               </div>
             </form>
           </div>
+          <div class="banner__form">
+            <div class="title__form">ЧТОБЫ ЗАКАЗАТЬ ПРОСТО ЗАПОЛНИТЕ ФОРМУ</div>
+            <form onsubmit="return check_dose(this)" action="/bp/checkout.php" target="_blank" method="POST" class="form-wrapper">
+              <input type="hidden" name="data" value="">
+              <div class="form__text">
+                <div>Закажите со скидкой <span class="discont">65%</span></div>
+                <!-- <div>осталось <span>10</span> упаковок</div>
+                        <div class="region">
+                          Ваш регион
+                          <span>
+                            <img
+                              src="{$dir}/img/flag/usa.png"
+                              alt="название страны"
+                              width="18"
+                              height="18"
+                            />
+                            страна
+                          </span>
+                        </div> -->
+              </div>
+              <!-- <div class="form__input-wrapper">
+                        <label for="name">Введите email</label>
+                        <input
+                          class="mail-inp"
+                          id="name"
+                          type="text"
+                          placeholder="example@gmail.com"
+                          required
+                        />
+                        <span class="warning">Проверьте правильность email</span>
+                      </div>
+                      <div class="form__input-wrapper">
+                        <label for="tel">Введите телефон</label>
+                        <input
+                          id="tel"
+                          type="tel"
+                          class="tel"
+                          placeholder="Ваш номер телефона"
+                          required
+                        />
+                        <span class="warning">Проверьте правильность телефона</span>
+                      </div> -->
+              <div class="form__counter-wrapper">
+                <!-- <div class="counter-title">Количество упаковок</div> -->
+                <div class="form__select">
+                  <div
+                    class="itc-select select-banner-form-med"
+                    id="select-banner-form-med"
+                  >
+                    <button
+                      type="button"
+                      class="itc-select__toggle"
+                      name="med"
+                      data-select="toggle"
+                      data-index="0"
+                      aria-label="Выбрать препарат"
+                    >
+                      Выбрать препарат
+                    </button>
+                    <div class="itc-select__dropdown">
+                      <ul class="itc-select__options">
+                        {foreach $goods as $good}
+                        <li
+                          class="itc-select__option order-option"
+                          data-select="option"
+                          data-value="{$good.name}"
+                          data-slide="kamagra-{$good.id}"
+                          data-type="kamagra-{$good.id}"
+                        >
+                          {$good.name}
+                        </li>
+                        {/foreach}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__select">
+                  <div
+                    class="itc-select select-banner-form-dose"
+                    id="select-banner-form-dose"
+                  >
+                    <button
+                      type="button"
+                      class="itc-select__toggle"
+                      name="med"
+                      data-select="toggle"
+                      data-index="0"
+                      aria-label="Выбрать дозировку"
+                      disabled
+                    >
+                      Выбрать дозировку
+                    </button>
+                    <div class="itc-select__dropdown">
+                      <ul class="itc-select__options">
+                        {foreach $goods as $good}
+                        {foreach $good.data as $k=>$dt}
+                        <li
+                          class="itc-select__option order-option"
+                          data-select="option"
+                          data-value="{$dt.shop_unit|regex_replace:'/^[^{0-9}]*/':''}"
+                          data-price="{$dt.price}"
+                          data-prep="{$good.name}"
+                          data="{$dt.data}"
+                        >
+                          {$dt.shop_unit|regex_replace:'/^[^{0-9}]*/':''}
+                        </li>
+                        {/foreach}
+                        {/foreach}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="counter">
+                  <div class="counter-left">
+                    <button aria-label="-" class="counter-minus">
+                      <svg
+                        viewBox="0 0 48 48"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="#25b6d2"
+                        stroke="#25b6d2"
+                      >
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g
+                          id="SVGRepo_tracerCarrier"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></g>
+                        <g id="SVGRepo_iconCarrier">
+                          <path
+                            d="M24,3A21,21,0,1,0,45,24,21,21,0,0,0,24,3Z"
+                            fill="#ffffff8bcc4"
+                          ></path>
+                          <path
+                            d="M32,26H16a2,2,0,0,1,0-4H32A2,2,0,0,1,32,26Z"
+                            fill="#ffffff"
+                          ></path>
+                        </g>
+                      </svg>
+                    </button>
+                    <div class="counter-value">1</div>
+                    <button aria-label="+" class="counter-plus">
+                      <svg
+                        version="1.1"
+                        id="Layer_1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 512 512"
+                        xml:space="preserve"
+                        fill="#000000"
+                      >
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g
+                          id="SVGRepo_tracerCarrier"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></g>
+                        <g id="SVGRepo_iconCarrier">
+                          <circle cx="256" cy="256" r="256"></circle>
+                          <g>
+                            <rect
+                              x="240"
+                              y="120"
+                              style="fill: #ffffff"
+                              width="32"
+                              height="272"
+                            ></rect>
+                            <rect
+                              x="120"
+                              y="240"
+                              style="fill: #ffffff"
+                              width="272"
+                              height="32"
+                            ></rect>
+                          </g>
+                        </g>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="counter__right">
+                    <div class="counter-total">
+                      Итого 
+                      {foreach $goods as $good}
+                      <span class="total-number">{$good.price}</span> {$countries.$country.currency} + доставка
+                      {break}{/foreach}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-actions">
+                <div class="form-btn primary-btn">
+                  <button
+                    class="get-order-btn"
+                    aria-label="Заказать сейчас"
+                    type="submit"
+                  >
+                    Заказать сейчас
+                  </button>
+                </div>
+                <div class="form-btn secondary-btn">
+                  <a href="./instruction-page" aria-label="Скачать инструкцию">
+                    Скачать инструкцию
+                  </a>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </header>
@@ -509,14 +715,32 @@
                       <div
                         class="review-item"
                         itemscope=""
+                        itemprop="itemListElement"
                         itemtype="https://schema.org/Review"
                       >
                         <div
                           itemprop="itemReviewed"
                           itemscope=""
-                          itemtype="https://schema.org/Organization"
+                          itemtype="https://schema.org/Drug"
                         >
-                          <meta itemprop="name" content="" />
+                          <meta itemprop="name" content="Kamagra" />
+                          <div
+                            itemprop="aggregateRating"
+                            itemscope=""
+                            itemtype="https://schema.org/AggregateRating"
+                          >
+                            <meta itemprop="ratingValue" content="5" />
+                            <meta itemprop="ratingCount" content="4" />
+                          </div>
+                          <div
+                            itemprop="reviewRating"
+                            itemscope
+                            itemtype="https://schema.org/Rating"
+                          >
+                            <meta itemprop="bestRating" content="5" />
+                            <meta itemprop="worstRating" content="1" />
+                            <meta itemprop="ratingValue" content="5" />
+                          </div>
                         </div>
                         <div class="review__head">
                           <div
@@ -527,7 +751,7 @@
                           >
                             <meta itemprop="name" content="Имя Фамилия" />
                             <img
-                              src="./img/review/1.jpg"
+                              src="{$dir}/img/review/1.jpg"
                               alt="Имя Фамилия"
                               width="128"
                               height="128"
@@ -537,15 +761,7 @@
                           </div>
                           <div class="review__main">
                             <h3 class="review__author-name">Имя Фамилия</h3>
-                            <div
-                              class="review__rating"
-                              itemprop="reviewRating"
-                              itemscope=""
-                              itemtype="https://schema.org/Rating"
-                            >
-                              <meta itemprop="ratingValue" content="5" />
-                              <meta itemprop="worstRating" content="1" />
-                              <meta itemprop="bestRating" content="5" />
+                            <div class="review__rating">
                               <svg viewBox="0 0 576 512">
                                 <path
                                   d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
@@ -591,14 +807,32 @@
                       <div
                         class="review-item"
                         itemscope=""
+                        itemprop="itemListElement"
                         itemtype="https://schema.org/Review"
                       >
                         <div
                           itemprop="itemReviewed"
                           itemscope=""
-                          itemtype="https://schema.org/Organization"
+                          itemtype="https://schema.org/Drug"
                         >
-                          <meta itemprop="name" content="" />
+                          <meta itemprop="name" content="Kamagra" />
+                          <div
+                            itemprop="aggregateRating"
+                            itemscope=""
+                            itemtype="https://schema.org/AggregateRating"
+                          >
+                            <meta itemprop="ratingValue" content="5" />
+                            <meta itemprop="ratingCount" content="4" />
+                          </div>
+                          <div
+                            itemprop="reviewRating"
+                            itemscope
+                            itemtype="https://schema.org/Rating"
+                          >
+                            <meta itemprop="bestRating" content="5" />
+                            <meta itemprop="worstRating" content="1" />
+                            <meta itemprop="ratingValue" content="5" />
+                          </div>
                         </div>
                         <div class="review__head">
                           <div
@@ -609,7 +843,7 @@
                           >
                             <meta itemprop="name" content="Имя Фамилия" />
                             <img
-                              src="./img/review/2.jpg"
+                              src="{$dir}/img/review/2.jpg"
                               alt="Имя Фамилия"
                               width="128"
                               height="128"
@@ -619,258 +853,7 @@
                           </div>
                           <div class="review__main">
                             <h3 class="review__author-name">Имя Фамилия</h3>
-                            <div
-                              class="review__rating"
-                              itemprop="reviewRating"
-                              itemscope=""
-                              itemtype="https://schema.org/Rating"
-                            >
-                              <meta itemprop="ratingValue" content="5" />
-                              <meta itemprop="worstRating" content="1" />
-                              <meta itemprop="bestRating" content="5" />
-                              <svg viewBox="0 0 576 512">
-                                <path
-                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-                                ></path>
-                              </svg>
-                              <svg viewBox="0 0 576 512">
-                                <path
-                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-                                ></path>
-                              </svg>
-                              <svg viewBox="0 0 576 512">
-                                <path
-                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-                                ></path>
-                              </svg>
-                              <svg viewBox="0 0 576 512">
-                                <path
-                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-                                ></path>
-                              </svg>
-                              <svg viewBox="0 0 576 512">
-                                <path
-                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-                                ></path>
-                              </svg>
-                            </div>
-                          </div>
-                          <time
-                            class="review__date"
-                            itemprop="datePublished"
-                            datetime="2024-08-22"
-                            >2024-08-22</time
-                          >
-                        </div>
-                        <p class="review__text" itemprop="reviewBody">
-                          Lorem ipsum dolor sit, amet consectetur adipisicing
-                          elit. Delectus libero, rerum adipisci magni ducimus
-                          maiores.
-                        </p>
-                      </div>
-                      <div
-                        class="review-item"
-                        itemscope=""
-                        itemtype="https://schema.org/Review"
-                      >
-                        <div
-                          itemprop="itemReviewed"
-                          itemscope=""
-                          itemtype="https://schema.org/Organization"
-                        >
-                          <meta itemprop="name" content="" />
-                        </div>
-                        <div class="review__head">
-                          <div
-                            class="review__author-photo"
-                            itemprop="author"
-                            itemscope=""
-                            itemtype="https://schema.org/Person"
-                          >
-                            <meta itemprop="name" content="Имя Фамилия" />
-                            <img
-                              src="./img/review/3.jpg"
-                              alt="Имя Фамилия"
-                              width="128"
-                              height="128"
-                              loading="lazy"
-                              itemprop="image"
-                            />
-                          </div>
-                          <div class="review__main">
-                            <h3 class="review__author-name">Имя Фамилия</h3>
-                            <div
-                              class="review__rating"
-                              itemprop="reviewRating"
-                              itemscope=""
-                              itemtype="https://schema.org/Rating"
-                            >
-                              <meta itemprop="ratingValue" content="5" />
-                              <meta itemprop="worstRating" content="1" />
-                              <meta itemprop="bestRating" content="5" />
-                              <svg viewBox="0 0 576 512">
-                                <path
-                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-                                ></path>
-                              </svg>
-                              <svg viewBox="0 0 576 512">
-                                <path
-                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-                                ></path>
-                              </svg>
-                              <svg viewBox="0 0 576 512">
-                                <path
-                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-                                ></path>
-                              </svg>
-                              <svg viewBox="0 0 576 512">
-                                <path
-                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-                                ></path>
-                              </svg>
-                              <svg viewBox="0 0 576 512">
-                                <path
-                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-                                ></path>
-                              </svg>
-                            </div>
-                          </div>
-                          <time
-                            class="review__date"
-                            itemprop="datePublished"
-                            datetime="2024-08-22"
-                            >2024-08-22</time
-                          >
-                        </div>
-                        <p class="review__text" itemprop="reviewBody">
-                          Lorem ipsum dolor sit amet elit. Omnis blanditiis
-                          libero voluptatibus harum dolores accusamus. Sapiente
-                          iure pariatur sed blanditiis perferendis, deserunt ad
-                          dolore, tempora error voluptatibus ipsum recusandae
-                          suscipit.
-                        </p>
-                      </div>
-                      <div
-                        class="review-item"
-                        itemscope=""
-                        itemtype="https://schema.org/Review"
-                      >
-                        <div
-                          itemprop="itemReviewed"
-                          itemscope=""
-                          itemtype="https://schema.org/Organization"
-                        >
-                          <meta itemprop="name" content="" />
-                        </div>
-                        <div class="review__head">
-                          <div
-                            class="review__author-photo"
-                            itemprop="author"
-                            itemscope=""
-                            itemtype="https://schema.org/Person"
-                          >
-                            <meta itemprop="name" content="Имя Фамилия" />
-                            <img
-                              src="./img/review/4.jpg"
-                              alt="Имя Фамилия"
-                              width="128"
-                              height="128"
-                              loading="lazy"
-                              itemprop="image"
-                            />
-                          </div>
-                          <div class="review__main">
-                            <h3 class="review__author-name">Имя Фамилия</h3>
-                            <div
-                              class="review__rating"
-                              itemprop="reviewRating"
-                              itemscope=""
-                              itemtype="https://schema.org/Rating"
-                            >
-                              <meta itemprop="ratingValue" content="5" />
-                              <meta itemprop="worstRating" content="1" />
-                              <meta itemprop="bestRating" content="5" />
-                              <svg viewBox="0 0 576 512">
-                                <path
-                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-                                ></path>
-                              </svg>
-                              <svg viewBox="0 0 576 512">
-                                <path
-                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-                                ></path>
-                              </svg>
-                              <svg viewBox="0 0 576 512">
-                                <path
-                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-                                ></path>
-                              </svg>
-                              <svg viewBox="0 0 576 512">
-                                <path
-                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-                                ></path>
-                              </svg>
-                              <svg viewBox="0 0 576 512">
-                                <path
-                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-                                ></path>
-                              </svg>
-                            </div>
-                          </div>
-                          <time
-                            class="review__date"
-                            itemprop="datePublished"
-                            datetime="2024-08-22"
-                            >2024-08-22</time
-                          >
-                        </div>
-                        <p itemprop="reviewBody">
-                          Lorem ipsum dolor, sit amet consectetur adipisicing
-                          elit. Aliquam debitis sapiente ex quos vel ipsam,
-                          distinctio quisquam veritatis perspiciatis! In quam
-                          cum incidunt consequuntur cupiditate.
-                        </p>
-                      </div>
-                      <div
-                        class="review-item"
-                        itemscope=""
-                        itemtype="https://schema.org/Review"
-                      >
-                        <div
-                          itemprop="itemReviewed"
-                          itemscope=""
-                          itemtype="https://schema.org/Organization"
-                        >
-                          <meta itemprop="name" content="" />
-                        </div>
-                        <div class="review__head">
-                          <div
-                            class="review__author-photo"
-                            itemprop="author"
-                            itemscope=""
-                            itemtype="https://schema.org/Person"
-                          >
-                            <meta itemprop="name" content="Имя Фамилия" />
-                            <img
-                              src="./img/review/5.jpg"
-                              alt="Имя Фамилия"
-                              width="128"
-                              height="128"
-                              loading="lazy"
-                              itemprop="image"
-                            />
-                          </div>
-                          <div class="review__main">
-                            <h3 class="review__author-name">Имя Фамилия</h3>
-                            <div
-                              class="review__rating"
-                              itemprop="reviewRating"
-                              itemscope=""
-                              itemtype="https://schema.org/Rating"
-                            >
-                              <meta itemprop="ratingValue" content="5" />
-                              <meta itemprop="worstRating" content="1" />
-                              <meta itemprop="bestRating" content="5" />
+                            <div class="review__rating">
                               <svg viewBox="0 0 576 512">
                                 <path
                                   d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
@@ -916,14 +899,32 @@
                       <div
                         class="review-item"
                         itemscope=""
+                        itemprop="itemListElement"
                         itemtype="https://schema.org/Review"
                       >
                         <div
                           itemprop="itemReviewed"
                           itemscope=""
-                          itemtype="https://schema.org/Organization"
+                          itemtype="https://schema.org/Drug"
                         >
-                          <meta itemprop="name" content="" />
+                          <meta itemprop="name" content="Kamagra" />
+                          <div
+                            itemprop="aggregateRating"
+                            itemscope=""
+                            itemtype="https://schema.org/AggregateRating"
+                          >
+                            <meta itemprop="ratingValue" content="5" />
+                            <meta itemprop="ratingCount" content="4" />
+                          </div>
+                          <div
+                            itemprop="reviewRating"
+                            itemscope
+                            itemtype="https://schema.org/Rating"
+                          >
+                            <meta itemprop="bestRating" content="5" />
+                            <meta itemprop="worstRating" content="1" />
+                            <meta itemprop="ratingValue" content="5" />
+                          </div>
                         </div>
                         <div class="review__head">
                           <div
@@ -934,7 +935,7 @@
                           >
                             <meta itemprop="name" content="Имя Фамилия" />
                             <img
-                              src="./img/review/6.jpg"
+                              src="{$dir}/img/review/3.jpg"
                               alt="Имя Фамилия"
                               width="128"
                               height="128"
@@ -944,258 +945,7 @@
                           </div>
                           <div class="review__main">
                             <h3 class="review__author-name">Имя Фамилия</h3>
-                            <div
-                              class="review__rating"
-                              itemprop="reviewRating"
-                              itemscope=""
-                              itemtype="https://schema.org/Rating"
-                            >
-                              <meta itemprop="ratingValue" content="5" />
-                              <meta itemprop="worstRating" content="1" />
-                              <meta itemprop="bestRating" content="5" />
-                              <svg viewBox="0 0 576 512">
-                                <path
-                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-                                ></path>
-                              </svg>
-                              <svg viewBox="0 0 576 512">
-                                <path
-                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-                                ></path>
-                              </svg>
-                              <svg viewBox="0 0 576 512">
-                                <path
-                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-                                ></path>
-                              </svg>
-                              <svg viewBox="0 0 576 512">
-                                <path
-                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-                                ></path>
-                              </svg>
-                              <svg viewBox="0 0 576 512">
-                                <path
-                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-                                ></path>
-                              </svg>
-                            </div>
-                          </div>
-                          <time
-                            class="review__date"
-                            itemprop="datePublished"
-                            datetime="2024-08-22"
-                            >2024-08-22</time
-                          >
-                        </div>
-                        <p class="review__text" itemprop="reviewBody">
-                          Lorem ipsum dolor sit, amet consectetur adipisicing
-                          elit. Delectus libero, rerum adipisci magni ducimus
-                          maiores.
-                        </p>
-                      </div>
-                      <div
-                        class="review-item"
-                        itemscope=""
-                        itemtype="https://schema.org/Review"
-                      >
-                        <div
-                          itemprop="itemReviewed"
-                          itemscope=""
-                          itemtype="https://schema.org/Organization"
-                        >
-                          <meta itemprop="name" content="" />
-                        </div>
-                        <div class="review__head">
-                          <div
-                            class="review__author-photo"
-                            itemprop="author"
-                            itemscope=""
-                            itemtype="https://schema.org/Person"
-                          >
-                            <meta itemprop="name" content="Имя Фамилия" />
-                            <img
-                              src="./img/review/7.jpg"
-                              alt="Имя Фамилия"
-                              width="128"
-                              height="128"
-                              loading="lazy"
-                              itemprop="image"
-                            />
-                          </div>
-                          <div class="review__main">
-                            <h3 class="review__author-name">Имя Фамилия</h3>
-                            <div
-                              class="review__rating"
-                              itemprop="reviewRating"
-                              itemscope=""
-                              itemtype="https://schema.org/Rating"
-                            >
-                              <meta itemprop="ratingValue" content="5" />
-                              <meta itemprop="worstRating" content="1" />
-                              <meta itemprop="bestRating" content="5" />
-                              <svg viewBox="0 0 576 512">
-                                <path
-                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-                                ></path>
-                              </svg>
-                              <svg viewBox="0 0 576 512">
-                                <path
-                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-                                ></path>
-                              </svg>
-                              <svg viewBox="0 0 576 512">
-                                <path
-                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-                                ></path>
-                              </svg>
-                              <svg viewBox="0 0 576 512">
-                                <path
-                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-                                ></path>
-                              </svg>
-                              <svg viewBox="0 0 576 512">
-                                <path
-                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-                                ></path>
-                              </svg>
-                            </div>
-                          </div>
-                          <time
-                            class="review__date"
-                            itemprop="datePublished"
-                            datetime="2024-08-22"
-                            >2024-08-22</time
-                          >
-                        </div>
-                        <p class="review__text" itemprop="reviewBody">
-                          Lorem ipsum dolor sit amet elit. Omnis blanditiis
-                          libero voluptatibus harum dolores accusamus. Sapiente
-                          iure pariatur sed blanditiis perferendis, deserunt ad
-                          dolore, tempora error voluptatibus ipsum recusandae
-                          suscipit.
-                        </p>
-                      </div>
-                      <div
-                        class="review-item"
-                        itemscope=""
-                        itemtype="https://schema.org/Review"
-                      >
-                        <div
-                          itemprop="itemReviewed"
-                          itemscope=""
-                          itemtype="https://schema.org/Organization"
-                        >
-                          <meta itemprop="name" content="" />
-                        </div>
-                        <div class="review__head">
-                          <div
-                            class="review__author-photo"
-                            itemprop="author"
-                            itemscope=""
-                            itemtype="https://schema.org/Person"
-                          >
-                            <meta itemprop="name" content="Имя Фамилия" />
-                            <img
-                              src="./img/review/8.jpg"
-                              alt="Имя Фамилия"
-                              width="128"
-                              height="128"
-                              loading="lazy"
-                              itemprop="image"
-                            />
-                          </div>
-                          <div class="review__main">
-                            <h3 class="review__author-name">Имя Фамилия</h3>
-                            <div
-                              class="review__rating"
-                              itemprop="reviewRating"
-                              itemscope=""
-                              itemtype="https://schema.org/Rating"
-                            >
-                              <meta itemprop="ratingValue" content="5" />
-                              <meta itemprop="worstRating" content="1" />
-                              <meta itemprop="bestRating" content="5" />
-                              <svg viewBox="0 0 576 512">
-                                <path
-                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-                                ></path>
-                              </svg>
-                              <svg viewBox="0 0 576 512">
-                                <path
-                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-                                ></path>
-                              </svg>
-                              <svg viewBox="0 0 576 512">
-                                <path
-                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-                                ></path>
-                              </svg>
-                              <svg viewBox="0 0 576 512">
-                                <path
-                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-                                ></path>
-                              </svg>
-                              <svg viewBox="0 0 576 512">
-                                <path
-                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
-                                ></path>
-                              </svg>
-                            </div>
-                          </div>
-                          <time
-                            class="review__date"
-                            itemprop="datePublished"
-                            datetime="2024-08-22"
-                            >2024-08-22</time
-                          >
-                        </div>
-                        <p itemprop="reviewBody">
-                          Lorem ipsum dolor, sit amet consectetur adipisicing
-                          elit. Aliquam debitis sapiente ex quos vel ipsam,
-                          distinctio quisquam veritatis perspiciatis! In quam
-                          cum incidunt consequuntur cupiditate.
-                        </p>
-                      </div>
-                      <div
-                        class="review-item"
-                        itemscope=""
-                        itemtype="https://schema.org/Review"
-                      >
-                        <div
-                          itemprop="itemReviewed"
-                          itemscope=""
-                          itemtype="https://schema.org/Organization"
-                        >
-                          <meta itemprop="name" content="" />
-                        </div>
-                        <div class="review__head">
-                          <div
-                            class="review__author-photo"
-                            itemprop="author"
-                            itemscope=""
-                            itemtype="https://schema.org/Person"
-                          >
-                            <meta itemprop="name" content="Имя Фамилия" />
-                            <img
-                              src="./img/review/9.jpg"
-                              alt="Имя Фамилия"
-                              width="128"
-                              height="128"
-                              loading="lazy"
-                              itemprop="image"
-                            />
-                          </div>
-                          <div class="review__main">
-                            <h3 class="review__author-name">Имя Фамилия</h3>
-                            <div
-                              class="review__rating"
-                              itemprop="reviewRating"
-                              itemscope=""
-                              itemtype="https://schema.org/Rating"
-                            >
-                              <meta itemprop="ratingValue" content="5" />
-                              <meta itemprop="worstRating" content="1" />
-                              <meta itemprop="bestRating" content="5" />
+                            <div class="review__rating">
                               <svg viewBox="0 0 576 512">
                                 <path
                                   d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
@@ -1241,14 +991,32 @@
                       <div
                         class="review-item"
                         itemscope=""
+                        itemprop="itemListElement"
                         itemtype="https://schema.org/Review"
                       >
                         <div
                           itemprop="itemReviewed"
                           itemscope=""
-                          itemtype="https://schema.org/Organization"
+                          itemtype="https://schema.org/Drug"
                         >
-                          <meta itemprop="name" content="" />
+                          <meta itemprop="name" content="Kamagra" />
+                          <div
+                            itemprop="aggregateRating"
+                            itemscope=""
+                            itemtype="https://schema.org/AggregateRating"
+                          >
+                            <meta itemprop="ratingValue" content="5" />
+                            <meta itemprop="ratingCount" content="4" />
+                          </div>
+                          <div
+                            itemprop="reviewRating"
+                            itemscope
+                            itemtype="https://schema.org/Rating"
+                          >
+                            <meta itemprop="bestRating" content="5" />
+                            <meta itemprop="worstRating" content="1" />
+                            <meta itemprop="ratingValue" content="5" />
+                          </div>
                         </div>
                         <div class="review__head">
                           <div
@@ -1259,7 +1027,7 @@
                           >
                             <meta itemprop="name" content="Имя Фамилия" />
                             <img
-                              src="./img/review/10.jpg"
+                              src="{$dir}/img/review/4.jpg"
                               alt="Имя Фамилия"
                               width="128"
                               height="128"
@@ -1269,15 +1037,7 @@
                           </div>
                           <div class="review__main">
                             <h3 class="review__author-name">Имя Фамилия</h3>
-                            <div
-                              class="review__rating"
-                              itemprop="reviewRating"
-                              itemscope=""
-                              itemtype="https://schema.org/Rating"
-                            >
-                              <meta itemprop="ratingValue" content="5" />
-                              <meta itemprop="worstRating" content="1" />
-                              <meta itemprop="bestRating" content="5" />
+                            <div class="review__rating">
                               <svg viewBox="0 0 576 512">
                                 <path
                                   d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
@@ -1313,9 +1073,563 @@
                           >
                         </div>
                         <p class="review__text" itemprop="reviewBody">
-                          Lorem ipsum dolor sit, amet consectetur adipisicing
-                          elit. Delectus libero, rerum adipisci magni ducimus
-                          maiores.
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit. Praesentium odio illum placeat laborum, labore,
+                          quae provident aliquid blanditiis fuga nam veniam
+                          quasi laudantium nobis fugit molestiae non ducimus
+                          ullam voluptatum!
+                        </p>
+                      </div>
+                      <div
+                        class="review-item"
+                        itemscope=""
+                        itemprop="itemListElement"
+                        itemtype="https://schema.org/Review"
+                      >
+                        <div
+                          itemprop="itemReviewed"
+                          itemscope=""
+                          itemtype="https://schema.org/Drug"
+                        >
+                          <meta itemprop="name" content="Kamagra" />
+                          <div
+                            itemprop="aggregateRating"
+                            itemscope=""
+                            itemtype="https://schema.org/AggregateRating"
+                          >
+                            <meta itemprop="ratingValue" content="5" />
+                            <meta itemprop="ratingCount" content="4" />
+                          </div>
+                          <div
+                            itemprop="reviewRating"
+                            itemscope
+                            itemtype="https://schema.org/Rating"
+                          >
+                            <meta itemprop="bestRating" content="5" />
+                            <meta itemprop="worstRating" content="1" />
+                            <meta itemprop="ratingValue" content="5" />
+                          </div>
+                        </div>
+                        <div class="review__head">
+                          <div
+                            class="review__author-photo"
+                            itemprop="author"
+                            itemscope=""
+                            itemtype="https://schema.org/Person"
+                          >
+                            <meta itemprop="name" content="Имя Фамилия" />
+                            <img
+                              src="{$dir}/img/review/5.jpg"
+                              alt="Имя Фамилия"
+                              width="128"
+                              height="128"
+                              loading="lazy"
+                              itemprop="image"
+                            />
+                          </div>
+                          <div class="review__main">
+                            <h3 class="review__author-name">Имя Фамилия</h3>
+                            <div class="review__rating">
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                            </div>
+                          </div>
+                          <time
+                            class="review__date"
+                            itemprop="datePublished"
+                            datetime="2024-08-22"
+                            >2024-08-22</time
+                          >
+                        </div>
+                        <p class="review__text" itemprop="reviewBody">
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit. Praesentium odio illum placeat laborum, labore,
+                          quae provident aliquid blanditiis fuga nam veniam
+                          quasi laudantium nobis fugit molestiae non ducimus
+                          ullam voluptatum!
+                        </p>
+                      </div>
+                      <div
+                        class="review-item"
+                        itemscope=""
+                        itemprop="itemListElement"
+                        itemtype="https://schema.org/Review"
+                      >
+                        <div
+                          itemprop="itemReviewed"
+                          itemscope=""
+                          itemtype="https://schema.org/Drug"
+                        >
+                          <meta itemprop="name" content="Kamagra" />
+                          <div
+                            itemprop="aggregateRating"
+                            itemscope=""
+                            itemtype="https://schema.org/AggregateRating"
+                          >
+                            <meta itemprop="ratingValue" content="5" />
+                            <meta itemprop="ratingCount" content="4" />
+                          </div>
+                          <div
+                            itemprop="reviewRating"
+                            itemscope
+                            itemtype="https://schema.org/Rating"
+                          >
+                            <meta itemprop="bestRating" content="5" />
+                            <meta itemprop="worstRating" content="1" />
+                            <meta itemprop="ratingValue" content="5" />
+                          </div>
+                        </div>
+                        <div class="review__head">
+                          <div
+                            class="review__author-photo"
+                            itemprop="author"
+                            itemscope=""
+                            itemtype="https://schema.org/Person"
+                          >
+                            <meta itemprop="name" content="Имя Фамилия" />
+                            <img
+                              src="{$dir}/img/review/6.jpg"
+                              alt="Имя Фамилия"
+                              width="128"
+                              height="128"
+                              loading="lazy"
+                              itemprop="image"
+                            />
+                          </div>
+                          <div class="review__main">
+                            <h3 class="review__author-name">Имя Фамилия</h3>
+                            <div class="review__rating">
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                            </div>
+                          </div>
+                          <time
+                            class="review__date"
+                            itemprop="datePublished"
+                            datetime="2024-08-22"
+                            >2024-08-22</time
+                          >
+                        </div>
+                        <p class="review__text" itemprop="reviewBody">
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit. Praesentium odio illum placeat laborum, labore,
+                          quae provident aliquid blanditiis fuga nam veniam
+                          quasi laudantium nobis fugit molestiae non ducimus
+                          ullam voluptatum!
+                        </p>
+                      </div>
+                      <div
+                        class="review-item"
+                        itemscope=""
+                        itemprop="itemListElement"
+                        itemtype="https://schema.org/Review"
+                      >
+                        <div
+                          itemprop="itemReviewed"
+                          itemscope=""
+                          itemtype="https://schema.org/Drug"
+                        >
+                          <meta itemprop="name" content="Kamagra" />
+                          <div
+                            itemprop="aggregateRating"
+                            itemscope=""
+                            itemtype="https://schema.org/AggregateRating"
+                          >
+                            <meta itemprop="ratingValue" content="5" />
+                            <meta itemprop="ratingCount" content="4" />
+                          </div>
+                          <div
+                            itemprop="reviewRating"
+                            itemscope
+                            itemtype="https://schema.org/Rating"
+                          >
+                            <meta itemprop="bestRating" content="5" />
+                            <meta itemprop="worstRating" content="1" />
+                            <meta itemprop="ratingValue" content="5" />
+                          </div>
+                        </div>
+                        <div class="review__head">
+                          <div
+                            class="review__author-photo"
+                            itemprop="author"
+                            itemscope=""
+                            itemtype="https://schema.org/Person"
+                          >
+                            <meta itemprop="name" content="Имя Фамилия" />
+                            <img
+                              src="{$dir}/img/review/7.jpg"
+                              alt="Имя Фамилия"
+                              width="128"
+                              height="128"
+                              loading="lazy"
+                              itemprop="image"
+                            />
+                          </div>
+                          <div class="review__main">
+                            <h3 class="review__author-name">Имя Фамилия</h3>
+                            <div class="review__rating">
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                            </div>
+                          </div>
+                          <time
+                            class="review__date"
+                            itemprop="datePublished"
+                            datetime="2024-08-22"
+                            >2024-08-22</time
+                          >
+                        </div>
+                        <p class="review__text" itemprop="reviewBody">
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit. Praesentium odio illum placeat laborum, labore,
+                          quae provident aliquid blanditiis fuga nam veniam
+                          quasi laudantium nobis fugit molestiae non ducimus
+                          ullam voluptatum!
+                        </p>
+                      </div>
+                      <div
+                        class="review-item"
+                        itemscope=""
+                        itemprop="itemListElement"
+                        itemtype="https://schema.org/Review"
+                      >
+                        <div
+                          itemprop="itemReviewed"
+                          itemscope=""
+                          itemtype="https://schema.org/Drug"
+                        >
+                          <meta itemprop="name" content="Kamagra" />
+                          <div
+                            itemprop="aggregateRating"
+                            itemscope=""
+                            itemtype="https://schema.org/AggregateRating"
+                          >
+                            <meta itemprop="ratingValue" content="5" />
+                            <meta itemprop="ratingCount" content="4" />
+                          </div>
+                          <div
+                            itemprop="reviewRating"
+                            itemscope
+                            itemtype="https://schema.org/Rating"
+                          >
+                            <meta itemprop="bestRating" content="5" />
+                            <meta itemprop="worstRating" content="1" />
+                            <meta itemprop="ratingValue" content="5" />
+                          </div>
+                        </div>
+                        <div class="review__head">
+                          <div
+                            class="review__author-photo"
+                            itemprop="author"
+                            itemscope=""
+                            itemtype="https://schema.org/Person"
+                          >
+                            <meta itemprop="name" content="Имя Фамилия" />
+                            <img
+                              src="{$dir}/img/review/8.jpg"
+                              alt="Имя Фамилия"
+                              width="128"
+                              height="128"
+                              loading="lazy"
+                              itemprop="image"
+                            />
+                          </div>
+                          <div class="review__main">
+                            <h3 class="review__author-name">Имя Фамилия</h3>
+                            <div class="review__rating">
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                            </div>
+                          </div>
+                          <time
+                            class="review__date"
+                            itemprop="datePublished"
+                            datetime="2024-08-22"
+                            >2024-08-22</time
+                          >
+                        </div>
+                        <p class="review__text" itemprop="reviewBody">
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit. Praesentium odio illum placeat laborum, labore,
+                          quae provident aliquid blanditiis fuga nam veniam
+                          quasi laudantium nobis fugit molestiae non ducimus
+                          ullam voluptatum!
+                        </p>
+                      </div>
+                      <div
+                        class="review-item"
+                        itemscope=""
+                        itemprop="itemListElement"
+                        itemtype="https://schema.org/Review"
+                      >
+                        <div
+                          itemprop="itemReviewed"
+                          itemscope=""
+                          itemtype="https://schema.org/Drug"
+                        >
+                          <meta itemprop="name" content="Kamagra" />
+                          <div
+                            itemprop="aggregateRating"
+                            itemscope=""
+                            itemtype="https://schema.org/AggregateRating"
+                          >
+                            <meta itemprop="ratingValue" content="5" />
+                            <meta itemprop="ratingCount" content="4" />
+                          </div>
+                          <div
+                            itemprop="reviewRating"
+                            itemscope
+                            itemtype="https://schema.org/Rating"
+                          >
+                            <meta itemprop="bestRating" content="5" />
+                            <meta itemprop="worstRating" content="1" />
+                            <meta itemprop="ratingValue" content="5" />
+                          </div>
+                        </div>
+                        <div class="review__head">
+                          <div
+                            class="review__author-photo"
+                            itemprop="author"
+                            itemscope=""
+                            itemtype="https://schema.org/Person"
+                          >
+                            <meta itemprop="name" content="Имя Фамилия" />
+                            <img
+                              src="{$dir}/img/review/9.jpg"
+                              alt="Имя Фамилия"
+                              width="128"
+                              height="128"
+                              loading="lazy"
+                              itemprop="image"
+                            />
+                          </div>
+                          <div class="review__main">
+                            <h3 class="review__author-name">Имя Фамилия</h3>
+                            <div class="review__rating">
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                            </div>
+                          </div>
+                          <time
+                            class="review__date"
+                            itemprop="datePublished"
+                            datetime="2024-08-22"
+                            >2024-08-22</time
+                          >
+                        </div>
+                        <p class="review__text" itemprop="reviewBody">
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit. Praesentium odio illum placeat laborum, labore,
+                          quae provident aliquid blanditiis fuga nam veniam
+                          quasi laudantium nobis fugit molestiae non ducimus
+                          ullam voluptatum!
+                        </p>
+                      </div>
+                      <div
+                        class="review-item"
+                        itemscope=""
+                        itemprop="itemListElement"
+                        itemtype="https://schema.org/Review"
+                      >
+                        <div
+                          itemprop="itemReviewed"
+                          itemscope=""
+                          itemtype="https://schema.org/Drug"
+                        >
+                          <meta itemprop="name" content="Kamagra" />
+                          <div
+                            itemprop="aggregateRating"
+                            itemscope=""
+                            itemtype="https://schema.org/AggregateRating"
+                          >
+                            <meta itemprop="ratingValue" content="5" />
+                            <meta itemprop="ratingCount" content="4" />
+                          </div>
+                          <div
+                            itemprop="reviewRating"
+                            itemscope
+                            itemtype="https://schema.org/Rating"
+                          >
+                            <meta itemprop="bestRating" content="5" />
+                            <meta itemprop="worstRating" content="1" />
+                            <meta itemprop="ratingValue" content="5" />
+                          </div>
+                        </div>
+                        <div class="review__head">
+                          <div
+                            class="review__author-photo"
+                            itemprop="author"
+                            itemscope=""
+                            itemtype="https://schema.org/Person"
+                          >
+                            <meta itemprop="name" content="Имя Фамилия" />
+                            <img
+                              src="{$dir}/img/review/10.jpg"
+                              alt="Имя Фамилия"
+                              width="128"
+                              height="128"
+                              loading="lazy"
+                              itemprop="image"
+                            />
+                          </div>
+                          <div class="review__main">
+                            <h3 class="review__author-name">Имя Фамилия</h3>
+                            <div class="review__rating">
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                              <svg viewBox="0 0 576 512">
+                                <path
+                                  d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                                ></path>
+                              </svg>
+                            </div>
+                          </div>
+                          <time
+                            class="review__date"
+                            itemprop="datePublished"
+                            datetime="2024-08-22"
+                            >2024-08-22</time
+                          >
+                        </div>
+                        <p class="review__text" itemprop="reviewBody">
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit. Praesentium odio illum placeat laborum, labore,
+                          quae provident aliquid blanditiis fuga nam veniam
+                          quasi laudantium nobis fugit molestiae non ducimus
+                          ullam voluptatum!
                         </p>
                       </div>
                     </div>
@@ -1449,7 +1763,7 @@
                         <span>Upload photo</span>
                         <div class="comment__img_wrapper">
                           <img
-                            src="./img/review/avatar.png"
+                            src="{$dir}/img/review/avatar.png"
                             alt="avatar preview"
                             id="new-photo"
                             width="100"

@@ -1457,7 +1457,7 @@ main {
     }
     .review__text {
       margin: 0 !important;
-      font-size: 16px;
+      font-size: 15px;
       color: #000;
     }
   }
@@ -2724,6 +2724,7 @@ main {
   align-items: center;
   flex-wrap: wrap;
   gap: 15px;
+  padding-left: 0 !important;
   @media screen and (max-width: 1300px) {
     justify-content: center;
   }
@@ -3273,6 +3274,8 @@ main {
   padding: 15px 0;
   position: relative;
   z-index: -1;
+  max-width: 1024px;
+  margin: 0 auto;
 }
 .main-info-product__list {
   display: flex;
@@ -3607,7 +3610,7 @@ main {
   min-width: 270px;
   max-width: 600px;
   width: 45%;
-  color: #fff !important;
+  color: #000 !important;
 }
 
 .form_container input {

@@ -26,10 +26,16 @@ const updateQuantity = (newValue) => {
 
 const updatePrice = () => {
   priceTotal = counter * selectedPrice;
-  newPriceSection.textContent = priceTotal.toFixed(2);
-  oldPriceSection.textContent = priceTotal * (1 + discount / 100);
+  if(newPriceSection) {
+    newPriceSection.textContent = priceTotal.toFixed(2);
+  }
+  if(oldPriceSection) {
+    oldPriceSection.textContent = priceTotal * (1 + discount / 100);
+  }
   oldPrice = priceTotal * (1 + discount / 100);
-  oldPriceSection.textContent = oldPrice.toFixed(2);
+  if(oldPriceSection) {
+    oldPriceSection.textContent = oldPrice.toFixed(2);
+  }
 };
 
 const validationProductReview = {
